@@ -1,0 +1,4 @@
+.anchor{
+    -fx-background-image: url("MainMenu.jpg");
+    -fx-background-size: cover;
+}

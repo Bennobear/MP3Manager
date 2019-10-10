@@ -6,8 +6,6 @@ import com.mpatric.mp3agic.ID3v1;
 import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.Mp3File;
 import com.mpatric.mp3agic.UnsupportedTagException;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,16 +14,18 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable{
     ConnectionDAO dao = new ConnectionDAO();
+    MediaPlayer mediaPlayer;
     /* MainMenu */
     @FXML
     Button btnInput;
@@ -40,11 +40,13 @@ public class Controller implements Initializable{
 
     /* Output */
     @FXML
-    ListView<Song> listSongs;
-
+    ListView<Song> listSongs = new ListView<>();
 
     @FXML
-    Button btnHTML;
+    Button btnPlay;
+
+    @FXML
+    Button btnPause;
 
     /* Input & Output */
     @FXML
@@ -52,10 +54,34 @@ public class Controller implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
-        //ObservableList<Song> songs = FXCollections.observableArrayList(dao.findAll());
-        //System.out.println(songs);
         listSongs.getItems().addAll(dao.findAll());
-        //listSongs.setItems(songs);
+    }
+
+    @FXML
+    private void playMusic(){
+        String path = listSongs.getSelectionModel().getSelectedItem().getPath();
+        Media hit = new Media(new File(path).toURI().toString());
+        if (mediaPlayer != null){
+            mediaPlayer.stop();
+            mediaPlayer = new MediaPlayer(hit);
+            mediaPlayer.play();
+        } else {
+            mediaPlayer = new MediaPlayer(hit);
+            mediaPlayer.play();
+        }
+    }
+
+    @FXML
+    private void pauseMusic(){
+        MediaPlayer.Status currentStatus = mediaPlayer.getStatus();
+
+        if(currentStatus == MediaPlayer.Status.PLAYING)
+            mediaPlayer.pause();
+        else if(currentStatus == MediaPlayer.Status.PAUSED || currentStatus == MediaPlayer.Status.STOPPED) {
+            System.out.println("Player will start at: " + mediaPlayer.getCurrentTime());
+            mediaPlayer.play();
+        }
+        mediaPlayer.setOnPaused(() -> System.out.println("Paused at: " + mediaPlayer.getCurrentTime()));
     }
 
     @FXML
@@ -102,7 +128,7 @@ public class Controller implements Initializable{
                 Mp3File mp3file = new Mp3File(folder + "\\" + file.getName());
                 if (mp3file.hasId3v1Tag()) {
                     ID3v1 id3v1Tag = mp3file.getId3v1Tag();
-                    dao.add(id3v1Tag.getYear(), id3v1Tag.getArtist(), id3v1Tag.getAlbum(), id3v1Tag.getTitle());
+                    dao.add(id3v1Tag.getYear(), id3v1Tag.getArtist(), id3v1Tag.getAlbum(), id3v1Tag.getTitle(), folder + "\\"+ file.getName());
                 } else System.out.println("No Metadata");
             }
         }
@@ -119,13 +145,11 @@ public class Controller implements Initializable{
             stage.setScene(new Scene(root1, 600, 450));
             oldStage.hide();
             stage.show();
+            if (mediaPlayer != null){
+                mediaPlayer.stop();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    @FXML
-    private void getHTML() {
-
     }
 }

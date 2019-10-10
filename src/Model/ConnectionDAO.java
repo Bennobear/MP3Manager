@@ -7,13 +7,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ConnectionDAO {
     Connection connection = null;
     PreparedStatement ptmt = null;
     ResultSet resultSet = null;
-    private List<Song> songList;
+    private List<Song> songList = new ArrayList<Song>();
     public ConnectionDAO() {
     }
 
@@ -24,10 +25,10 @@ public class ConnectionDAO {
     }
 
 
-    public void add(String year, String artist , String album, String title) {
+    public void add(String year, String artist , String album, String title, String path) {
         try {
             String i = null;
-            String queryString = "INSERT INTO songs(id, year, artist, album, title) VALUES(?,?,?,?,?)";
+            String queryString = "INSERT INTO songs(id, year, artist, album, title, path) VALUES(?,?,?,?,?,?)";
             connection = getConnection();
             ptmt = connection.prepareStatement(queryString);
             ptmt.setString(1, i);
@@ -35,6 +36,7 @@ public class ConnectionDAO {
             ptmt.setString(3,artist);
             ptmt.setString(4, album);
             ptmt.setString(5, title);
+            ptmt.setString(6, path);
             ptmt.executeUpdate();
             System.out.println("Data Added Successfully");
         } catch (SQLException e) {
@@ -65,6 +67,7 @@ public class ConnectionDAO {
                 s.setArtist(resultSet.getString("artist"));
                 s.setAlbum(resultSet.getString("album"));
                 s.setTitle(resultSet.getString("title"));
+                s.setPath((resultSet.getString("path")));
                 songList.add(s);
             }
         } catch (SQLException e) {

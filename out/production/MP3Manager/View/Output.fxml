@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import java.net.URL?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
-   <children>
-      <Button fx:id="btnHTML" layoutX="501.0" layoutY="188.0" mnemonicParsing="false" onAction="#getHTML" text="Export HTML" />
-      <ListView fx:id="listSongs" layoutX="14.0" layoutY="14.0" prefHeight="372.0" prefWidth="470.0" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="anchor" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+    <stylesheets>
+        <URL value="@Output.css" />
+    </stylesheets>
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="40.0" layoutX="12.0" stroke="BLACK" strokeType="INSIDE" width="474.0" />
+      <ListView fx:id="listSongs" layoutX="14.0" layoutY="34.0" prefHeight="372.0" prefWidth="470.0" />
       <Button fx:id="btnBack" layoutX="523.0" layoutY="361.0" mnemonicParsing="false" onAction="#getBack" text="Back" />
+      <Button fx:id="btnPlay" layoutX="525.0" layoutY="128.0" mnemonicParsing="false" onAction="#playMusic" text="Play" />
+      <Button fx:id="btnPause" layoutX="521.0" layoutY="249.0" mnemonicParsing="false" onAction="#pauseMusic" text="Pause" />
+      <Text layoutX="24.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Text>
+      <Text layoutX="105.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Text>
+      <Text layoutX="202.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Album">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Text>
+      <Text layoutX="317.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Text>
    </children>
 </AnchorPane>
