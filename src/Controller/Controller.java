@@ -82,7 +82,6 @@ public class Controller implements Initializable {
     @FXML
     private void pauseMusic() {
         MediaPlayer.Status currentStatus = mediaPlayer.getStatus();
-
         if (currentStatus == MediaPlayer.Status.PLAYING)
             mediaPlayer.pause();
         else if (currentStatus == MediaPlayer.Status.PAUSED || currentStatus == MediaPlayer.Status.STOPPED) {
