@@ -62,7 +62,7 @@ public class Song {
 
     @Override
     public String toString() {
-        return (this.getYear() + "\t\t\t" + this.artist + "\t\t\t" + this.album + "\t\t\t" + this.title);
+        return (this.getYear() + "\t\t" + this.artist + "\t\t" + this.album + "\t\t" + this.title);
     }
 
 }

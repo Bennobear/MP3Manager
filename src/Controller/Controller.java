@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
@@ -91,8 +92,9 @@ public class Controller implements Initializable{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/Input.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
-            stage.setTitle("Input");
+            stage.setTitle("MP3 Depot - Input");
             stage.setScene(new Scene(root1, 600, 450));
+            stage.getIcons().add(new Image("/View/music.png"));
             oldStage.hide();
             stage.show();
         } catch (Exception e) {
@@ -107,8 +109,9 @@ public class Controller implements Initializable{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/Output.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
-            stage.setTitle("Output");
+            stage.setTitle("MP3 Depot - Output");
             stage.setScene(new Scene(root1, 600, 450));
+            stage.getIcons().add(new Image("/View/music.png"));
             oldStage.hide();
             stage.show();
         } catch (Exception e) {
@@ -141,8 +144,9 @@ public class Controller implements Initializable{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/MainMenu.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
-            stage.setTitle("Main Menu");
+            stage.setTitle("MP3 Depot - Main Menu");
             stage.setScene(new Scene(root1, 600, 450));
+            stage.getIcons().add(new Image("/View/music.png"));
             oldStage.hide();
             stage.show();
             if (mediaPlayer != null){
