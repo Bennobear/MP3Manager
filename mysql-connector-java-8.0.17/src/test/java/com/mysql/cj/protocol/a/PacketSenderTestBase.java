@@ -29,9 +29,9 @@
 
 package com.mysql.cj.protocol.a;
 
-import static org.junit.Assert.assertEquals;
-
 import com.mysql.cj.protocol.MessageSender;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Common functionality for packet sender tests.

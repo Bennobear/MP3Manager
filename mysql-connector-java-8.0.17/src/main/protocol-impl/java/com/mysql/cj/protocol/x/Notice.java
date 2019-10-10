@@ -29,8 +29,6 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.util.List;
-
 import com.google.protobuf.ByteString;
 import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.InvalidProtocolBufferException;
@@ -41,6 +39,8 @@ import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar;
 import com.mysql.cj.x.protobuf.MysqlxNotice.Frame;
 import com.mysql.cj.x.protobuf.MysqlxNotice.SessionStateChanged;
 import com.mysql.cj.x.protobuf.MysqlxNotice.SessionVariableChanged;
+
+import java.util.List;
 
 public class Notice {
 

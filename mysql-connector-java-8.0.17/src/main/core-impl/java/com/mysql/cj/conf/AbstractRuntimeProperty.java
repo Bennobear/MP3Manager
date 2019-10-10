@@ -29,19 +29,18 @@
 
 package com.mysql.cj.conf;
 
+import com.mysql.cj.Messages;
+import com.mysql.cj.exceptions.ExceptionFactory;
+import com.mysql.cj.exceptions.ExceptionInterceptor;
+import com.mysql.cj.exceptions.PropertyNotModifiableException;
+
+import javax.naming.RefAddr;
+import javax.naming.Reference;
 import java.io.Serializable;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-
-import javax.naming.RefAddr;
-import javax.naming.Reference;
-
-import com.mysql.cj.Messages;
-import com.mysql.cj.exceptions.ExceptionFactory;
-import com.mysql.cj.exceptions.ExceptionInterceptor;
-import com.mysql.cj.exceptions.PropertyNotModifiableException;
 
 public abstract class AbstractRuntimeProperty<T> implements RuntimeProperty<T>, Serializable {
 

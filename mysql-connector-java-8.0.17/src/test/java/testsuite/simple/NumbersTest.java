@@ -29,9 +29,9 @@
 
 package testsuite.simple;
 
-import java.sql.SQLException;
-
 import testsuite.BaseTestCase;
+
+import java.sql.SQLException;
 
 public class NumbersTest extends BaseTestCase {
     private static final long TEST_BIGINT_VALUE = 6147483647L;

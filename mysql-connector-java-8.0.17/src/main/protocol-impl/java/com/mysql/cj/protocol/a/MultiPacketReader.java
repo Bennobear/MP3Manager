@@ -29,12 +29,12 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.io.IOException;
-import java.util.Optional;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.protocol.MessageReader;
 import com.mysql.cj.protocol.a.NativeConstants.StringLengthDataType;
+
+import java.io.IOException;
+import java.util.Optional;
 
 /**
  * A {@link MessageReader} which reads a full packet

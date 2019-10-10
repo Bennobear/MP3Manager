@@ -29,26 +29,17 @@
 
 package testsuite.regression;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.lang.reflect.Method;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Hashtable;
-import java.util.concurrent.Callable;
+import com.mysql.cj.MysqlConnection;
+import com.mysql.cj.conf.AbstractRuntimeProperty;
+import com.mysql.cj.conf.PropertyDefinitions;
+import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.conf.RuntimeProperty;
+import com.mysql.cj.jdbc.*;
+import com.mysql.cj.jdbc.integration.jboss.MysqlValidConnectionChecker;
+import testsuite.BaseTestCase;
+import testsuite.simple.DataSourceTest;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.Name;
-import javax.naming.NameParser;
-import javax.naming.RefAddr;
-import javax.naming.Reference;
+import javax.naming.*;
 import javax.naming.spi.ObjectFactory;
 import javax.sql.ConnectionPoolDataSource;
 import javax.sql.DataSource;
@@ -57,24 +48,11 @@ import javax.sql.XAConnection;
 import javax.transaction.xa.XAException;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
-
-import com.mysql.cj.MysqlConnection;
-import com.mysql.cj.conf.AbstractRuntimeProperty;
-import com.mysql.cj.conf.PropertyDefinitions;
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.conf.RuntimeProperty;
-import com.mysql.cj.jdbc.JdbcConnection;
-import com.mysql.cj.jdbc.MysqlConnectionPoolDataSource;
-import com.mysql.cj.jdbc.MysqlDataSource;
-import com.mysql.cj.jdbc.MysqlDataSourceFactory;
-import com.mysql.cj.jdbc.MysqlXADataSource;
-import com.mysql.cj.jdbc.MysqlXid;
-import com.mysql.cj.jdbc.PreparedStatementWrapper;
-import com.mysql.cj.jdbc.StatementWrapper;
-import com.mysql.cj.jdbc.integration.jboss.MysqlValidConnectionChecker;
-
-import testsuite.BaseTestCase;
-import testsuite.simple.DataSourceTest;
+import java.io.*;
+import java.lang.reflect.Method;
+import java.sql.*;
+import java.util.Hashtable;
+import java.util.concurrent.Callable;
 
 /**
  * Tests fixes for bugs related to datasources.

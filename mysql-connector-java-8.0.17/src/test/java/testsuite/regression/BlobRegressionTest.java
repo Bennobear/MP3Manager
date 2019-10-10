@@ -29,24 +29,17 @@
 
 package testsuite.regression;
 
+import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.util.StringUtils;
+import testsuite.BaseTestCase;
+
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.StringReader;
-import java.sql.Blob;
-import java.sql.Clob;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Properties;
 import java.util.concurrent.Callable;
-
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.util.StringUtils;
-
-import testsuite.BaseTestCase;
 
 /**
  * Tests fixes for BLOB handling.

@@ -29,9 +29,9 @@
 
 package com.mysql.cj;
 
-import java.util.List;
-
 import com.mysql.cj.protocol.Message;
+
+import java.util.List;
 
 public interface MessageBuilder<M extends Message> {
 

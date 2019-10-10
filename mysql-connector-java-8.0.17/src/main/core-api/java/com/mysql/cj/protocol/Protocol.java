@@ -29,10 +29,6 @@
 
 package com.mysql.cj.protocol;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.concurrent.CompletableFuture;
-
 import com.mysql.cj.MessageBuilder;
 import com.mysql.cj.QueryResult;
 import com.mysql.cj.Session;
@@ -41,6 +37,10 @@ import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.exceptions.CJException;
 import com.mysql.cj.exceptions.ExceptionInterceptor;
 import com.mysql.cj.result.RowList;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * A protocol provides the facilities to communicate with a MySQL server.

@@ -30,7 +30,6 @@
 package testsuite.perf;
 
 import com.mysql.cj.MysqlConnection;
-
 import testsuite.BaseTestCase;
 
 /**

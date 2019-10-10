@@ -29,43 +29,22 @@
 
 package testsuite;
 
-import static com.mysql.cj.util.StringUtils.isNullOrEmpty;
-
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FilenameFilter;
-import java.io.IOException;
-import java.lang.reflect.Method;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
-import java.util.Properties;
-import java.util.Set;
-import java.util.StringJoiner;
-import java.util.concurrent.Callable;
-
 import com.mysql.cj.ServerVersion;
-import com.mysql.cj.conf.ConnectionUrl;
-import com.mysql.cj.conf.ConnectionUrlParser;
-import com.mysql.cj.conf.HostInfo;
-import com.mysql.cj.conf.PropertyDefinitions;
-import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.conf.*;
 import com.mysql.cj.jdbc.JdbcConnection;
 import com.mysql.cj.jdbc.NonRegisteringDriver;
 import com.mysql.cj.jdbc.ha.ReplicationConnection;
 import com.mysql.cj.util.StringUtils;
 import com.mysql.cj.util.Util;
-
 import junit.framework.TestCase;
+
+import java.io.*;
+import java.lang.reflect.Method;
+import java.sql.*;
+import java.util.*;
+import java.util.concurrent.Callable;
+
+import static com.mysql.cj.util.StringUtils.isNullOrEmpty;
 
 /**
  * Base class for all test cases. Creates connections, statements, etc. and closes them.

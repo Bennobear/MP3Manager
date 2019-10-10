@@ -29,12 +29,11 @@
 
 package testsuite.x.devapi;
 
-import java.util.Random;
-
+import com.mysql.cj.xdevapi.Collection;
 import org.junit.After;
 import org.junit.Before;
 
-import com.mysql.cj.xdevapi.Collection;
+import java.util.Random;
 
 public class BaseCollectionTestCase extends DevApiBaseTestCase {
     /** Collection for testing. */

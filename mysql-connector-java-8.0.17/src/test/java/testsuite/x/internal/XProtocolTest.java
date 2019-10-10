@@ -29,43 +29,24 @@
 
 package testsuite.x.internal;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.function.BiConsumer;
-import java.util.stream.Collectors;
-
+import com.mysql.cj.MysqlType;
+import com.mysql.cj.exceptions.MysqlErrorNumbers;
+import com.mysql.cj.protocol.ColumnDefinition;
+import com.mysql.cj.protocol.x.*;
+import com.mysql.cj.result.Field;
+import com.mysql.cj.result.Row;
+import com.mysql.cj.result.StringValueFactory;
+import com.mysql.cj.xdevapi.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.mysql.cj.MysqlType;
-import com.mysql.cj.exceptions.MysqlErrorNumbers;
-import com.mysql.cj.protocol.ColumnDefinition;
-import com.mysql.cj.protocol.x.StatementExecuteOk;
-import com.mysql.cj.protocol.x.XMessageBuilder;
-import com.mysql.cj.protocol.x.XProtocol;
-import com.mysql.cj.protocol.x.XProtocolError;
-import com.mysql.cj.protocol.x.XServerCapabilities;
-import com.mysql.cj.result.Field;
-import com.mysql.cj.result.Row;
-import com.mysql.cj.result.StringValueFactory;
-import com.mysql.cj.xdevapi.DocFilterParams;
-import com.mysql.cj.xdevapi.FilterParams;
-import com.mysql.cj.xdevapi.InsertParams;
-import com.mysql.cj.xdevapi.TableFilterParams;
-import com.mysql.cj.xdevapi.UpdateSpec;
-import com.mysql.cj.xdevapi.UpdateType;
-import com.mysql.cj.xdevapi.Warning;
-import com.mysql.cj.xdevapi.WarningImpl;
+import java.io.IOException;
+import java.util.*;
+import java.util.function.BiConsumer;
+import java.util.stream.Collectors;
+
+import static org.junit.Assert.*;
 
 /**
  * Tests for protocol-level APIs against X Plugin via X Protocol.

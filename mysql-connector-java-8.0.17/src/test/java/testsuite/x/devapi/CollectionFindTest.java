@@ -29,47 +29,23 @@
 
 package testsuite.x.devapi;
 
-import static com.mysql.cj.xdevapi.Expression.expr;
-import static org.hamcrest.CoreMatchers.hasItems;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import org.hamcrest.CoreMatchers;
-import org.junit.After;
-import org.junit.Test;
-
 import com.mysql.cj.ServerVersion;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
 import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.protocol.x.XProtocolError;
-import com.mysql.cj.xdevapi.Collection;
-import com.mysql.cj.xdevapi.DbDoc;
-import com.mysql.cj.xdevapi.DocResult;
-import com.mysql.cj.xdevapi.FindStatement;
-import com.mysql.cj.xdevapi.FindStatementImpl;
-import com.mysql.cj.xdevapi.JsonLiteral;
-import com.mysql.cj.xdevapi.JsonNumber;
-import com.mysql.cj.xdevapi.JsonString;
-import com.mysql.cj.xdevapi.Row;
-import com.mysql.cj.xdevapi.Session;
-import com.mysql.cj.xdevapi.SessionFactory;
-import com.mysql.cj.xdevapi.Statement;
-import com.mysql.cj.xdevapi.Table;
+import com.mysql.cj.xdevapi.*;
+import org.hamcrest.CoreMatchers;
+import org.junit.After;
+import org.junit.Test;
+
+import java.util.List;
+import java.util.concurrent.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+import static com.mysql.cj.xdevapi.Expression.expr;
+import static org.hamcrest.CoreMatchers.hasItems;
+import static org.junit.Assert.*;
 
 /**
  * @todo

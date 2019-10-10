@@ -29,21 +29,16 @@
 
 package com.mysql.cj.jdbc;
 
+import com.mysql.cj.Messages;
+import com.mysql.cj.exceptions.ExceptionInterceptor;
+import com.mysql.cj.jdbc.exceptions.SQLError;
+
+import javax.sql.*;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
-import javax.sql.ConnectionEvent;
-import javax.sql.ConnectionEventListener;
-import javax.sql.PooledConnection;
-import javax.sql.StatementEvent;
-import javax.sql.StatementEventListener;
-
-import com.mysql.cj.Messages;
-import com.mysql.cj.exceptions.ExceptionInterceptor;
-import com.mysql.cj.jdbc.exceptions.SQLError;
 
 /**
  * This class is used to wrap and return a physical connection within a logical handle. It also registers and notifies ConnectionEventListeners of any

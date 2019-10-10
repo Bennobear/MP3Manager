@@ -29,8 +29,6 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.util.concurrent.CompletableFuture;
-
 import com.google.protobuf.GeneratedMessageV3;
 import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.protocol.MessageListener;
@@ -38,6 +36,8 @@ import com.mysql.cj.x.protobuf.Mysqlx.Error;
 import com.mysql.cj.x.protobuf.MysqlxNotice.Frame;
 import com.mysql.cj.x.protobuf.MysqlxResultset.FetchDone;
 import com.mysql.cj.x.protobuf.MysqlxSql.StmtExecuteOk;
+
+import java.util.concurrent.CompletableFuture;
 
 /**
  * Async message reader accumulating the status necessary to produce a {@link StatementExecuteOk} result.

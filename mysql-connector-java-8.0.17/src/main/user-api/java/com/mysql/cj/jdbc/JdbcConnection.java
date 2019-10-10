@@ -29,15 +29,15 @@
 
 package com.mysql.cj.jdbc;
 
-import java.sql.SQLException;
-import java.util.List;
-
 import com.mysql.cj.MysqlConnection;
 import com.mysql.cj.ServerVersion;
 import com.mysql.cj.TransactionEventHandler;
 import com.mysql.cj.interceptors.QueryInterceptor;
 import com.mysql.cj.jdbc.result.CachedResultSetMetaData;
 import com.mysql.cj.jdbc.result.ResultSetInternalMethods;
+
+import java.sql.SQLException;
+import java.util.List;
 
 /**
  * This interface contains methods that are considered the "vendor extension" to the JDBC API for MySQL's implementation of java.sql.Connection.

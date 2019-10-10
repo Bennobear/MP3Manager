@@ -29,9 +29,9 @@
 
 package com.mysql.cj;
 
-import java.util.Set;
-
 import com.mysql.cj.util.LRUCache;
+
+import java.util.Set;
 
 public class PerConnectionLRUFactory implements CacheAdapterFactory<String, ParseInfo> {
 

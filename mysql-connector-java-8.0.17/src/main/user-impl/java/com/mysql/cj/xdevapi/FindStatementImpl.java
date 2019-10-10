@@ -29,12 +29,12 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.concurrent.CompletableFuture;
-
 import com.mysql.cj.MysqlxSession;
 import com.mysql.cj.protocol.x.XMessage;
 import com.mysql.cj.xdevapi.FilterParams.RowLock;
 import com.mysql.cj.xdevapi.FilterParams.RowLockOptions;
+
+import java.util.concurrent.CompletableFuture;
 
 /**
  * {@link FindStatement} implementation.

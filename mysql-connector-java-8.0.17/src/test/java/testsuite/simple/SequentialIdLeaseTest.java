@@ -29,10 +29,8 @@
 
 package testsuite.simple;
 
-import org.junit.Test;
-
 import com.mysql.cj.util.SequentialIdLease;
-
+import org.junit.Test;
 import testsuite.BaseTestCase;
 
 public class SequentialIdLeaseTest extends BaseTestCase {

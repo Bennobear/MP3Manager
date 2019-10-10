@@ -29,13 +29,13 @@
 
 package com.mysql.cj.protocol.a.authentication;
 
-import java.util.List;
-
 import com.mysql.cj.protocol.AuthenticationPlugin;
 import com.mysql.cj.protocol.Protocol;
 import com.mysql.cj.protocol.Security;
 import com.mysql.cj.protocol.a.NativeConstants.StringSelfDataType;
 import com.mysql.cj.protocol.a.NativePacketPayload;
+
+import java.util.List;
 
 /**
  * MySQL Native Password Authentication Plugin

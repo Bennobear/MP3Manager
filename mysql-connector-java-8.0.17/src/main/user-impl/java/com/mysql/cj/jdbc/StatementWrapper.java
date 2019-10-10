@@ -29,17 +29,13 @@
 
 package com.mysql.cj.jdbc;
 
-import java.lang.reflect.Proxy;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.SQLWarning;
-import java.sql.Statement;
-import java.util.HashMap;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
 import com.mysql.cj.jdbc.exceptions.SQLError;
+
+import java.lang.reflect.Proxy;
+import java.sql.*;
+import java.util.HashMap;
 
 /**
  * Wraps statements so that errors can be reported correctly to ConnectionEventListeners.

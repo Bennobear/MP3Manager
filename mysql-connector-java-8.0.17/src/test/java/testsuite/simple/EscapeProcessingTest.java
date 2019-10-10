@@ -29,13 +29,12 @@
 
 package testsuite.simple;
 
+import com.mysql.cj.conf.PropertyKey;
+import testsuite.BaseTestCase;
+
 import java.sql.Connection;
 import java.util.Properties;
 import java.util.TimeZone;
-
-import com.mysql.cj.conf.PropertyKey;
-
-import testsuite.BaseTestCase;
 
 /**
  * Tests escape processing

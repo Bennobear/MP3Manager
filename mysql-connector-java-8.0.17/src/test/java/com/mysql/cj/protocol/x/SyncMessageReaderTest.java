@@ -29,21 +29,6 @@
 
 package com.mysql.cj.protocol.x;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.util.Map;
-
-import org.junit.Before;
-import org.junit.Test;
-
 import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;
@@ -52,6 +37,17 @@ import com.mysql.cj.protocol.FullReadInputStream;
 import com.mysql.cj.x.protobuf.Mysqlx.Error;
 import com.mysql.cj.x.protobuf.Mysqlx.Ok;
 import com.mysql.cj.x.protobuf.Mysqlx.ServerMessages;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.util.Map;
+
+import static org.junit.Assert.*;
 
 /**
  * Tests for {@link SyncMessageReader}.

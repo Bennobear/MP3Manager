@@ -29,20 +29,13 @@
 
 package testsuite.x.devapi;
 
+import com.mysql.cj.ServerVersion;
+import com.mysql.cj.xdevapi.*;
+import org.junit.Test;
+
 import static com.mysql.cj.xdevapi.Expression.expr;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-
-import org.junit.Test;
-
-import com.mysql.cj.ServerVersion;
-import com.mysql.cj.xdevapi.Result;
-import com.mysql.cj.xdevapi.Row;
-import com.mysql.cj.xdevapi.RowResult;
-import com.mysql.cj.xdevapi.Session;
-import com.mysql.cj.xdevapi.SessionFactory;
-import com.mysql.cj.xdevapi.Table;
-import com.mysql.cj.xdevapi.UpdateStatement;
 
 /**
  * @todo

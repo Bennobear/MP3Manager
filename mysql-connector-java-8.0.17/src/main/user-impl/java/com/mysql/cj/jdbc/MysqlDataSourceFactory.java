@@ -29,16 +29,15 @@
 
 package com.mysql.cj.jdbc;
 
-import java.util.Hashtable;
+import com.mysql.cj.Messages;
+import com.mysql.cj.conf.PropertyKey;
 
 import javax.naming.Context;
 import javax.naming.Name;
 import javax.naming.RefAddr;
 import javax.naming.Reference;
 import javax.naming.spi.ObjectFactory;
-
-import com.mysql.cj.Messages;
-import com.mysql.cj.conf.PropertyKey;
+import java.util.Hashtable;
 
 /**
  * Factory class for MysqlDataSource objects

@@ -29,9 +29,9 @@
 
 package com.mysql.cj.jdbc.exceptions;
 
-import java.sql.SQLTimeoutException;
-
 import com.mysql.cj.Messages;
+
+import java.sql.SQLTimeoutException;
 
 public class MySQLTimeoutException extends SQLTimeoutException {
 

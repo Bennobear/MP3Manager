@@ -29,14 +29,14 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.util.List;
-
 import com.mysql.cj.MessageBuilder;
 import com.mysql.cj.exceptions.CJOperationNotSupportedException;
 import com.mysql.cj.exceptions.ExceptionFactory;
 import com.mysql.cj.protocol.a.NativeConstants.IntegerDataType;
 import com.mysql.cj.protocol.a.NativeConstants.StringLengthDataType;
 import com.mysql.cj.util.StringUtils;
+
+import java.util.List;
 
 public class NativeMessageBuilder implements MessageBuilder<NativePacketPayload> {
 

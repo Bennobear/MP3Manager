@@ -29,18 +29,14 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import com.mysql.cj.ServerVersion;
+import com.mysql.cj.exceptions.WrongArgumentException;
+import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Test;
-
-import com.mysql.cj.ServerVersion;
-import com.mysql.cj.exceptions.WrongArgumentException;
+import static org.junit.Assert.*;
 
 public class BindTest extends BaseCollectionTestCase {
 

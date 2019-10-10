@@ -29,12 +29,12 @@
 
 package com.mysql.cj.conf;
 
-import static com.mysql.cj.util.StringUtils.isNullOrEmpty;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+
+import static com.mysql.cj.util.StringUtils.isNullOrEmpty;
 
 /**
  * This class holds the following MySQL host information:

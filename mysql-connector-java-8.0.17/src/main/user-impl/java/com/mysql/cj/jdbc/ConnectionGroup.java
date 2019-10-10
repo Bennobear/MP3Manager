@@ -29,17 +29,12 @@
 
 package com.mysql.cj.jdbc;
 
-import java.sql.SQLException;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.jdbc.exceptions.SQLError;
 import com.mysql.cj.jdbc.ha.LoadBalancedConnectionProxy;
+
+import java.sql.SQLException;
+import java.util.*;
 
 public class ConnectionGroup {
     private String groupName;

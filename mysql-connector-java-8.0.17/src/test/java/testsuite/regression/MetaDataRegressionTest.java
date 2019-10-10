@@ -29,28 +29,6 @@
 
 package testsuite.regression;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
-import java.sql.DriverPropertyInfo;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Types;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.function.Supplier;
-
 import com.mysql.cj.CharsetMapping;
 import com.mysql.cj.Constants;
 import com.mysql.cj.MysqlConnection;
@@ -64,11 +42,15 @@ import com.mysql.cj.jdbc.JdbcConnection;
 import com.mysql.cj.jdbc.NonRegisteringDriver;
 import com.mysql.cj.protocol.Resultset;
 import com.mysql.cj.util.StringUtils;
-
+import junit.framework.ComparisonFailure;
 import testsuite.BaseQueryInterceptor;
 import testsuite.BaseTestCase;
 
-import junit.framework.ComparisonFailure;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.sql.*;
+import java.util.*;
+import java.util.function.Supplier;
 
 /**
  * Regression tests for DatabaseMetaData

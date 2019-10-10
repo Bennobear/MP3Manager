@@ -29,11 +29,11 @@
 
 package com.mysql.cj.protocol.a.result;
 
-import java.util.List;
-
 import com.mysql.cj.protocol.ColumnDefinition;
 import com.mysql.cj.protocol.ResultsetRows;
 import com.mysql.cj.result.Row;
+
+import java.util.List;
 
 /**
  * Represents an in-memory result set

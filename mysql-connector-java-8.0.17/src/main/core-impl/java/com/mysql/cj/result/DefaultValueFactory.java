@@ -29,9 +29,6 @@
 
 package com.mysql.cj.result;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.conf.PropertySet;
@@ -39,6 +36,9 @@ import com.mysql.cj.exceptions.DataConversionException;
 import com.mysql.cj.protocol.InternalDate;
 import com.mysql.cj.protocol.InternalTime;
 import com.mysql.cj.protocol.InternalTimestamp;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * The default value factory provides a base class that can be used for value factories that do not support creation from every type. The default value factory

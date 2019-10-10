@@ -29,20 +29,14 @@
 
 package testsuite.simple;
 
-import java.nio.charset.Charset;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.EnumSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.Callable;
-
 import com.mysql.cj.util.LazyString;
 import com.mysql.cj.util.StringUtils;
 import com.mysql.cj.util.StringUtils.SearchMode;
-
 import testsuite.BaseTestCase;
+
+import java.nio.charset.Charset;
+import java.util.*;
+import java.util.concurrent.Callable;
 
 public class StringUtilsTest extends BaseTestCase {
     /**

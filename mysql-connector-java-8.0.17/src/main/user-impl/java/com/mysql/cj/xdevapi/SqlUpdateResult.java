@@ -29,10 +29,10 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.List;
-
 import com.mysql.cj.exceptions.FeatureNotAvailableException;
 import com.mysql.cj.protocol.x.StatementExecuteOk;
+
+import java.util.List;
 
 /**
  * SQL result for DML statements.

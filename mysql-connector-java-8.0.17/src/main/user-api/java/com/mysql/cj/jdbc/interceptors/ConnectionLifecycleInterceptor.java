@@ -29,12 +29,12 @@
 
 package com.mysql.cj.jdbc.interceptors;
 
+import com.mysql.cj.MysqlConnection;
+import com.mysql.cj.log.Log;
+
 import java.sql.SQLException;
 import java.sql.Savepoint;
 import java.util.Properties;
-
-import com.mysql.cj.MysqlConnection;
-import com.mysql.cj.log.Log;
 
 /**
  * Implementors of this interface can be installed via the "connectionLifecycleInterceptors" configuration property and receive events and alter behavior of

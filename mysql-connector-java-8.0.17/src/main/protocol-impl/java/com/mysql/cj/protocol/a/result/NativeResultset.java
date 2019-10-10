@@ -29,14 +29,14 @@
 
 package com.mysql.cj.protocol.a.result;
 
-import java.util.HashMap;
-
 import com.mysql.cj.protocol.ColumnDefinition;
 import com.mysql.cj.protocol.Resultset;
 import com.mysql.cj.protocol.ResultsetRows;
 import com.mysql.cj.result.DefaultColumnDefinition;
 import com.mysql.cj.result.Field;
 import com.mysql.cj.result.Row;
+
+import java.util.HashMap;
 
 public class NativeResultset implements Resultset {
 

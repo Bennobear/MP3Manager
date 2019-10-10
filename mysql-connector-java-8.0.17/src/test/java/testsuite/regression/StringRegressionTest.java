@@ -29,21 +29,16 @@
 
 package testsuite.regression;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
-import java.sql.Clob;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-import java.util.Properties;
-
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.util.Base64Decoder;
 import com.mysql.cj.util.StringUtils;
-
 import testsuite.BaseTestCase;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.sql.*;
+import java.util.Properties;
 
 /**
  * Tests for regressions of bugs in String handling in the driver.

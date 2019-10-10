@@ -29,31 +29,21 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.io.IOException;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Objects;
-import java.util.Properties;
-import java.util.Set;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import com.mysql.cj.conf.BooleanPropertyDefinition;
-import com.mysql.cj.conf.ConnectionUrl;
-import com.mysql.cj.conf.DefaultPropertySet;
-import com.mysql.cj.conf.HostInfo;
-import com.mysql.cj.conf.IntegerPropertyDefinition;
-import com.mysql.cj.conf.PropertySet;
+import com.mysql.cj.conf.*;
 import com.mysql.cj.exceptions.CJCommunicationsException;
 import com.mysql.cj.exceptions.CJException;
 import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.protocol.x.XProtocol;
 import com.mysql.cj.util.StringUtils;
+
+import java.io.IOException;
+import java.lang.ref.WeakReference;
+import java.util.*;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ClientImpl implements Client {
     boolean isClosed = false;

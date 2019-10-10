@@ -29,25 +29,15 @@
 
 package com.mysql.cj.protocol.x;
 
+import com.mysql.cj.conf.PropertySet;
+import com.mysql.cj.exceptions.*;
+import com.mysql.cj.log.Log;
+import com.mysql.cj.protocol.*;
+
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.nio.channels.AsynchronousSocketChannel;
-
-import com.mysql.cj.conf.PropertySet;
-import com.mysql.cj.exceptions.CJCommunicationsException;
-import com.mysql.cj.exceptions.CJOperationNotSupportedException;
-import com.mysql.cj.exceptions.ExceptionFactory;
-import com.mysql.cj.exceptions.ExceptionInterceptor;
-import com.mysql.cj.exceptions.FeatureNotAvailableException;
-import com.mysql.cj.exceptions.SSLParamsException;
-import com.mysql.cj.log.Log;
-import com.mysql.cj.protocol.AbstractSocketConnection;
-import com.mysql.cj.protocol.AsyncSocketFactory;
-import com.mysql.cj.protocol.FullReadInputStream;
-import com.mysql.cj.protocol.NetworkResources;
-import com.mysql.cj.protocol.ServerSession;
-import com.mysql.cj.protocol.SocketConnection;
 
 /**
  * An async I/O connection. This enables use of async methods on {@link XProtocol}.

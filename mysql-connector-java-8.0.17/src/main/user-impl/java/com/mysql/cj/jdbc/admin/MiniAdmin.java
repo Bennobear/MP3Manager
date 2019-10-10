@@ -29,14 +29,14 @@
 
 package com.mysql.cj.jdbc.admin;
 
-import java.sql.SQLException;
-import java.util.Properties;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
 import com.mysql.cj.jdbc.Driver;
 import com.mysql.cj.jdbc.JdbcConnection;
 import com.mysql.cj.jdbc.exceptions.SQLError;
+
+import java.sql.SQLException;
+import java.util.Properties;
 
 /**
  * Utility functions for admin functionality from Java.

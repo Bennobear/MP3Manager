@@ -29,11 +29,11 @@
 
 package com.mysql.cj.protocol.a;
 
+import com.mysql.cj.protocol.MessageSender;
+
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.util.zip.Deflater;
-
-import com.mysql.cj.protocol.MessageSender;
 
 /**
  * A {@link MessageSender} for the compressed protocol.

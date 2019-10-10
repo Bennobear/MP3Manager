@@ -29,11 +29,10 @@
 
 package com.mysql.cj.conf;
 
-import java.util.Properties;
+import com.mysql.cj.exceptions.ExceptionInterceptor;
 
 import javax.naming.Reference;
-
-import com.mysql.cj.exceptions.ExceptionInterceptor;
+import java.util.Properties;
 
 public class MemorySizeProperty extends IntegerProperty {
 

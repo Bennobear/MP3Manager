@@ -30,7 +30,6 @@
 package testsuite.regression;
 
 import com.mysql.cj.jdbc.exceptions.SQLError;
-
 import testsuite.BaseTestCase;
 
 public class ExceptionSubclassesTest extends BaseTestCase {

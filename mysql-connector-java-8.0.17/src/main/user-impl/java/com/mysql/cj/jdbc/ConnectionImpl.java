@@ -29,70 +29,34 @@
 
 package com.mysql.cj.jdbc;
 
-import java.io.Serializable;
-import java.lang.ref.WeakReference;
-import java.lang.reflect.InvocationHandler;
-import java.sql.Blob;
-import java.sql.Clob;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
-import java.sql.NClob;
-import java.sql.ResultSet;
-import java.sql.SQLClientInfoException;
-import java.sql.SQLException;
-import java.sql.SQLPermission;
-import java.sql.SQLWarning;
-import java.sql.SQLXML;
-import java.sql.Savepoint;
-import java.sql.Struct;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Random;
-import java.util.Stack;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.Executor;
-import java.util.stream.Collectors;
-
-import com.mysql.cj.CacheAdapter;
-import com.mysql.cj.CacheAdapterFactory;
-import com.mysql.cj.LicenseConfiguration;
-import com.mysql.cj.Messages;
-import com.mysql.cj.NativeSession;
-import com.mysql.cj.NoSubInterceptorWrapper;
-import com.mysql.cj.ParseInfo;
-import com.mysql.cj.PreparedQuery;
-import com.mysql.cj.ServerVersion;
+import com.mysql.cj.*;
 import com.mysql.cj.Session.SessionEventListener;
 import com.mysql.cj.conf.HostInfo;
 import com.mysql.cj.conf.PropertyDefinitions.DatabaseTerm;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.conf.RuntimeProperty;
-import com.mysql.cj.exceptions.CJException;
-import com.mysql.cj.exceptions.ExceptionFactory;
-import com.mysql.cj.exceptions.ExceptionInterceptor;
-import com.mysql.cj.exceptions.ExceptionInterceptorChain;
-import com.mysql.cj.exceptions.MysqlErrorNumbers;
-import com.mysql.cj.exceptions.PasswordExpiredException;
-import com.mysql.cj.exceptions.UnableToConnectException;
+import com.mysql.cj.exceptions.*;
 import com.mysql.cj.interceptors.QueryInterceptor;
 import com.mysql.cj.jdbc.exceptions.SQLError;
 import com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping;
 import com.mysql.cj.jdbc.ha.MultiHostMySQLConnection;
 import com.mysql.cj.jdbc.interceptors.ConnectionLifecycleInterceptor;
-import com.mysql.cj.jdbc.result.CachedResultSetMetaData;
-import com.mysql.cj.jdbc.result.CachedResultSetMetaDataImpl;
-import com.mysql.cj.jdbc.result.ResultSetFactory;
-import com.mysql.cj.jdbc.result.ResultSetInternalMethods;
-import com.mysql.cj.jdbc.result.UpdatableResultSet;
+import com.mysql.cj.jdbc.result.*;
 import com.mysql.cj.log.ProfilerEvent;
 import com.mysql.cj.log.StandardLogger;
 import com.mysql.cj.protocol.SocksProxySocketFactory;
 import com.mysql.cj.util.LRUCache;
 import com.mysql.cj.util.StringUtils;
 import com.mysql.cj.util.Util;
+
+import java.io.Serializable;
+import java.lang.ref.WeakReference;
+import java.lang.reflect.InvocationHandler;
+import java.sql.*;
+import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.Executor;
+import java.util.stream.Collectors;
 
 /**
  * A Connection represents a session with a specific database. Within the context of a Connection, SQL statements are executed and results are returned.

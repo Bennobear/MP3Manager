@@ -29,22 +29,6 @@
 
 package com.mysql.cj.jdbc.result;
 
-import java.io.InputStream;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
-import java.math.BigDecimal;
-import java.sql.Clob;
-import java.sql.JDBCType;
-import java.sql.NClob;
-import java.sql.SQLException;
-import java.sql.SQLType;
-import java.sql.SQLXML;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.MysqlType;
 import com.mysql.cj.conf.PropertyDefinitions.DatabaseTerm;
@@ -65,6 +49,13 @@ import com.mysql.cj.protocol.a.result.ByteArrayRow;
 import com.mysql.cj.result.Field;
 import com.mysql.cj.result.Row;
 import com.mysql.cj.util.StringUtils;
+
+import java.io.InputStream;
+import java.io.Reader;
+import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
+import java.sql.*;
+import java.util.*;
 
 /**
  * A result set that is updatable.

@@ -29,28 +29,6 @@
 
 package com.mysql.cj.jdbc;
 
-import static com.mysql.cj.jdbc.DatabaseMetaData.ProcedureType.FUNCTION;
-import static com.mysql.cj.jdbc.DatabaseMetaData.ProcedureType.PROCEDURE;
-
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.RowIdLifetime;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
-import java.util.SortedMap;
-import java.util.StringTokenizer;
-import java.util.TreeMap;
-import java.util.TreeSet;
-
 import com.mysql.cj.Constants;
 import com.mysql.cj.Messages;
 import com.mysql.cj.MysqlType;
@@ -73,6 +51,12 @@ import com.mysql.cj.result.DefaultColumnDefinition;
 import com.mysql.cj.result.Field;
 import com.mysql.cj.result.Row;
 import com.mysql.cj.util.StringUtils;
+
+import java.sql.*;
+import java.util.*;
+
+import static com.mysql.cj.jdbc.DatabaseMetaData.ProcedureType.FUNCTION;
+import static com.mysql.cj.jdbc.DatabaseMetaData.ProcedureType.PROCEDURE;
 
 /**
  * JDBC Interface to Mysql functions

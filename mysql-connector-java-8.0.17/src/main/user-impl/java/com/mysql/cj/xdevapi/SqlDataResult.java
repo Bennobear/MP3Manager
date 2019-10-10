@@ -29,14 +29,14 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.TimeZone;
-import java.util.function.Supplier;
-
 import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.exceptions.FeatureNotAvailableException;
 import com.mysql.cj.protocol.ColumnDefinition;
 import com.mysql.cj.protocol.x.StatementExecuteOk;
 import com.mysql.cj.result.RowList;
+
+import java.util.TimeZone;
+import java.util.function.Supplier;
 
 /**
  * SQL result with data. Implemented as a thin layer over {@link RowResultImpl}.

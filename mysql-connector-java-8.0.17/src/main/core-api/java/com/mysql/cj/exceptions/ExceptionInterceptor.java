@@ -29,9 +29,9 @@
 
 package com.mysql.cj.exceptions;
 
-import java.util.Properties;
-
 import com.mysql.cj.log.Log;
+
+import java.util.Properties;
 
 public interface ExceptionInterceptor {
 

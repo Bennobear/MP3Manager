@@ -29,9 +29,9 @@
 
 package com.mysql.cj.jdbc.integration.jboss;
 
-import java.sql.SQLException;
-
 import org.jboss.resource.adapter.jdbc.vendor.MySQLExceptionSorter;
+
+import java.sql.SQLException;
 
 /**
  * Exception sorter used for JBoss to make recovery of downed/stale connections work more consistently.

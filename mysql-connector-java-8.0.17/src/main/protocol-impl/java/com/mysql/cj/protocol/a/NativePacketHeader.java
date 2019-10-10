@@ -29,9 +29,9 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.nio.ByteBuffer;
-
 import com.mysql.cj.protocol.MessageHeader;
+
+import java.nio.ByteBuffer;
 
 /**
  * Represents the legacy protocol packet header, consisting of

@@ -29,15 +29,15 @@
 
 package com.mysql.cj.conf;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.PerConnectionLRUFactory;
 import com.mysql.cj.log.Log;
 import com.mysql.cj.log.StandardLogger;
 import com.mysql.cj.util.PerVmServerConfigCacheFactory;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PropertyDefinitions {
     /*

@@ -29,24 +29,6 @@
 
 package testsuite.simple;
 
-import java.lang.reflect.Field;
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Types;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-import java.util.concurrent.Callable;
-import java.util.function.Supplier;
-
 import com.mysql.cj.Query;
 import com.mysql.cj.ServerVersion;
 import com.mysql.cj.conf.PropertyDefinitions;
@@ -56,9 +38,14 @@ import com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema;
 import com.mysql.cj.jdbc.JdbcConnection;
 import com.mysql.cj.protocol.Resultset;
 import com.mysql.cj.util.StringUtils;
-
 import testsuite.BaseQueryInterceptor;
 import testsuite.BaseTestCase;
+
+import java.lang.reflect.Field;
+import java.sql.*;
+import java.util.*;
+import java.util.concurrent.Callable;
+import java.util.function.Supplier;
 
 /**
  * Tests DatabaseMetaData methods.

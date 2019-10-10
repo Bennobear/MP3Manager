@@ -29,8 +29,6 @@
 
 package com.mysql.cj.jdbc.exceptions;
 
-import java.sql.SQLRecoverableException;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.ExceptionFactory;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
@@ -38,6 +36,8 @@ import com.mysql.cj.exceptions.StreamingNotifiable;
 import com.mysql.cj.jdbc.JdbcConnection;
 import com.mysql.cj.protocol.PacketReceivedTimeHolder;
 import com.mysql.cj.protocol.PacketSentTimeHolder;
+
+import java.sql.SQLRecoverableException;
 
 /**
  * An exception to represent communications errors with the database.

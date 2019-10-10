@@ -29,11 +29,11 @@
 
 package testsuite.x;
 
-import java.util.Properties;
-
 import com.mysql.cj.conf.PropertyDefinitions;
 import com.mysql.cj.xdevapi.Session;
 import com.mysql.cj.xdevapi.SessionFactory;
+
+import java.util.Properties;
 
 public abstract class BaseXDevAPITestCase {
     protected String baseUrl = System.getProperty(PropertyDefinitions.SYSP_testsuite_url_mysqlx);

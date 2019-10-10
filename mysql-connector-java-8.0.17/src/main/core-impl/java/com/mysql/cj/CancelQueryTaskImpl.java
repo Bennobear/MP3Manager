@@ -29,14 +29,14 @@
 
 package com.mysql.cj;
 
-import java.util.TimerTask;
-
 import com.mysql.cj.Query.CancelStatus;
 import com.mysql.cj.conf.HostInfo;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.exceptions.OperationCancelledException;
 import com.mysql.cj.protocol.a.NativeMessageBuilder;
 import com.mysql.cj.util.StringUtils;
+
+import java.util.TimerTask;
 
 //TODO should not be protocol-specific
 

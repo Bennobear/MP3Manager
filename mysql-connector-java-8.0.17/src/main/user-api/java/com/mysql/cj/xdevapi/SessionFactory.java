@@ -29,13 +29,13 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.Properties;
-
 import com.mysql.cj.conf.ConnectionUrl;
 import com.mysql.cj.conf.HostInfo;
 import com.mysql.cj.exceptions.CJCommunicationsException;
 import com.mysql.cj.exceptions.ExceptionFactory;
 import com.mysql.cj.exceptions.InvalidConnectionAttributeException;
+
+import java.util.Properties;
 
 /**
  * SessionFactory is used for creation of sessions.

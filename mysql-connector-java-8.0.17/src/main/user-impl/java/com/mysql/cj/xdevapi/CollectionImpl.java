@@ -29,10 +29,6 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.io.IOException;
-import java.io.StringReader;
-import java.util.Map;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.MysqlxSession;
 import com.mysql.cj.exceptions.AssertionFailedException;
@@ -42,6 +38,10 @@ import com.mysql.cj.protocol.x.StatementExecuteOk;
 import com.mysql.cj.protocol.x.XMessage;
 import com.mysql.cj.protocol.x.XMessageBuilder;
 import com.mysql.cj.protocol.x.XProtocolError;
+
+import java.io.IOException;
+import java.io.StringReader;
+import java.util.Map;
 
 public class CollectionImpl implements Collection {
     private MysqlxSession mysqlxSession;

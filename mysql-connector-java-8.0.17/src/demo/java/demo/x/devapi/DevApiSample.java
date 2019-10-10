@@ -29,15 +29,7 @@
 
 package demo.x.devapi;
 
-import com.mysql.cj.xdevapi.Collection;
-import com.mysql.cj.xdevapi.DbDoc;
-import com.mysql.cj.xdevapi.DbDocImpl;
-import com.mysql.cj.xdevapi.DocResult;
-import com.mysql.cj.xdevapi.JsonNumber;
-import com.mysql.cj.xdevapi.JsonString;
-import com.mysql.cj.xdevapi.Schema;
-import com.mysql.cj.xdevapi.Session;
-import com.mysql.cj.xdevapi.SessionFactory;
+import com.mysql.cj.xdevapi.*;
 
 /*
  * Sample program showing how to use Connector/J's Dev API support.

@@ -29,10 +29,10 @@
 
 package com.mysql.cj.protocol.a;
 
+import com.mysql.cj.protocol.MessageSender;
+
 import java.io.BufferedOutputStream;
 import java.io.IOException;
-
-import com.mysql.cj.protocol.MessageSender;
 
 /**
  * Simple implementation of {@link MessageSender} which handles the transmission of logical MySQL packets to the provided output stream. Large packets will be

@@ -29,12 +29,12 @@
 
 package com.mysql.cj;
 
+import com.mysql.cj.result.LongValueFactory;
+import com.mysql.cj.xdevapi.ExprUnparser;
+
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-
-import com.mysql.cj.result.LongValueFactory;
-import com.mysql.cj.xdevapi.ExprUnparser;
 
 public class DataStoreMetadataImpl implements DataStoreMetadata {
 

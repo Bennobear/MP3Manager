@@ -29,18 +29,14 @@
 
 package com.mysql.cj.xdevapi;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import com.mysql.cj.exceptions.WrongArgumentException;
+import org.junit.Test;
 
 import java.io.StringReader;
 import java.math.BigDecimal;
 import java.util.concurrent.Callable;
 
-import org.junit.Test;
-
-import com.mysql.cj.exceptions.WrongArgumentException;
+import static org.junit.Assert.*;
 
 /**
  * DbDoc tests.

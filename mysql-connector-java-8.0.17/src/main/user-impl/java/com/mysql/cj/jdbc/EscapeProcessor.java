@@ -29,16 +29,6 @@
 
 package com.mysql.cj.jdbc;
 
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-import java.util.StringTokenizer;
-import java.util.TimeZone;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.ExceptionInterceptor;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
@@ -46,6 +36,11 @@ import com.mysql.cj.jdbc.exceptions.SQLError;
 import com.mysql.cj.util.EscapeTokenizer;
 import com.mysql.cj.util.StringUtils;
 import com.mysql.cj.util.TimeUtil;
+
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * EscapeProcessor performs all escape code processing as outlined in the JDBC spec by JavaSoft.

@@ -29,21 +29,14 @@
 
 package com.mysql.cj.xdevapi;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar;
+import com.mysql.cj.x.protobuf.MysqlxExpr.*;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar;
-import com.mysql.cj.x.protobuf.MysqlxExpr.Array;
-import com.mysql.cj.x.protobuf.MysqlxExpr.ColumnIdentifier;
-import com.mysql.cj.x.protobuf.MysqlxExpr.DocumentPathItem;
-import com.mysql.cj.x.protobuf.MysqlxExpr.Expr;
-import com.mysql.cj.x.protobuf.MysqlxExpr.FunctionCall;
-import com.mysql.cj.x.protobuf.MysqlxExpr.Identifier;
-import com.mysql.cj.x.protobuf.MysqlxExpr.Object;
-import com.mysql.cj.x.protobuf.MysqlxExpr.Operator;
 
 /**
  * Serializer utility for dealing with X Protocol expression trees.

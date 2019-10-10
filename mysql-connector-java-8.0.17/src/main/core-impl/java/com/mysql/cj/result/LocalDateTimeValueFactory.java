@@ -29,14 +29,14 @@
 
 package com.mysql.cj.result;
 
-import java.time.LocalDateTime;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.exceptions.DataReadException;
 import com.mysql.cj.protocol.InternalDate;
 import com.mysql.cj.protocol.InternalTime;
 import com.mysql.cj.protocol.InternalTimestamp;
+
+import java.time.LocalDateTime;
 
 /**
  * Value factory to create {@link LocalDateTime} instances.

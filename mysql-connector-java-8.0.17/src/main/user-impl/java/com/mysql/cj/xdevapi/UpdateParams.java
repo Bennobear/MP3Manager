@@ -29,11 +29,11 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.mysql.cj.x.protobuf.MysqlxExpr.ColumnIdentifier;
 import com.mysql.cj.x.protobuf.MysqlxExpr.Expr;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Class collecting parameters for {@link Table#update()}.

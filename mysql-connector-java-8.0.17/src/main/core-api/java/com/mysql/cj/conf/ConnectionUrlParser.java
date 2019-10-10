@@ -29,27 +29,23 @@
 
 package com.mysql.cj.conf;
 
-import static com.mysql.cj.util.StringUtils.isNullOrEmpty;
-import static com.mysql.cj.util.StringUtils.safeTrim;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URI;
-import java.net.URLDecoder;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.conf.ConnectionUrl.Type;
 import com.mysql.cj.exceptions.ExceptionFactory;
 import com.mysql.cj.exceptions.UnsupportedConnectionStringException;
 import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.util.StringUtils;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URI;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static com.mysql.cj.util.StringUtils.isNullOrEmpty;
+import static com.mysql.cj.util.StringUtils.safeTrim;
 
 /**
  * This class parses a connection string using the general URI structure defined in RFC 3986. Instead of using a URI instance to ensure the correct syntax of

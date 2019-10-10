@@ -29,12 +29,11 @@
 
 package com.mysql.cj.jdbc;
 
-import java.sql.Connection;
-import java.sql.SQLException;
+import com.mysql.cj.conf.PropertyKey;
 
 import javax.sql.XAConnection;
-
-import com.mysql.cj.conf.PropertyKey;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class MysqlXADataSource extends MysqlDataSource implements javax.sql.XADataSource {
 

@@ -29,12 +29,12 @@
 
 package com.mysql.cj.jdbc.ha;
 
+import com.mysql.cj.jdbc.JdbcConnection;
+
 import java.lang.reflect.InvocationHandler;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
-
-import com.mysql.cj.jdbc.JdbcConnection;
 
 /**
  * Implement this interface to provide a new load balancing strategy for URLs of the form "jdbc:mysql:loadbalance://..", and provide the implementation class

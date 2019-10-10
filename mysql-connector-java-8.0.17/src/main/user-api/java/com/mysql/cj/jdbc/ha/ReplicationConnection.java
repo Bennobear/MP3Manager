@@ -29,9 +29,9 @@
 
 package com.mysql.cj.jdbc.ha;
 
-import java.sql.SQLException;
-
 import com.mysql.cj.jdbc.JdbcConnection;
+
+import java.sql.SQLException;
 
 public interface ReplicationConnection extends JdbcConnection {
     public long getConnectionGroupId();

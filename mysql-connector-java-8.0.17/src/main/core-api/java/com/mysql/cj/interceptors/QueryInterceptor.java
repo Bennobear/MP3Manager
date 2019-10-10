@@ -29,15 +29,15 @@
 
 package com.mysql.cj.interceptors;
 
-import java.util.Properties;
-import java.util.function.Supplier;
-
 import com.mysql.cj.MysqlConnection;
 import com.mysql.cj.Query;
 import com.mysql.cj.log.Log;
 import com.mysql.cj.protocol.Message;
 import com.mysql.cj.protocol.Resultset;
 import com.mysql.cj.protocol.ServerSession;
+
+import java.util.Properties;
+import java.util.function.Supplier;
 
 /**
  * Implement this interface to be placed "in between" query execution, so that you can influence it.

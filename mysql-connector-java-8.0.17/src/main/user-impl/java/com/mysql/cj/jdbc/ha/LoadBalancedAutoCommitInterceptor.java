@@ -29,10 +29,6 @@
 
 package com.mysql.cj.jdbc.ha;
 
-import java.sql.SQLException;
-import java.util.Properties;
-import java.util.function.Supplier;
-
 import com.mysql.cj.MysqlConnection;
 import com.mysql.cj.Query;
 import com.mysql.cj.conf.PropertyKey;
@@ -43,6 +39,10 @@ import com.mysql.cj.log.Log;
 import com.mysql.cj.protocol.Resultset;
 import com.mysql.cj.protocol.ServerSession;
 import com.mysql.cj.util.StringUtils;
+
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.function.Supplier;
 
 public class LoadBalancedAutoCommitInterceptor implements QueryInterceptor {
     private int matchingAfterStatementCount = 0;

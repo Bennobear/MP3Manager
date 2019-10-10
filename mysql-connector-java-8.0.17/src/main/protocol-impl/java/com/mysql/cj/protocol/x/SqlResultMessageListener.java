@@ -29,12 +29,6 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.util.TimeZone;
-import java.util.concurrent.CompletableFuture;
-import java.util.function.BiFunction;
-import java.util.function.Function;
-import java.util.function.Supplier;
-
 import com.google.protobuf.GeneratedMessageV3;
 import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.protocol.ColumnDefinition;
@@ -47,6 +41,12 @@ import com.mysql.cj.x.protobuf.MysqlxResultset.ColumnMetaData;
 import com.mysql.cj.xdevapi.SqlDataResult;
 import com.mysql.cj.xdevapi.SqlResult;
 import com.mysql.cj.xdevapi.SqlUpdateResult;
+
+import java.util.TimeZone;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class SqlResultMessageListener implements MessageListener<XMessage> {
     private static enum ResultType {

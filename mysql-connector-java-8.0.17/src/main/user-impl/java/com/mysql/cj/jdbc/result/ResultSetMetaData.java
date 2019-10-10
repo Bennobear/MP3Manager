@@ -29,19 +29,15 @@
 
 package com.mysql.cj.jdbc.result;
 
-import java.sql.SQLException;
-
-import com.mysql.cj.CharsetMapping;
-import com.mysql.cj.Messages;
-import com.mysql.cj.MysqlType;
-import com.mysql.cj.NativeSession;
-import com.mysql.cj.Session;
+import com.mysql.cj.*;
 import com.mysql.cj.conf.PropertyDefinitions.DatabaseTerm;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.exceptions.ExceptionInterceptor;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
 import com.mysql.cj.jdbc.exceptions.SQLError;
 import com.mysql.cj.result.Field;
+
+import java.sql.SQLException;
 
 /**
  * A ResultSetMetaData object can be used to find out about the types and properties of the columns in a ResultSet

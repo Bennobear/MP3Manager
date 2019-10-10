@@ -29,15 +29,15 @@
 
 package com.mysql.cj.protocol;
 
+import com.mysql.cj.conf.PropertySet;
+import com.mysql.cj.exceptions.CJCommunicationsException;
+
 import java.io.Closeable;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.channels.AsynchronousSocketChannel;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
-
-import com.mysql.cj.conf.PropertySet;
-import com.mysql.cj.exceptions.CJCommunicationsException;
 
 public class AsyncSocketFactory implements SocketFactory {
 

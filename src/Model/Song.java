@@ -1,5 +1,6 @@
 package Model;
 
+/* Song Object Class*/
 public class Song {
 
     private String artist;
@@ -20,22 +21,6 @@ public class Song {
         this.path = path;
     }
 
-    public void setArtist(String artist) {
-        this.artist = artist;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
-    }
-
-    public void setAlbum(String album) {
-        this.album = album;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getPath() {
         return path;
     }
@@ -48,16 +33,32 @@ public class Song {
         return artist;
     }
 
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
     public String getYear() {
         return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
     }
 
     public String getAlbum() {
         return album;
     }
 
+    public void setAlbum(String album) {
+        this.album = album;
+    }
+
     public String getTitle() {
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     @Override

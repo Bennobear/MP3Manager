@@ -29,9 +29,14 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import com.mysql.cj.ServerVersion;
+import com.mysql.cj.exceptions.WrongArgumentException;
+import com.mysql.cj.protocol.x.XProtocolError;
+import com.mysql.cj.xdevapi.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -40,21 +45,7 @@ import java.util.Map;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
-
-import com.mysql.cj.ServerVersion;
-import com.mysql.cj.exceptions.WrongArgumentException;
-import com.mysql.cj.protocol.x.XProtocolError;
-import com.mysql.cj.xdevapi.AddResult;
-import com.mysql.cj.xdevapi.DbDoc;
-import com.mysql.cj.xdevapi.DocResult;
-import com.mysql.cj.xdevapi.JsonNumber;
-import com.mysql.cj.xdevapi.JsonString;
-import com.mysql.cj.xdevapi.Result;
-import com.mysql.cj.xdevapi.XDevAPIError;
+import static org.junit.Assert.*;
 
 public class CollectionAddTest extends BaseCollectionTestCase {
     @Before

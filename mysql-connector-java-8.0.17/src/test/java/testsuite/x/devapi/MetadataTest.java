@@ -29,19 +29,18 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.assertEquals;
-
-import java.util.List;
-
-import org.junit.Before;
-import org.junit.Test;
-
 import com.mysql.cj.ServerVersion;
 import com.mysql.cj.x.protobuf.MysqlxResultset.ColumnMetaData;
 import com.mysql.cj.xdevapi.Column;
 import com.mysql.cj.xdevapi.RowResult;
 import com.mysql.cj.xdevapi.Table;
 import com.mysql.cj.xdevapi.Type;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Tests for "Column" table metadata API.

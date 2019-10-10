@@ -29,19 +29,16 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.util.concurrent.Callable;
-
+import com.mysql.cj.ServerVersion;
+import com.mysql.cj.xdevapi.Collection;
+import com.mysql.cj.xdevapi.XDevAPIError;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.mysql.cj.ServerVersion;
-import com.mysql.cj.xdevapi.Collection;
-import com.mysql.cj.xdevapi.XDevAPIError;
+import java.util.concurrent.Callable;
+
+import static org.junit.Assert.*;
 
 public class TransactionTest extends DevApiBaseTestCase {
     protected Collection collection;

@@ -29,11 +29,11 @@
 
 package com.mysql.cj.result;
 
+import com.mysql.cj.conf.PropertySet;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
-
-import com.mysql.cj.conf.PropertySet;
 
 /**
  * A value factory for creating {@link java.math.BigDecimal} values.

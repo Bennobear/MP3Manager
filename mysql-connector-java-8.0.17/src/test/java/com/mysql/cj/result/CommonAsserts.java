@@ -29,9 +29,9 @@
 
 package com.mysql.cj.result;
 
-import static org.junit.Assert.fail;
-
 import java.util.concurrent.Callable;
+
+import static org.junit.Assert.fail;
 
 public class CommonAsserts {
 

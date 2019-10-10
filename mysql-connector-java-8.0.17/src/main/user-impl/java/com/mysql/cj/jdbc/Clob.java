@@ -29,24 +29,15 @@
 
 package com.mysql.cj.jdbc;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.Reader;
-import java.io.StringReader;
-import java.io.Writer;
-import java.sql.SQLException;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.ExceptionInterceptor;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
 import com.mysql.cj.jdbc.exceptions.SQLError;
-import com.mysql.cj.protocol.OutputStreamWatcher;
-import com.mysql.cj.protocol.WatchableOutputStream;
-import com.mysql.cj.protocol.WatchableStream;
-import com.mysql.cj.protocol.WatchableWriter;
-import com.mysql.cj.protocol.WriterWatcher;
+import com.mysql.cj.protocol.*;
 import com.mysql.cj.util.StringUtils;
+
+import java.io.*;
+import java.sql.SQLException;
 
 /**
  * Simplistic implementation of java.sql.Clob for MySQL Connector/J

@@ -29,37 +29,19 @@
 
 package com.mysql.cj;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotSame;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import com.mysql.cj.conf.*;
+import com.mysql.cj.conf.PropertyDefinitions.ZeroDatetimeBehavior;
+import com.mysql.cj.exceptions.WrongArgumentException;
+import org.junit.Ignore;
+import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.NoSuchElementException;
-import java.util.Properties;
 
-import org.junit.Ignore;
-import org.junit.Test;
-
-import com.mysql.cj.conf.ConnectionPropertiesTransform;
-import com.mysql.cj.conf.ConnectionUrl;
-import com.mysql.cj.conf.ConnectionUrlParser;
-import com.mysql.cj.conf.HostInfo;
-import com.mysql.cj.conf.PropertyDefinitions.ZeroDatetimeBehavior;
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.exceptions.WrongArgumentException;
+import static org.junit.Assert.*;
 
 public class ConnectionUrlTest {
     /**

@@ -29,6 +29,12 @@
 
 package com.mysql.cj.xdevapi;
 
+import com.mysql.cj.MysqlxSession;
+import com.mysql.cj.exceptions.AssertionFailedException;
+import com.mysql.cj.protocol.x.StatementExecuteOk;
+import com.mysql.cj.protocol.x.XMessage;
+import com.mysql.cj.protocol.x.XMessageBuilder;
+
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
@@ -37,12 +43,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
-
-import com.mysql.cj.MysqlxSession;
-import com.mysql.cj.exceptions.AssertionFailedException;
-import com.mysql.cj.protocol.x.StatementExecuteOk;
-import com.mysql.cj.protocol.x.XMessage;
-import com.mysql.cj.protocol.x.XMessageBuilder;
 
 public class AddStatementImpl implements AddStatement {
     private MysqlxSession mysqlxSession;

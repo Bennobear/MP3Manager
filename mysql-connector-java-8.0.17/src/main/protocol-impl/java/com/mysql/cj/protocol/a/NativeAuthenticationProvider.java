@@ -29,13 +29,6 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-
 import com.mysql.cj.Constants;
 import com.mysql.cj.Messages;
 import com.mysql.cj.conf.PropertyDefinitions.SslMode;
@@ -53,13 +46,11 @@ import com.mysql.cj.protocol.ServerSession;
 import com.mysql.cj.protocol.a.NativeConstants.IntegerDataType;
 import com.mysql.cj.protocol.a.NativeConstants.StringLengthDataType;
 import com.mysql.cj.protocol.a.NativeConstants.StringSelfDataType;
-import com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin;
-import com.mysql.cj.protocol.a.authentication.MysqlClearPasswordPlugin;
-import com.mysql.cj.protocol.a.authentication.MysqlNativePasswordPlugin;
-import com.mysql.cj.protocol.a.authentication.MysqlOldPasswordPlugin;
-import com.mysql.cj.protocol.a.authentication.Sha256PasswordPlugin;
+import com.mysql.cj.protocol.a.authentication.*;
 import com.mysql.cj.protocol.a.result.OkPacket;
 import com.mysql.cj.util.StringUtils;
+
+import java.util.*;
 
 public class NativeAuthenticationProvider implements AuthenticationProvider<NativePacketPayload> {
 

@@ -29,9 +29,6 @@
 
 package com.mysql.cj;
 
-import java.io.IOException;
-import java.io.InputStream;
-
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.conf.RuntimeProperty;
 import com.mysql.cj.exceptions.ExceptionFactory;
@@ -43,6 +40,9 @@ import com.mysql.cj.protocol.a.NativeConstants.StringLengthDataType;
 import com.mysql.cj.protocol.a.NativePacketPayload;
 import com.mysql.cj.util.StringUtils;
 import com.mysql.cj.util.Util;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 // TODO should not be protocol-specific
 public abstract class AbstractPreparedQuery<T extends QueryBindings<?>> extends AbstractQuery implements PreparedQuery<T> {

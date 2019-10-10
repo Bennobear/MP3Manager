@@ -29,13 +29,12 @@
 
 package testsuite.simple;
 
+import com.mysql.cj.jdbc.exceptions.NotUpdatable;
+import testsuite.BaseTestCase;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import com.mysql.cj.jdbc.exceptions.NotUpdatable;
-
-import testsuite.BaseTestCase;
 
 /**
  * Tests for updatable result sets

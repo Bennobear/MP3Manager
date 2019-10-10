@@ -29,12 +29,11 @@
 
 package testsuite.regression;
 
-import java.lang.reflect.Method;
-import java.sql.ResultSet;
+import testsuite.BaseTestCase;
 
 import javax.sql.RowSet;
-
-import testsuite.BaseTestCase;
+import java.lang.reflect.Method;
+import java.sql.ResultSet;
 
 /**
  * Regression test cases for the ResultSet class.

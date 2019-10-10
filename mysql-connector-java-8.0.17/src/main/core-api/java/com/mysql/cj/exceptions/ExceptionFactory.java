@@ -29,8 +29,6 @@
 
 package com.mysql.cj.exceptions;
 
-import java.net.BindException;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.conf.PropertySet;
@@ -38,6 +36,8 @@ import com.mysql.cj.protocol.PacketReceivedTimeHolder;
 import com.mysql.cj.protocol.PacketSentTimeHolder;
 import com.mysql.cj.protocol.ServerSession;
 import com.mysql.cj.util.Util;
+
+import java.net.BindException;
 
 public class ExceptionFactory {
 

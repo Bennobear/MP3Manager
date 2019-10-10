@@ -29,11 +29,11 @@
 
 package com.mysql.cj.jdbc.util;
 
+import com.mysql.cj.jdbc.Driver;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
-
-import com.mysql.cj.jdbc.Driver;
 
 /**
  * Base class to help file bug reports for Connector/J.

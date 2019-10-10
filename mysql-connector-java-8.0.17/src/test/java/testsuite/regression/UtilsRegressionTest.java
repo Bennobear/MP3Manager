@@ -29,19 +29,18 @@
 
 package testsuite.regression;
 
-import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
-import java.util.TimeZone;
-
 import com.mysql.cj.exceptions.CJException;
 import com.mysql.cj.exceptions.ExceptionInterceptor;
 import com.mysql.cj.jdbc.exceptions.SQLError;
 import com.mysql.cj.log.Log;
 import com.mysql.cj.util.TimeUtil;
-
 import testsuite.BaseTestCase;
+
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+import java.util.TimeZone;
 
 /**
  * Regression tests for utility classes.

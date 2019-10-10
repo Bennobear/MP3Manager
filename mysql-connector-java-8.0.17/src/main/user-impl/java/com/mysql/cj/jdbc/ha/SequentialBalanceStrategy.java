@@ -29,13 +29,13 @@
 
 package com.mysql.cj.jdbc.ha;
 
+import com.mysql.cj.jdbc.ConnectionImpl;
+import com.mysql.cj.jdbc.JdbcConnection;
+
 import java.lang.reflect.InvocationHandler;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
-
-import com.mysql.cj.jdbc.ConnectionImpl;
-import com.mysql.cj.jdbc.JdbcConnection;
 
 /**
  * A balancing strategy that starts at a random point, and then advances in the list (wrapping around) for each new pickConnection() call.

@@ -29,14 +29,14 @@
 
 package com.mysql.jdbc;
 
-import java.io.Closeable;
-import java.io.IOException;
-
 import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.protocol.ServerSession;
 import com.mysql.cj.protocol.SocketConnection;
 import com.mysql.cj.protocol.SocketFactory;
 import com.mysql.cj.protocol.StandardSocketFactory;
+
+import java.io.Closeable;
+import java.io.IOException;
 
 /**
  * Wraps the legacy com.mysql.jdbc.SocketFactory implementations so they can be used as {@link SocketFactory}

@@ -31,7 +31,6 @@ package testsuite.simple;
 
 import com.mysql.cj.admin.ServerController;
 import com.mysql.cj.conf.PropertyDefinitions;
-
 import testsuite.BaseTestCase;
 
 /**

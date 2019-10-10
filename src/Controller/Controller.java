@@ -24,9 +24,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable{
+/* Main Working Class */
+
+public class Controller implements Initializable {
+    /* Get Dao access & the Mediaplayer ready */
     ConnectionDAO dao = new ConnectionDAO();
     MediaPlayer mediaPlayer;
+
     /* MainMenu */
     @FXML
     Button btnInput;
@@ -53,16 +57,18 @@ public class Controller implements Initializable{
     @FXML
     Button btnBack;
 
+    /* Refreshes the ListView everytime the Window changes */
     @Override
-    public void initialize(URL location, ResourceBundle resources){
+    public void initialize(URL location, ResourceBundle resources) {
         listSongs.getItems().addAll(dao.findAll());
     }
 
+    /* Play the selected Song with the push of a Button */
     @FXML
-    private void playMusic(){
+    private void playMusic() {
         String path = listSongs.getSelectionModel().getSelectedItem().getPath();
         Media hit = new Media(new File(path).toURI().toString());
-        if (mediaPlayer != null){
+        if (mediaPlayer != null) {
             mediaPlayer.stop();
             mediaPlayer = new MediaPlayer(hit);
             mediaPlayer.play();
@@ -72,25 +78,27 @@ public class Controller implements Initializable{
         }
     }
 
+    /* Pause or Resume the Song (Resumes at the right time) */
     @FXML
-    private void pauseMusic(){
+    private void pauseMusic() {
         MediaPlayer.Status currentStatus = mediaPlayer.getStatus();
 
-        if(currentStatus == MediaPlayer.Status.PLAYING)
+        if (currentStatus == MediaPlayer.Status.PLAYING)
             mediaPlayer.pause();
-        else if(currentStatus == MediaPlayer.Status.PAUSED || currentStatus == MediaPlayer.Status.STOPPED) {
+        else if (currentStatus == MediaPlayer.Status.PAUSED || currentStatus == MediaPlayer.Status.STOPPED) {
             System.out.println("Player will start at: " + mediaPlayer.getCurrentTime());
             mediaPlayer.play();
         }
         mediaPlayer.setOnPaused(() -> System.out.println("Paused at: " + mediaPlayer.getCurrentTime()));
     }
 
+    /* Change Scene to Input */
     @FXML
     private void openInput() {
         try {
             Stage oldStage = (Stage) btnInput.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/Input.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
+            Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("MP3 Depot - Input");
             stage.setScene(new Scene(root1, 600, 450));
@@ -102,12 +110,13 @@ public class Controller implements Initializable{
         }
     }
 
+    /* Change Scene to Output */
     @FXML
     private void openOutput() {
         try {
             Stage oldStage = (Stage) btnOutput.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/Output.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
+            Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("MP3 Depot - Output");
             stage.setScene(new Scene(root1, 600, 450));
@@ -119,6 +128,7 @@ public class Controller implements Initializable{
         }
     }
 
+    /* Searches the path the user wrote in the textField for any MP3s if they have MetaData they'll be added to the Database */
     @FXML
     private void searchD() throws InvalidDataException, IOException, UnsupportedTagException {
 
@@ -131,25 +141,26 @@ public class Controller implements Initializable{
                 Mp3File mp3file = new Mp3File(folder + "\\" + file.getName());
                 if (mp3file.hasId3v1Tag()) {
                     ID3v1 id3v1Tag = mp3file.getId3v1Tag();
-                    dao.add(id3v1Tag.getYear(), id3v1Tag.getArtist(), id3v1Tag.getAlbum(), id3v1Tag.getTitle(), folder + "\\"+ file.getName());
+                    dao.add(id3v1Tag.getYear(), id3v1Tag.getArtist(), id3v1Tag.getAlbum(), id3v1Tag.getTitle(), folder + "\\" + file.getName());
                 } else System.out.println("No Metadata");
             }
         }
     }
 
+    /* Change Scene to MainMenu */
     @FXML
     private void getBack() {
         try {
             Stage oldStage = (Stage) btnBack.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/MainMenu.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
+            Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("MP3 Depot - Main Menu");
             stage.setScene(new Scene(root1, 600, 450));
             stage.getIcons().add(new Image("/View/music.png"));
             oldStage.hide();
             stage.show();
-            if (mediaPlayer != null){
+            if (mediaPlayer != null) {
                 mediaPlayer.stop();
             }
         } catch (Exception e) {

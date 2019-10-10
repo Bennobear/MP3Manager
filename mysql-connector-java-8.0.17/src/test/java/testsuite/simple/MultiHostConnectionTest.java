@@ -29,6 +29,12 @@
 
 package testsuite.simple;
 
+import com.mysql.cj.conf.PropertyDefinitions.DatabaseTerm;
+import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.jdbc.JdbcConnection;
+import testsuite.BaseTestCase;
+import testsuite.UnreliableSocketFactory;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,13 +44,6 @@ import java.util.HashSet;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.Callable;
-
-import com.mysql.cj.conf.PropertyDefinitions.DatabaseTerm;
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.jdbc.JdbcConnection;
-
-import testsuite.BaseTestCase;
-import testsuite.UnreliableSocketFactory;
 
 public class MultiHostConnectionTest extends BaseTestCase {
     private static final String HOST_1 = "host1";

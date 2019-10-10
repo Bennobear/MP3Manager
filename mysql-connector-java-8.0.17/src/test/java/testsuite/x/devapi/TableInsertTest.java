@@ -29,24 +29,16 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+import com.mysql.cj.xdevapi.*;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Test;
-
-import com.mysql.cj.xdevapi.DbDoc;
-import com.mysql.cj.xdevapi.DbDocImpl;
-import com.mysql.cj.xdevapi.InsertResult;
-import com.mysql.cj.xdevapi.JsonParser;
-import com.mysql.cj.xdevapi.JsonString;
-import com.mysql.cj.xdevapi.Row;
-import com.mysql.cj.xdevapi.RowResult;
-import com.mysql.cj.xdevapi.Table;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 /**
  * @todo

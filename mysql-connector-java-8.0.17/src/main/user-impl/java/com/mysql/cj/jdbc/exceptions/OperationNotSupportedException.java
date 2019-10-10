@@ -29,10 +29,10 @@
 
 package com.mysql.cj.jdbc.exceptions;
 
-import java.sql.SQLException;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
+
+import java.sql.SQLException;
 
 public class OperationNotSupportedException extends SQLException {
 

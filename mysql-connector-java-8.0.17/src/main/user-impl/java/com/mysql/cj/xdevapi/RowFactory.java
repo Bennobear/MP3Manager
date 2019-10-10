@@ -29,13 +29,13 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.TimeZone;
-
 import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.protocol.ColumnDefinition;
 import com.mysql.cj.protocol.ProtocolEntity;
 import com.mysql.cj.protocol.ProtocolEntityFactory;
 import com.mysql.cj.protocol.x.XMessage;
+
+import java.util.TimeZone;
 
 /**
  * Create {@link Row} objects from internal row representation.

@@ -29,12 +29,12 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.util.Collections;
-import java.util.List;
-
 import com.mysql.cj.QueryResult;
 import com.mysql.cj.protocol.ProtocolEntity;
 import com.mysql.cj.protocol.Warning;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * The returned information from a successfully executed statement. All fields are optional and may be <i>null</i>.

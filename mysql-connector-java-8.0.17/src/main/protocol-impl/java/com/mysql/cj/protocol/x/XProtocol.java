@@ -29,62 +29,12 @@
 
 package com.mysql.cj.protocol.x;
 
-import static java.util.stream.Collectors.toMap;
-
-import java.io.Closeable;
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.ref.Reference;
-import java.lang.ref.ReferenceQueue;
-import java.nio.channels.CompletionHandler;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.concurrent.CompletableFuture;
-
-import com.mysql.cj.CharsetMapping;
-import com.mysql.cj.Constants;
-import com.mysql.cj.Messages;
-import com.mysql.cj.QueryResult;
-import com.mysql.cj.Session;
-import com.mysql.cj.TransactionEventHandler;
-import com.mysql.cj.conf.HostInfo;
-import com.mysql.cj.conf.PropertyDefinitions;
+import com.mysql.cj.*;
+import com.mysql.cj.conf.*;
 import com.mysql.cj.conf.PropertyDefinitions.SslMode;
 import com.mysql.cj.conf.PropertyDefinitions.XdevapiSslMode;
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.conf.PropertySet;
-import com.mysql.cj.conf.RuntimeProperty;
-import com.mysql.cj.exceptions.AssertionFailedException;
-import com.mysql.cj.exceptions.CJCommunicationsException;
-import com.mysql.cj.exceptions.CJConnectionFeatureNotAvailableException;
-import com.mysql.cj.exceptions.CJOperationNotSupportedException;
-import com.mysql.cj.exceptions.ConnectionIsClosedException;
-import com.mysql.cj.exceptions.ExceptionFactory;
-import com.mysql.cj.exceptions.ExceptionInterceptor;
-import com.mysql.cj.exceptions.FeatureNotAvailableException;
-import com.mysql.cj.exceptions.MysqlErrorNumbers;
-import com.mysql.cj.exceptions.SSLParamsException;
-import com.mysql.cj.exceptions.WrongArgumentException;
-import com.mysql.cj.protocol.AbstractProtocol;
-import com.mysql.cj.protocol.ColumnDefinition;
-import com.mysql.cj.protocol.ExportControlled;
-import com.mysql.cj.protocol.Message;
-import com.mysql.cj.protocol.MessageListener;
-import com.mysql.cj.protocol.MessageReader;
-import com.mysql.cj.protocol.MessageSender;
-import com.mysql.cj.protocol.Protocol;
-import com.mysql.cj.protocol.ProtocolEntity;
-import com.mysql.cj.protocol.ProtocolEntityFactory;
-import com.mysql.cj.protocol.ResultListener;
-import com.mysql.cj.protocol.ResultStreamer;
-import com.mysql.cj.protocol.Resultset;
-import com.mysql.cj.protocol.ServerCapabilities;
-import com.mysql.cj.protocol.ServerSession;
-import com.mysql.cj.protocol.SocketConnection;
+import com.mysql.cj.exceptions.*;
+import com.mysql.cj.protocol.*;
 import com.mysql.cj.protocol.a.NativeSocketConnection;
 import com.mysql.cj.protocol.x.Notice.XSessionStateChanged;
 import com.mysql.cj.result.DefaultColumnDefinition;
@@ -102,6 +52,17 @@ import com.mysql.cj.xdevapi.FilterParams;
 import com.mysql.cj.xdevapi.PreparableStatement;
 import com.mysql.cj.xdevapi.PreparableStatement.PreparableStatementFinalizer;
 import com.mysql.cj.xdevapi.SqlResult;
+
+import java.io.Closeable;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.ref.Reference;
+import java.lang.ref.ReferenceQueue;
+import java.nio.channels.CompletionHandler;
+import java.util.*;
+import java.util.concurrent.CompletableFuture;
+
+import static java.util.stream.Collectors.toMap;
 
 /**
  * Low-level interface to communications with X Plugin.

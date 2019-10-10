@@ -29,16 +29,10 @@
 
 package testsuite.simple;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.sql.Connection;
-
 import testsuite.BaseTestCase;
+
+import java.io.*;
+import java.sql.Connection;
 
 /**
  * Tests BLOB functionality in the driver.

@@ -29,9 +29,9 @@
 
 package com.mysql.cj.jdbc.exceptions;
 
-import java.sql.SQLNonTransientException;
-
 import com.mysql.cj.Messages;
+
+import java.sql.SQLNonTransientException;
 
 public class MySQLStatementCancelledException extends SQLNonTransientException {
 

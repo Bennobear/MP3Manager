@@ -29,10 +29,10 @@
 
 package com.mysql.cj.xdevapi;
 
+import com.mysql.cj.protocol.x.StatementExecuteOk;
+
 import java.util.Iterator;
 import java.util.stream.Collectors;
-
-import com.mysql.cj.protocol.x.StatementExecuteOk;
 
 /**
  * A result from a statement that doesn't return a set of rows.

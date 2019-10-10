@@ -29,14 +29,6 @@
 
 package com.mysql.cj.result;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-
-import java.util.concurrent.Callable;
-
-import org.junit.Test;
-
 import com.mysql.cj.Constants;
 import com.mysql.cj.MysqlType;
 import com.mysql.cj.conf.DefaultPropertySet;
@@ -46,6 +38,11 @@ import com.mysql.cj.exceptions.DataConversionException;
 import com.mysql.cj.protocol.InternalDate;
 import com.mysql.cj.protocol.InternalTime;
 import com.mysql.cj.protocol.InternalTimestamp;
+import org.junit.Test;
+
+import java.util.concurrent.Callable;
+
+import static org.junit.Assert.*;
 
 /**
  * Tests for {@link BooleanValueFactory}

@@ -29,23 +29,18 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.io.IOException;
-import java.util.ArrayList;
-
 import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.protocol.ColumnDefinition;
-import com.mysql.cj.protocol.ProtocolEntityFactory;
-import com.mysql.cj.protocol.ProtocolEntityReader;
-import com.mysql.cj.protocol.Resultset;
+import com.mysql.cj.protocol.*;
 import com.mysql.cj.protocol.Resultset.Type;
-import com.mysql.cj.protocol.ResultsetRow;
-import com.mysql.cj.protocol.ResultsetRows;
 import com.mysql.cj.protocol.a.NativeConstants.IntegerDataType;
 import com.mysql.cj.protocol.a.NativeConstants.StringSelfDataType;
 import com.mysql.cj.protocol.a.result.OkPacket;
 import com.mysql.cj.protocol.a.result.ResultsetRowsCursor;
 import com.mysql.cj.protocol.a.result.ResultsetRowsStatic;
 import com.mysql.cj.protocol.a.result.ResultsetRowsStreaming;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class BinaryResultsetReader implements ProtocolEntityReader<Resultset, NativePacketPayload> {
 

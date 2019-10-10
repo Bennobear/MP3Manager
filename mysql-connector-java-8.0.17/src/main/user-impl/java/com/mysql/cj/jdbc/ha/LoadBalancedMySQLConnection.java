@@ -29,11 +29,11 @@
 
 package com.mysql.cj.jdbc.ha;
 
-import java.sql.SQLException;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
 import com.mysql.cj.jdbc.exceptions.SQLError;
+
+import java.sql.SQLException;
 
 public class LoadBalancedMySQLConnection extends MultiHostMySQLConnection implements LoadBalancedConnection {
     public LoadBalancedMySQLConnection(LoadBalancedConnectionProxy proxy) {

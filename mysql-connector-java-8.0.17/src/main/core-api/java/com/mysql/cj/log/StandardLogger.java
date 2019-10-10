@@ -29,10 +29,10 @@
 
 package com.mysql.cj.log;
 
-import java.util.Date;
-
 import com.mysql.cj.util.LogUtils;
 import com.mysql.cj.util.Util;
+
+import java.util.Date;
 
 /**
  * Provides logging facilities for those platforms that don't have built-in facilities. Simply logs messages to STDERR.

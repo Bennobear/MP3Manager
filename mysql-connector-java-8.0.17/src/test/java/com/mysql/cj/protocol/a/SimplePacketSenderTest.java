@@ -29,14 +29,14 @@
 
 package com.mysql.cj.protocol.a;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.After;
+import org.junit.Test;
 
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import org.junit.After;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Tests for simple/direct packet sender.

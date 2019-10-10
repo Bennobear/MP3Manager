@@ -29,10 +29,6 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TimeZone;
-
 import com.mysql.cj.CharsetMapping;
 import com.mysql.cj.Messages;
 import com.mysql.cj.ServerVersion;
@@ -43,6 +39,10 @@ import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.protocol.ServerCapabilities;
 import com.mysql.cj.protocol.ServerSession;
 import com.mysql.cj.util.StringUtils;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TimeZone;
 
 public class NativeServerSession implements ServerSession {
 

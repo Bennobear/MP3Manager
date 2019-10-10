@@ -29,34 +29,15 @@
 
 package testsuite.x.devapi;
 
-import static com.mysql.cj.xdevapi.Expression.expr;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import com.mysql.cj.ServerVersion;
+import com.mysql.cj.xdevapi.*;
+import org.junit.Test;
 
 import java.io.StringReader;
 import java.util.concurrent.Callable;
 
-import org.junit.Test;
-
-import com.mysql.cj.ServerVersion;
-import com.mysql.cj.xdevapi.AddResult;
-import com.mysql.cj.xdevapi.Collection;
-import com.mysql.cj.xdevapi.DbDoc;
-import com.mysql.cj.xdevapi.DbDocImpl;
-import com.mysql.cj.xdevapi.DocResult;
-import com.mysql.cj.xdevapi.JsonArray;
-import com.mysql.cj.xdevapi.JsonNumber;
-import com.mysql.cj.xdevapi.JsonParser;
-import com.mysql.cj.xdevapi.JsonString;
-import com.mysql.cj.xdevapi.ModifyStatement;
-import com.mysql.cj.xdevapi.ModifyStatementImpl;
-import com.mysql.cj.xdevapi.Result;
-import com.mysql.cj.xdevapi.Session;
-import com.mysql.cj.xdevapi.SessionFactory;
-import com.mysql.cj.xdevapi.XDevAPIError;
+import static com.mysql.cj.xdevapi.Expression.expr;
+import static org.junit.Assert.*;
 
 /**
  * @todo

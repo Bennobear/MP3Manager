@@ -29,23 +29,16 @@
 
 package testsuite.x;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import com.mysql.cj.conf.ConnectionUrl;
+import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.xdevapi.*;
+import org.junit.Ignore;
+import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Properties;
 
-import org.junit.Ignore;
-import org.junit.Test;
-
-import com.mysql.cj.conf.ConnectionUrl;
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.xdevapi.Collection;
-import com.mysql.cj.xdevapi.Schema;
-import com.mysql.cj.xdevapi.Session;
-import com.mysql.cj.xdevapi.SessionImpl;
-import com.mysql.cj.xdevapi.Table;
+import static org.junit.Assert.*;
 
 /**
  * Tests for X DevAPI requirements.

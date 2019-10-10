@@ -29,22 +29,6 @@
 
 package testsuite.x.internal;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
 import com.mysql.cj.MysqlxSession;
 import com.mysql.cj.conf.DefaultPropertySet;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
@@ -59,6 +43,19 @@ import com.mysql.cj.xdevapi.DatabaseObject.DbObjectType;
 import com.mysql.cj.xdevapi.DocFilterParams;
 import com.mysql.cj.xdevapi.DocResultImpl;
 import com.mysql.cj.xdevapi.FilterParams;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+import static org.junit.Assert.*;
 
 /**
  * Tests for (internal) session-level APIs against X Plugin via X Protocol.

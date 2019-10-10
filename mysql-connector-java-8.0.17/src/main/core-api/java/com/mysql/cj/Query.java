@@ -29,12 +29,12 @@
 
 package com.mysql.cj;
 
-import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
-
 import com.mysql.cj.protocol.Message;
 import com.mysql.cj.protocol.ProtocolEntityFactory;
 import com.mysql.cj.protocol.Resultset;
+
+import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public interface Query {
 

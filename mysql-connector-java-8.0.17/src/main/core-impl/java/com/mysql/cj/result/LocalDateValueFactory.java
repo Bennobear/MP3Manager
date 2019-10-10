@@ -29,8 +29,6 @@
 
 package com.mysql.cj.result;
 
-import java.time.LocalDate;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.WarningListener;
 import com.mysql.cj.conf.PropertySet;
@@ -38,6 +36,8 @@ import com.mysql.cj.exceptions.DataReadException;
 import com.mysql.cj.protocol.InternalDate;
 import com.mysql.cj.protocol.InternalTime;
 import com.mysql.cj.protocol.InternalTimestamp;
+
+import java.time.LocalDate;
 
 /**
  * A value factory for creating {@link LocalDate} values.

@@ -29,8 +29,6 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.io.UnsupportedEncodingException;
-
 import com.mysql.cj.CharsetMapping;
 import com.mysql.cj.MysqlType;
 import com.mysql.cj.exceptions.WrongArgumentException;
@@ -39,6 +37,8 @@ import com.mysql.cj.result.Field;
 import com.mysql.cj.util.LazyString;
 import com.mysql.cj.x.protobuf.MysqlxResultset.ColumnMetaData;
 import com.mysql.cj.x.protobuf.MysqlxResultset.ColumnMetaData.FieldType;
+
+import java.io.UnsupportedEncodingException;
 
 public class FieldFactory implements ProtocolEntityFactory<Field, XMessage> {
 

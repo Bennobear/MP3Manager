@@ -29,11 +29,10 @@
 
 package com.mysql.cj.result;
 
-import static org.junit.Assert.assertEquals;
-
+import com.mysql.cj.conf.DefaultPropertySet;
 import org.junit.Test;
 
-import com.mysql.cj.conf.DefaultPropertySet;
+import static org.junit.Assert.assertEquals;
 
 public class BinaryStreamValueFactoryTest extends CommonAsserts {
 

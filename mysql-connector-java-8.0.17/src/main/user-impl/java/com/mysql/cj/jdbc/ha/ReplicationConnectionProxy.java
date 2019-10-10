@@ -29,14 +29,6 @@
 
 package com.mysql.cj.jdbc.ha;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
-import java.util.concurrent.Executor;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.PingTarget;
 import com.mysql.cj.conf.HostInfo;
@@ -47,6 +39,14 @@ import com.mysql.cj.exceptions.MysqlErrorNumbers;
 import com.mysql.cj.jdbc.JdbcConnection;
 import com.mysql.cj.jdbc.JdbcStatement;
 import com.mysql.cj.jdbc.exceptions.SQLError;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+import java.util.concurrent.Executor;
 
 /**
  * Connection that opens two connections, one two a replication master, and another to one or more slaves, and decides to use master when the connection is not

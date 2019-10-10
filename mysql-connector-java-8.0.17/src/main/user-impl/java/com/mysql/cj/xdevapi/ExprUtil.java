@@ -29,14 +29,6 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.sql.Date;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.stream.Collectors;
-
 import com.google.protobuf.ByteString;
 import com.mysql.cj.exceptions.FeatureNotAvailableException;
 import com.mysql.cj.exceptions.WrongArgumentException;
@@ -46,6 +38,14 @@ import com.mysql.cj.x.protobuf.MysqlxDatatypes.Any;
 import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar;
 import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar.Octets;
 import com.mysql.cj.x.protobuf.MysqlxExpr.Expr;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.sql.Date;
+import java.sql.Time;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.stream.Collectors;
 
 /**
  * Utilities to deal with Expr (and related) structures.

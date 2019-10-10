@@ -29,28 +29,15 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.function.Supplier;
-
 import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.x.protobuf.MysqlxCrud.Column;
 import com.mysql.cj.x.protobuf.MysqlxCrud.Order;
 import com.mysql.cj.x.protobuf.MysqlxCrud.Projection;
-import com.mysql.cj.x.protobuf.MysqlxExpr.Array;
-import com.mysql.cj.x.protobuf.MysqlxExpr.ColumnIdentifier;
-import com.mysql.cj.x.protobuf.MysqlxExpr.DocumentPathItem;
-import com.mysql.cj.x.protobuf.MysqlxExpr.Expr;
-import com.mysql.cj.x.protobuf.MysqlxExpr.FunctionCall;
-import com.mysql.cj.x.protobuf.MysqlxExpr.Identifier;
-import com.mysql.cj.x.protobuf.MysqlxExpr.Object;
+import com.mysql.cj.x.protobuf.MysqlxExpr.*;
 import com.mysql.cj.x.protobuf.MysqlxExpr.Object.ObjectField;
-import com.mysql.cj.x.protobuf.MysqlxExpr.Operator;
+
+import java.util.*;
+import java.util.function.Supplier;
 
 // Grammar includes precedence & associativity of binary operators:
 // (^ refers to the preceding production)

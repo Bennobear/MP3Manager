@@ -29,13 +29,13 @@
 
 package com.mysql.cj.xdevapi;
 
+import com.mysql.cj.MysqlxSession;
+import com.mysql.cj.exceptions.FeatureNotAvailableException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
-
-import com.mysql.cj.MysqlxSession;
-import com.mysql.cj.exceptions.FeatureNotAvailableException;
 
 /**
  * {@link SqlStatement} implementation.

@@ -29,11 +29,11 @@
 
 package com.mysql.cj.xdevapi;
 
+import com.mysql.cj.x.protobuf.MysqlxCrud.Projection;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.stream.Collectors;
-
-import com.mysql.cj.x.protobuf.MysqlxCrud.Projection;
 
 /**
  * {@link FilterParams} implementation for {@link com.mysql.cj.xdevapi.Collection} syntax.

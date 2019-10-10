@@ -29,10 +29,10 @@
 
 package testsuite.simple;
 
-import java.util.Properties;
-
 import com.mysql.cj.conf.ConnectionPropertiesTransform;
 import com.mysql.cj.conf.PropertyKey;
+
+import java.util.Properties;
 
 /**
  * Used for testing the ConnectionPropertiesTransform functionality.

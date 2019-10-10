@@ -29,9 +29,17 @@
 
 package com.mysql.cj.protocol.a;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.conf.PropertySet;
+import com.mysql.cj.conf.RuntimeProperty;
+import com.mysql.cj.exceptions.CJPacketTooBigException;
+import com.mysql.cj.exceptions.ExceptionInterceptor;
+import com.mysql.cj.exceptions.FeatureNotAvailableException;
+import com.mysql.cj.exceptions.SSLParamsException;
+import com.mysql.cj.jdbc.JdbcPropertySetImpl;
+import com.mysql.cj.log.Log;
+import com.mysql.cj.protocol.*;
+import org.junit.Test;
 
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
@@ -43,23 +51,7 @@ import java.nio.channels.AsynchronousSocketChannel;
 import java.util.Optional;
 import java.util.Random;
 
-import org.junit.Test;
-
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.conf.PropertySet;
-import com.mysql.cj.conf.RuntimeProperty;
-import com.mysql.cj.exceptions.CJPacketTooBigException;
-import com.mysql.cj.exceptions.ExceptionInterceptor;
-import com.mysql.cj.exceptions.FeatureNotAvailableException;
-import com.mysql.cj.exceptions.SSLParamsException;
-import com.mysql.cj.jdbc.JdbcPropertySetImpl;
-import com.mysql.cj.log.Log;
-import com.mysql.cj.protocol.FullReadInputStream;
-import com.mysql.cj.protocol.MessageReader;
-import com.mysql.cj.protocol.NetworkResources;
-import com.mysql.cj.protocol.ServerSession;
-import com.mysql.cj.protocol.SocketConnection;
-import com.mysql.cj.protocol.SocketFactory;
+import static org.junit.Assert.*;
 
 /**
  * Tests for simple packet reader.

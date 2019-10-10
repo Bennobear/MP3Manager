@@ -29,16 +29,16 @@
 
 package com.mysql.cj.jdbc;
 
+import com.mysql.cj.exceptions.ExceptionInterceptor;
+import com.mysql.cj.exceptions.MysqlErrorNumbers;
+import com.mysql.cj.util.Util;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.sql.SQLException;
 import java.util.Map;
-
-import com.mysql.cj.exceptions.ExceptionInterceptor;
-import com.mysql.cj.exceptions.MysqlErrorNumbers;
-import com.mysql.cj.util.Util;
 
 /**
  * Base class for all wrapped instances created by LogicalHandle

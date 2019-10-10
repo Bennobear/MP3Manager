@@ -29,11 +29,11 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.concurrent.CompletableFuture;
-
 import com.mysql.cj.MysqlxSession;
 import com.mysql.cj.protocol.x.StatementExecuteOk;
 import com.mysql.cj.protocol.x.XMessage;
+
+import java.util.concurrent.CompletableFuture;
 
 /**
  * {@link DeleteStatement} implementation.

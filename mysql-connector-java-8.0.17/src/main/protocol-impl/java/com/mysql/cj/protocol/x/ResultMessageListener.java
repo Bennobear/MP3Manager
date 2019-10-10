@@ -29,8 +29,6 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.util.ArrayList;
-
 import com.google.protobuf.GeneratedMessageV3;
 import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.protocol.ColumnDefinition;
@@ -45,6 +43,8 @@ import com.mysql.cj.x.protobuf.MysqlxResultset.ColumnMetaData;
 import com.mysql.cj.x.protobuf.MysqlxResultset.FetchDone;
 import com.mysql.cj.x.protobuf.MysqlxResultset.Row;
 import com.mysql.cj.x.protobuf.MysqlxSql.StmtExecuteOk;
+
+import java.util.ArrayList;
 
 /**
  * A {@link MessageListener} to handle result data and propagate it to a {@link ResultListener}.

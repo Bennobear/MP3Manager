@@ -29,12 +29,12 @@
 
 package com.mysql.cj.protocol;
 
+import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.conf.PropertySet;
+
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.net.Socket;
-
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.conf.PropertySet;
 
 /**
  * A socket factory used to create sockets connecting through a SOCKS proxy. The socket still supports all the same TCP features as the "standard" socket.

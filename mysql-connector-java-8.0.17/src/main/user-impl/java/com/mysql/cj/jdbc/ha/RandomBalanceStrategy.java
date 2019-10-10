@@ -29,17 +29,17 @@
 
 package com.mysql.cj.jdbc.ha;
 
+import com.mysql.cj.Messages;
+import com.mysql.cj.jdbc.ConnectionImpl;
+import com.mysql.cj.jdbc.JdbcConnection;
+import com.mysql.cj.jdbc.exceptions.SQLError;
+
 import java.lang.reflect.InvocationHandler;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.mysql.cj.Messages;
-import com.mysql.cj.jdbc.ConnectionImpl;
-import com.mysql.cj.jdbc.JdbcConnection;
-import com.mysql.cj.jdbc.exceptions.SQLError;
 
 public class RandomBalanceStrategy implements BalanceStrategy {
 

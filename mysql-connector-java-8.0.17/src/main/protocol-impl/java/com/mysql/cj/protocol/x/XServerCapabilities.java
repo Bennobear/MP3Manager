@@ -29,14 +29,14 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 import com.mysql.cj.ServerVersion;
 import com.mysql.cj.protocol.ServerCapabilities;
 import com.mysql.cj.x.protobuf.MysqlxDatatypes.Any;
 import com.mysql.cj.xdevapi.ExprUtil;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class XServerCapabilities implements ServerCapabilities {
 

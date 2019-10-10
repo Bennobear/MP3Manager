@@ -29,16 +29,15 @@
 
 package com.mysql.cj.jdbc.jmx;
 
-import java.lang.management.ManagementFactory;
-import java.sql.SQLException;
-
-import javax.management.MBeanServer;
-import javax.management.ObjectName;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.jdbc.exceptions.SQLError;
 import com.mysql.cj.jdbc.ha.ReplicationConnectionGroup;
 import com.mysql.cj.jdbc.ha.ReplicationConnectionGroupManager;
+
+import javax.management.MBeanServer;
+import javax.management.ObjectName;
+import java.lang.management.ManagementFactory;
+import java.sql.SQLException;
 
 public class ReplicationGroupManager implements ReplicationGroupManagerMBean {
     private boolean isJmxRegistered = false;

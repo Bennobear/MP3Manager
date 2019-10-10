@@ -29,11 +29,18 @@
 
 package com.mysql.cj;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectOutputStream;
+import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.conf.RuntimeProperty;
+import com.mysql.cj.exceptions.ExceptionFactory;
+import com.mysql.cj.exceptions.WrongArgumentException;
+import com.mysql.cj.protocol.ColumnDefinition;
+import com.mysql.cj.protocol.a.NativeConstants.IntegerDataType;
+import com.mysql.cj.protocol.a.NativePacketPayload;
+import com.mysql.cj.util.StringUtils;
+import com.mysql.cj.util.TimeUtil;
+import com.mysql.cj.util.Util;
+
+import java.io.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.sql.Date;
@@ -45,17 +52,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.Locale;
-
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.conf.RuntimeProperty;
-import com.mysql.cj.exceptions.ExceptionFactory;
-import com.mysql.cj.exceptions.WrongArgumentException;
-import com.mysql.cj.protocol.ColumnDefinition;
-import com.mysql.cj.protocol.a.NativeConstants.IntegerDataType;
-import com.mysql.cj.protocol.a.NativePacketPayload;
-import com.mysql.cj.util.StringUtils;
-import com.mysql.cj.util.TimeUtil;
-import com.mysql.cj.util.Util;
 
 //TODO should not be protocol-specific
 public abstract class AbstractQueryBindings<T extends BindValue> implements QueryBindings<T> {

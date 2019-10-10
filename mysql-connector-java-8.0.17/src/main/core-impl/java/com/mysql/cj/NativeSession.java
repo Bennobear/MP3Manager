@@ -29,6 +29,19 @@
 
 package com.mysql.cj;
 
+import com.mysql.cj.conf.HostInfo;
+import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.conf.PropertySet;
+import com.mysql.cj.conf.RuntimeProperty;
+import com.mysql.cj.exceptions.*;
+import com.mysql.cj.interceptors.QueryInterceptor;
+import com.mysql.cj.log.Log;
+import com.mysql.cj.protocol.*;
+import com.mysql.cj.protocol.Resultset.Type;
+import com.mysql.cj.protocol.a.*;
+import com.mysql.cj.result.*;
+import com.mysql.cj.util.StringUtils;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
@@ -39,59 +52,12 @@ import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetEncoder;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Timer;
+import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Collector;
-
-import com.mysql.cj.conf.HostInfo;
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.conf.PropertySet;
-import com.mysql.cj.conf.RuntimeProperty;
-import com.mysql.cj.exceptions.CJCommunicationsException;
-import com.mysql.cj.exceptions.CJException;
-import com.mysql.cj.exceptions.CJOperationNotSupportedException;
-import com.mysql.cj.exceptions.ConnectionIsClosedException;
-import com.mysql.cj.exceptions.ExceptionFactory;
-import com.mysql.cj.exceptions.ExceptionInterceptor;
-import com.mysql.cj.exceptions.ExceptionInterceptorChain;
-import com.mysql.cj.exceptions.MysqlErrorNumbers;
-import com.mysql.cj.exceptions.OperationCancelledException;
-import com.mysql.cj.exceptions.PasswordExpiredException;
-import com.mysql.cj.exceptions.WrongArgumentException;
-import com.mysql.cj.interceptors.QueryInterceptor;
-import com.mysql.cj.log.Log;
-import com.mysql.cj.protocol.ColumnDefinition;
-import com.mysql.cj.protocol.Message;
-import com.mysql.cj.protocol.NetworkResources;
-import com.mysql.cj.protocol.ProtocolEntityFactory;
-import com.mysql.cj.protocol.Resultset;
-import com.mysql.cj.protocol.Resultset.Type;
-import com.mysql.cj.protocol.ServerSession;
-import com.mysql.cj.protocol.SocketConnection;
-import com.mysql.cj.protocol.SocketFactory;
-import com.mysql.cj.protocol.a.NativeMessageBuilder;
-import com.mysql.cj.protocol.a.NativePacketPayload;
-import com.mysql.cj.protocol.a.NativeProtocol;
-import com.mysql.cj.protocol.a.NativeServerSession;
-import com.mysql.cj.protocol.a.NativeSocketConnection;
-import com.mysql.cj.protocol.a.ResultsetFactory;
-import com.mysql.cj.result.Field;
-import com.mysql.cj.result.IntegerValueFactory;
-import com.mysql.cj.result.LongValueFactory;
-import com.mysql.cj.result.Row;
-import com.mysql.cj.result.StringValueFactory;
-import com.mysql.cj.result.ValueFactory;
-import com.mysql.cj.util.StringUtils;
 
 public class NativeSession extends CoreSession implements Serializable {
 

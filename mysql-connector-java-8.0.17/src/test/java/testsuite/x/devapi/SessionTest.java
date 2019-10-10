@@ -29,57 +29,27 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.io.FileNotFoundException;
-import java.lang.ref.WeakReference;
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Random;
-import java.util.Set;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.Callable;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
 import com.mysql.cj.Constants;
 import com.mysql.cj.CoreSession;
 import com.mysql.cj.ServerVersion;
 import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.exceptions.CJCommunicationsException;
-import com.mysql.cj.exceptions.CJPacketTooBigException;
-import com.mysql.cj.exceptions.FeatureNotAvailableException;
-import com.mysql.cj.exceptions.MysqlErrorNumbers;
-import com.mysql.cj.exceptions.WrongArgumentException;
+import com.mysql.cj.exceptions.*;
 import com.mysql.cj.protocol.x.XProtocolError;
-import com.mysql.cj.xdevapi.Client;
+import com.mysql.cj.xdevapi.*;
 import com.mysql.cj.xdevapi.Client.ClientProperty;
-import com.mysql.cj.xdevapi.ClientFactory;
-import com.mysql.cj.xdevapi.ClientImpl;
 import com.mysql.cj.xdevapi.ClientImpl.PooledXProtocol;
-import com.mysql.cj.xdevapi.FindStatement;
-import com.mysql.cj.xdevapi.Row;
-import com.mysql.cj.xdevapi.RowResult;
-import com.mysql.cj.xdevapi.Schema;
-import com.mysql.cj.xdevapi.SelectStatement;
-import com.mysql.cj.xdevapi.Session;
-import com.mysql.cj.xdevapi.SessionFactory;
-import com.mysql.cj.xdevapi.SessionImpl;
-import com.mysql.cj.xdevapi.SqlResult;
-import com.mysql.cj.xdevapi.SqlStatement;
-import com.mysql.cj.xdevapi.XDevAPIError;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.io.FileNotFoundException;
+import java.lang.ref.WeakReference;
+import java.lang.reflect.Field;
+import java.util.*;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.Callable;
+
+import static org.junit.Assert.*;
 
 public class SessionTest extends DevApiBaseTestCase {
     @Before

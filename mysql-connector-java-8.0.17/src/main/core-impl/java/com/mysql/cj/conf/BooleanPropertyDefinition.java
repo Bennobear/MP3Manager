@@ -29,12 +29,12 @@
 
 package com.mysql.cj.conf;
 
-import java.util.Arrays;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.ExceptionFactory;
 import com.mysql.cj.exceptions.ExceptionInterceptor;
 import com.mysql.cj.util.StringUtils;
+
+import java.util.Arrays;
 
 public class BooleanPropertyDefinition extends AbstractPropertyDefinition<Boolean> {
 

@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
 
-
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import java.net.URL?>
-<AnchorPane styleClass="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
-   <stylesheets>
-      <URL value="@MainMenu.css" />
-   </stylesheets>
-   <children>
-      <Button fx:id="btnInput" layoutX="270.0" layoutY="175.0" mnemonicParsing="false" onAction="#openInput" text="Input" />
-      <Button fx:id="btnOutput" layoutX="265.0" layoutY="206.0" mnemonicParsing="false" onAction="#openOutput" text="Output" />
-   </children>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" styleClass="anchor" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="Controller.Controller">
+    <stylesheets>
+        <URL value="@MainMenu.css"/>
+    </stylesheets>
+    <children>
+        <Button fx:id="btnInput" layoutX="270.0" layoutY="175.0" mnemonicParsing="false" onAction="#openInput"
+                text="Input"/>
+        <Button fx:id="btnOutput" layoutX="265.0" layoutY="206.0" mnemonicParsing="false" onAction="#openOutput"
+                text="Output"/>
+    </children>
 </AnchorPane>

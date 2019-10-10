@@ -29,34 +29,20 @@
 
 package testsuite.simple;
 
+import com.mysql.cj.conf.*;
+import com.mysql.cj.jdbc.MysqlConnectionPoolDataSource;
+import com.mysql.cj.jdbc.MysqlXADataSource;
+import testsuite.BaseTestCase;
+
+import javax.naming.*;
+import javax.naming.spi.ObjectFactory;
+import javax.sql.DataSource;
+import javax.sql.PooledConnection;
 import java.io.File;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
 import java.sql.Connection;
 import java.util.Hashtable;
-
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.Name;
-import javax.naming.NameParser;
-import javax.naming.Reference;
-import javax.naming.spi.ObjectFactory;
-import javax.sql.DataSource;
-import javax.sql.PooledConnection;
-
-import com.mysql.cj.conf.BooleanPropertyDefinition;
-import com.mysql.cj.conf.EnumPropertyDefinition;
-import com.mysql.cj.conf.IntegerPropertyDefinition;
-import com.mysql.cj.conf.LongPropertyDefinition;
-import com.mysql.cj.conf.MemorySizePropertyDefinition;
-import com.mysql.cj.conf.PropertyDefinition;
-import com.mysql.cj.conf.PropertyDefinitions;
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.conf.StringPropertyDefinition;
-import com.mysql.cj.jdbc.MysqlConnectionPoolDataSource;
-import com.mysql.cj.jdbc.MysqlXADataSource;
-
-import testsuite.BaseTestCase;
 
 public class DataSourceTest extends BaseTestCase {
     private Context ctx;

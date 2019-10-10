@@ -31,11 +31,7 @@ package com.mysql.cj.protocol.a;
 
 import com.mysql.cj.conf.RuntimeProperty;
 import com.mysql.cj.exceptions.ExceptionInterceptor;
-import com.mysql.cj.protocol.ColumnDefinition;
-import com.mysql.cj.protocol.ProtocolEntityFactory;
-import com.mysql.cj.protocol.Resultset;
-import com.mysql.cj.protocol.ResultsetRow;
-import com.mysql.cj.protocol.ValueDecoder;
+import com.mysql.cj.protocol.*;
 
 public abstract class AbstractRowFactory implements ProtocolEntityFactory<ResultsetRow, NativePacketPayload> {
 

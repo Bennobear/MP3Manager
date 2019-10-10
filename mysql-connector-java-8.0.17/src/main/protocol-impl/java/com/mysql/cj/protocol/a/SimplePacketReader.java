@@ -29,14 +29,14 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.io.IOException;
-import java.util.Optional;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.conf.RuntimeProperty;
 import com.mysql.cj.exceptions.CJPacketTooBigException;
 import com.mysql.cj.protocol.MessageReader;
 import com.mysql.cj.protocol.SocketConnection;
+
+import java.io.IOException;
+import java.util.Optional;
 
 /**
  * Simple implementation of {@link MessageReader} which handles the receiving of logical MySQL packets from the provided socket input stream.

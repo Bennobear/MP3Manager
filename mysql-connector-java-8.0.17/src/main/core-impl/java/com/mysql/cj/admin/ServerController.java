@@ -29,13 +29,13 @@
 
 package com.mysql.cj.admin;
 
+import com.mysql.cj.Constants;
+import com.mysql.cj.util.StringUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Properties;
-
-import com.mysql.cj.Constants;
-import com.mysql.cj.util.StringUtils;
 
 /**
  * Controls a MySQL server using Java RunTime methods

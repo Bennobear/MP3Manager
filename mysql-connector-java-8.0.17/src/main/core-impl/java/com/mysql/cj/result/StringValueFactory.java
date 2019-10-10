@@ -29,9 +29,6 @@
 
 package com.mysql.cj.result;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-
 import com.mysql.cj.CharsetMapping;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.conf.PropertySet;
@@ -40,6 +37,9 @@ import com.mysql.cj.protocol.InternalTime;
 import com.mysql.cj.protocol.InternalTimestamp;
 import com.mysql.cj.util.DataTypeUtil;
 import com.mysql.cj.util.StringUtils;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * A {@link com.mysql.cj.result.ValueFactory} implementation to create strings.

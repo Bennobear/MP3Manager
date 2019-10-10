@@ -29,28 +29,19 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import com.mysql.cj.exceptions.MysqlErrorNumbers;
+import com.mysql.cj.protocol.x.XProtocolError;
+import com.mysql.cj.xdevapi.*;
+import com.mysql.cj.xdevapi.DatabaseObject.DbObjectStatus;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import com.mysql.cj.exceptions.MysqlErrorNumbers;
-import com.mysql.cj.protocol.x.XProtocolError;
-import com.mysql.cj.xdevapi.Collection;
-import com.mysql.cj.xdevapi.DatabaseObject;
-import com.mysql.cj.xdevapi.DatabaseObject.DbObjectStatus;
-import com.mysql.cj.xdevapi.Schema;
-import com.mysql.cj.xdevapi.Session;
-import com.mysql.cj.xdevapi.SessionImpl;
-import com.mysql.cj.xdevapi.Table;
+import static org.junit.Assert.*;
 
 public class SchemaTest extends DevApiBaseTestCase {
     @Before

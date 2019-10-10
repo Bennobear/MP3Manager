@@ -29,9 +29,15 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import com.mysql.cj.exceptions.DataReadException;
+import com.mysql.cj.util.TimeUtil;
+import com.mysql.cj.xdevapi.Row;
+import com.mysql.cj.xdevapi.RowResult;
+import com.mysql.cj.xdevapi.Table;
+import com.mysql.cj.xdevapi.Warning;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.sql.Date;
 import java.sql.Time;
@@ -40,16 +46,7 @@ import java.text.SimpleDateFormat;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import com.mysql.cj.exceptions.DataReadException;
-import com.mysql.cj.util.TimeUtil;
-import com.mysql.cj.xdevapi.Row;
-import com.mysql.cj.xdevapi.RowResult;
-import com.mysql.cj.xdevapi.Table;
-import com.mysql.cj.xdevapi.Warning;
+import static org.junit.Assert.*;
 
 public class ResultTest extends DevApiBaseTestCase {
     @Before

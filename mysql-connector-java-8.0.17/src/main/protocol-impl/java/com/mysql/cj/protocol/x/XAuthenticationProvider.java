@@ -29,10 +29,6 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.nio.channels.ClosedChannelException;
-import java.util.Arrays;
-import java.util.List;
-
 import com.mysql.cj.conf.PropertyDefinitions.AuthMech;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.conf.PropertySet;
@@ -45,6 +41,10 @@ import com.mysql.cj.protocol.Protocol;
 import com.mysql.cj.protocol.ServerSession;
 import com.mysql.cj.util.StringUtils;
 import com.mysql.cj.xdevapi.XDevAPIError;
+
+import java.nio.channels.ClosedChannelException;
+import java.util.Arrays;
+import java.util.List;
 
 public class XAuthenticationProvider implements AuthenticationProvider<XMessage> {
 

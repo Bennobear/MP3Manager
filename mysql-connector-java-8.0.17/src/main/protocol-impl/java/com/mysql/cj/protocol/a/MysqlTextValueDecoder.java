@@ -29,9 +29,6 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.DataReadException;
 import com.mysql.cj.exceptions.NumberOutOfRange;
@@ -42,6 +39,9 @@ import com.mysql.cj.protocol.ValueDecoder;
 import com.mysql.cj.result.Field;
 import com.mysql.cj.result.ValueFactory;
 import com.mysql.cj.util.StringUtils;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * Implementation of {@link com.mysql.cj.protocol.ValueDecoder} for the MySQL text protocol. All values will be received as <i>LengthEncodedString</i> values.

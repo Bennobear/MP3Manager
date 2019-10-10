@@ -29,9 +29,9 @@
 
 package com.mysql.cj.protocol;
 
-import java.util.Map;
-
 import com.mysql.cj.result.Field;
+
+import java.util.Map;
 
 /**
  * Represents protocol specific result set metadata,

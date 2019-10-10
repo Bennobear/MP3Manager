@@ -29,11 +29,11 @@
 
 package com.mysql.cj.result;
 
+import com.mysql.cj.protocol.ColumnDefinition;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
-
-import com.mysql.cj.protocol.ColumnDefinition;
 
 /**
  * Protocol::ColumnDefinition41 object

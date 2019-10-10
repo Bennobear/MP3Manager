@@ -29,11 +29,6 @@
 
 package com.mysql.cj.jdbc.interceptors;
 
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.Properties;
-import java.util.function.Supplier;
-
 import com.mysql.cj.MysqlConnection;
 import com.mysql.cj.Query;
 import com.mysql.cj.exceptions.ExceptionFactory;
@@ -42,6 +37,11 @@ import com.mysql.cj.jdbc.JdbcConnection;
 import com.mysql.cj.log.Log;
 import com.mysql.cj.protocol.Resultset;
 import com.mysql.cj.protocol.ServerSession;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.function.Supplier;
 
 public class SessionAssociationInterceptor implements QueryInterceptor {
 

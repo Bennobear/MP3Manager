@@ -29,11 +29,6 @@
 
 package com.mysql.cj.result;
 
-import java.sql.Time;
-import java.util.Calendar;
-import java.util.Locale;
-import java.util.TimeZone;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.WarningListener;
 import com.mysql.cj.conf.PropertySet;
@@ -43,6 +38,11 @@ import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.protocol.InternalDate;
 import com.mysql.cj.protocol.InternalTime;
 import com.mysql.cj.protocol.InternalTimestamp;
+
+import java.sql.Time;
+import java.util.Calendar;
+import java.util.Locale;
+import java.util.TimeZone;
 
 /**
  * A value factory to create {@link java.sql.Time} instances. As with other date/time types, a time zone is necessary to interpret the

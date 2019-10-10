@@ -29,61 +29,28 @@
 
 package instrumentation;
 
-import java.lang.reflect.Method;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Savepoint;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.TreeMap;
-
 import com.mysql.cj.QueryBindings;
 import com.mysql.cj.exceptions.CJException;
-import com.mysql.cj.jdbc.Blob;
-import com.mysql.cj.jdbc.BlobFromLocator;
-import com.mysql.cj.jdbc.CallableStatement;
+import com.mysql.cj.jdbc.*;
 import com.mysql.cj.jdbc.CallableStatement.CallableStatementParamInfo;
-import com.mysql.cj.jdbc.ClientPreparedStatement;
-import com.mysql.cj.jdbc.Clob;
-import com.mysql.cj.jdbc.ConnectionImpl;
-import com.mysql.cj.jdbc.ConnectionWrapper;
-import com.mysql.cj.jdbc.DatabaseMetaData;
-import com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema;
-import com.mysql.cj.jdbc.JdbcConnection;
-import com.mysql.cj.jdbc.JdbcStatement;
-import com.mysql.cj.jdbc.MysqlConnectionPoolDataSource;
-import com.mysql.cj.jdbc.MysqlDataSource;
-import com.mysql.cj.jdbc.MysqlParameterMetadata;
-import com.mysql.cj.jdbc.MysqlPooledConnection;
-import com.mysql.cj.jdbc.MysqlSQLXML;
-import com.mysql.cj.jdbc.MysqlSavepoint;
-import com.mysql.cj.jdbc.MysqlXAConnection;
-import com.mysql.cj.jdbc.MysqlXADataSource;
-import com.mysql.cj.jdbc.MysqlXid;
-import com.mysql.cj.jdbc.NClob;
-import com.mysql.cj.jdbc.NonRegisteringDriver;
-import com.mysql.cj.jdbc.ServerPreparedStatement;
-import com.mysql.cj.jdbc.StatementImpl;
-import com.mysql.cj.jdbc.SuspendableXAConnection;
 import com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping;
-import com.mysql.cj.jdbc.ha.LoadBalancedConnection;
-import com.mysql.cj.jdbc.ha.LoadBalancedMySQLConnection;
-import com.mysql.cj.jdbc.ha.MultiHostMySQLConnection;
-import com.mysql.cj.jdbc.ha.ReplicationConnection;
-import com.mysql.cj.jdbc.ha.ReplicationMySQLConnection;
+import com.mysql.cj.jdbc.ha.*;
 import com.mysql.cj.jdbc.result.ResultSetImpl;
 import com.mysql.cj.jdbc.result.ResultSetInternalMethods;
 import com.mysql.cj.jdbc.result.ResultSetMetaData;
 import com.mysql.cj.jdbc.result.UpdatableResultSet;
 import com.mysql.cj.protocol.ColumnDefinition;
 import com.mysql.cj.protocol.Message;
-
 import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtMethod;
 import javassist.NotFoundException;
+
+import java.lang.reflect.Method;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Savepoint;
+import java.util.*;
 
 public class TranslateExceptions {
 

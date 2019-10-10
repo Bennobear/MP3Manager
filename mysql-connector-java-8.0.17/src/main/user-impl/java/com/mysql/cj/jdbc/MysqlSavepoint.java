@@ -29,14 +29,14 @@
 
 package com.mysql.cj.jdbc;
 
-import java.sql.SQLException;
-import java.sql.Savepoint;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.ExceptionInterceptor;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
 import com.mysql.cj.jdbc.exceptions.SQLError;
 import com.mysql.cj.util.StringUtils;
+
+import java.sql.SQLException;
+import java.sql.Savepoint;
 
 /**
  * Represents SQL SAVEPOINTS in MySQL.

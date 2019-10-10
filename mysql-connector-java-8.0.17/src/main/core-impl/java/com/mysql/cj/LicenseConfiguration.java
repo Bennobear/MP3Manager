@@ -29,9 +29,9 @@
 
 package com.mysql.cj;
 
-import java.util.Map;
-
 import com.mysql.cj.exceptions.CJException;
+
+import java.util.Map;
 
 /**
  * Used in commercially-licensed clients that require connections to commercially-licensed servers as part of the licensing terms.

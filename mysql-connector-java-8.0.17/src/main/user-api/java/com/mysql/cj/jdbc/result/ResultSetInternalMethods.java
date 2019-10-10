@@ -29,14 +29,14 @@
 
 package com.mysql.cj.jdbc.result;
 
-import java.math.BigInteger;
-import java.sql.SQLException;
-import java.sql.Types;
-
 import com.mysql.cj.jdbc.JdbcPreparedStatement;
 import com.mysql.cj.jdbc.JdbcStatement;
 import com.mysql.cj.protocol.Resultset;
 import com.mysql.cj.protocol.ResultsetRowsOwner;
+
+import java.math.BigInteger;
+import java.sql.SQLException;
+import java.sql.Types;
 
 /**
  * This interface is intended to be used by implementors of statement interceptors so that implementors can create static or dynamic (via

@@ -29,13 +29,13 @@
 
 package testsuite.simple;
 
-import java.sql.SQLException;
-import java.sql.Savepoint;
-import java.util.Properties;
-
 import com.mysql.cj.MysqlConnection;
 import com.mysql.cj.jdbc.interceptors.ConnectionLifecycleInterceptor;
 import com.mysql.cj.log.Log;
+
+import java.sql.SQLException;
+import java.sql.Savepoint;
+import java.util.Properties;
 
 public class TestLifecycleInterceptor implements ConnectionLifecycleInterceptor {
     static int transactionsBegun = 0;

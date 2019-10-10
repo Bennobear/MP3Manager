@@ -29,11 +29,14 @@
 
 package testsuite.x.devapi;
 
-import static org.hamcrest.CoreMatchers.hasItems;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import com.mysql.cj.CoreSession;
+import com.mysql.cj.ServerVersion;
+import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.exceptions.DataConversionException;
+import com.mysql.cj.protocol.x.XProtocol;
+import com.mysql.cj.protocol.x.XProtocolError;
+import com.mysql.cj.xdevapi.*;
+import org.junit.Test;
 
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
@@ -41,33 +44,12 @@ import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.Callable;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
+import java.util.concurrent.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import org.junit.Test;
-
-import com.mysql.cj.CoreSession;
-import com.mysql.cj.ServerVersion;
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.exceptions.DataConversionException;
-import com.mysql.cj.protocol.x.XProtocol;
-import com.mysql.cj.protocol.x.XProtocolError;
-import com.mysql.cj.xdevapi.Column;
-import com.mysql.cj.xdevapi.Row;
-import com.mysql.cj.xdevapi.RowResult;
-import com.mysql.cj.xdevapi.SelectStatement;
-import com.mysql.cj.xdevapi.Session;
-import com.mysql.cj.xdevapi.SessionFactory;
-import com.mysql.cj.xdevapi.SessionImpl;
-import com.mysql.cj.xdevapi.SqlResult;
-import com.mysql.cj.xdevapi.Statement;
-import com.mysql.cj.xdevapi.Table;
-import com.mysql.cj.xdevapi.Type;
+import static org.hamcrest.CoreMatchers.hasItems;
+import static org.junit.Assert.*;
 
 /**
  * @todo

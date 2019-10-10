@@ -29,10 +29,10 @@
 
 package com.mysql.cj.log;
 
-import java.util.Date;
-
 import com.mysql.cj.util.LogUtils;
 import com.mysql.cj.util.StringUtils;
+
+import java.util.Date;
 
 public class ProfilerEventImpl implements ProfilerEvent {
 

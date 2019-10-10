@@ -29,18 +29,18 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.channels.CompletionHandler;
-
 import com.google.protobuf.MessageLite;
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.CJCommunicationsException;
 import com.mysql.cj.exceptions.CJPacketTooBigException;
 import com.mysql.cj.protocol.MessageSender;
 import com.mysql.cj.protocol.PacketSentTimeHolder;
+
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.channels.CompletionHandler;
 
 /**
  * Synchronous-only implementation of {@link MessageSender}.

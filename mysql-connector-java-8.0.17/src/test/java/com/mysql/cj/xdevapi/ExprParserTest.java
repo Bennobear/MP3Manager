@@ -29,17 +29,6 @@
 
 package com.mysql.cj.xdevapi;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-
-import org.junit.Test;
-
 import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.x.protobuf.MysqlxCrud.Column;
 import com.mysql.cj.x.protobuf.MysqlxCrud.Order;
@@ -50,6 +39,13 @@ import com.mysql.cj.x.protobuf.MysqlxExpr.DocumentPathItem;
 import com.mysql.cj.x.protobuf.MysqlxExpr.Expr;
 import com.mysql.cj.x.protobuf.MysqlxExpr.Object;
 import com.mysql.cj.x.protobuf.MysqlxExpr.Object.ObjectField;
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 /**
  * Expression parser tests.

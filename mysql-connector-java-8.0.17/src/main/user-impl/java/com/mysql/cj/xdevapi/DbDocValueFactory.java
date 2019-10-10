@@ -29,15 +29,15 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.io.IOException;
-import java.io.StringReader;
-
 import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.exceptions.AssertionFailedException;
 import com.mysql.cj.result.DefaultValueFactory;
 import com.mysql.cj.result.Field;
 import com.mysql.cj.result.ValueFactory;
 import com.mysql.cj.util.StringUtils;
+
+import java.io.IOException;
+import java.io.StringReader;
 
 /**
  * A {@link ValueFactory} implementation to create {@link DbDoc}s.

@@ -29,12 +29,12 @@
 
 package com.mysql.cj.util;
 
+import com.mysql.cj.CacheAdapter;
+import com.mysql.cj.CacheAdapterFactory;
+
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-
-import com.mysql.cj.CacheAdapter;
-import com.mysql.cj.CacheAdapterFactory;
 
 public class PerVmServerConfigCacheFactory implements CacheAdapterFactory<String, Map<String, String>> {
     static final ConcurrentHashMap<String, Map<String, String>> serverConfigByUrl = new ConcurrentHashMap<>();

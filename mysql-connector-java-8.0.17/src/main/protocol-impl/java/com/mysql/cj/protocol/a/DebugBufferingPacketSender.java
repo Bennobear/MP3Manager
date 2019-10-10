@@ -29,12 +29,12 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.io.IOException;
-import java.util.LinkedList;
-
 import com.mysql.cj.conf.RuntimeProperty;
 import com.mysql.cj.protocol.MessageSender;
 import com.mysql.cj.util.StringUtils;
+
+import java.io.IOException;
+import java.util.LinkedList;
 
 public class DebugBufferingPacketSender implements MessageSender<NativePacketPayload> {
     private MessageSender<NativePacketPayload> packetSender;

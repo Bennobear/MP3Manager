@@ -29,8 +29,6 @@
 
 package com.mysql.cj.jdbc.result;
 
-import java.sql.SQLException;
-
 import com.mysql.cj.exceptions.ExceptionFactory;
 import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.jdbc.JdbcConnection;
@@ -44,6 +42,8 @@ import com.mysql.cj.protocol.ResultsetRows;
 import com.mysql.cj.protocol.a.NativePacketPayload;
 import com.mysql.cj.protocol.a.result.OkPacket;
 import com.mysql.cj.protocol.a.result.ResultsetRowsCursor;
+
+import java.sql.SQLException;
 
 public class ResultSetFactory implements ProtocolEntityFactory<ResultSetImpl, NativePacketPayload> {
 

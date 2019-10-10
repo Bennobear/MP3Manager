@@ -29,9 +29,9 @@
 
 package com.mysql.cj;
 
-import java.util.LinkedList;
-
 import com.mysql.cj.util.StringUtils;
+
+import java.util.LinkedList;
 
 public class AppendingBatchVisitor implements BatchVisitor {
     LinkedList<byte[]> statementComponents = new LinkedList<>();

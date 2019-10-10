@@ -29,34 +29,23 @@
 
 package testsuite.x.internal;
 
-import static org.junit.Assert.fail;
-
-import java.util.Properties;
-import java.util.concurrent.Callable;
-
-import org.junit.Assert;
-
 import com.mysql.cj.MysqlxSession;
 import com.mysql.cj.ServerVersion;
-import com.mysql.cj.conf.ConnectionUrl;
-import com.mysql.cj.conf.DefaultPropertySet;
-import com.mysql.cj.conf.HostInfo;
-import com.mysql.cj.conf.PropertyDefinitions;
+import com.mysql.cj.conf.*;
 import com.mysql.cj.conf.PropertyDefinitions.AuthMech;
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.protocol.x.XMessageBuilder;
 import com.mysql.cj.protocol.x.XProtocol;
 import com.mysql.cj.protocol.x.XProtocolError;
 import com.mysql.cj.protocol.x.XServerCapabilities;
-import com.mysql.cj.xdevapi.Session;
-import com.mysql.cj.xdevapi.SessionFactory;
-import com.mysql.cj.xdevapi.SessionImpl;
-import com.mysql.cj.xdevapi.SqlResult;
-import com.mysql.cj.xdevapi.XDevAPIError;
-
+import com.mysql.cj.xdevapi.*;
+import org.junit.Assert;
 import testsuite.TestUtils;
+
+import java.util.Properties;
+import java.util.concurrent.Callable;
+
+import static org.junit.Assert.fail;
 
 /**
  * Base class for tests of X DevAPI and X Protocol client internal components.

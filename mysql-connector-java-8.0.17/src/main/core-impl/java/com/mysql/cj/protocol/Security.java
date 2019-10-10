@@ -29,12 +29,12 @@
 
 package com.mysql.cj.protocol;
 
+import com.mysql.cj.exceptions.AssertionFailedException;
+import com.mysql.cj.util.StringUtils;
+
 import java.security.DigestException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
-import com.mysql.cj.exceptions.AssertionFailedException;
-import com.mysql.cj.util.StringUtils;
 
 /**
  * Methods for doing secure authentication with MySQL-4.1 and newer.

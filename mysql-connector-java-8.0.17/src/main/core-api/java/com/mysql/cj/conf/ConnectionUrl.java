@@ -29,30 +29,20 @@
 
 package com.mysql.cj.conf;
 
-import static com.mysql.cj.util.StringUtils.isNullOrEmpty;
+import com.mysql.cj.Messages;
+import com.mysql.cj.exceptions.*;
+import com.mysql.cj.util.LRUCache;
+import com.mysql.cj.util.Util;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.DriverManager;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.stream.Collectors;
 
-import com.mysql.cj.Messages;
-import com.mysql.cj.exceptions.CJException;
-import com.mysql.cj.exceptions.ExceptionFactory;
-import com.mysql.cj.exceptions.InvalidConnectionAttributeException;
-import com.mysql.cj.exceptions.UnsupportedConnectionStringException;
-import com.mysql.cj.exceptions.WrongArgumentException;
-import com.mysql.cj.util.LRUCache;
-import com.mysql.cj.util.Util;
+import static com.mysql.cj.util.StringUtils.isNullOrEmpty;
 
 /**
  * A container for a database URL and a collection of given connection arguments.

@@ -29,13 +29,12 @@
 
 package testsuite.perf;
 
+import com.mysql.cj.conf.PropertyDefinitions;
+import testsuite.BaseTestCase;
+
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.text.NumberFormat;
-
-import com.mysql.cj.conf.PropertyDefinitions;
-
-import testsuite.BaseTestCase;
 
 /**
  * Simple performance testing unit test.

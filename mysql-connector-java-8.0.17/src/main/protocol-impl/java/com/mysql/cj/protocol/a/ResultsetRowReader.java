@@ -29,15 +29,15 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.io.IOException;
-import java.util.Optional;
-
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.conf.RuntimeProperty;
 import com.mysql.cj.protocol.ProtocolEntityFactory;
 import com.mysql.cj.protocol.ProtocolEntityReader;
 import com.mysql.cj.protocol.ResultsetRow;
+
+import java.io.IOException;
+import java.util.Optional;
 
 public class ResultsetRowReader implements ProtocolEntityReader<ResultsetRow, NativePacketPayload> {
 

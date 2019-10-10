@@ -29,19 +29,18 @@
 
 package com.mysql.cj.protocol.a;
 
-import static org.junit.Assert.assertTrue;
-
-import java.io.IOException;
-import java.util.LinkedList;
-import java.util.regex.Pattern;
-
-import org.junit.Test;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.conf.IntegerProperty;
 import com.mysql.cj.conf.IntegerPropertyDefinition;
 import com.mysql.cj.conf.PropertyDefinitions;
 import com.mysql.cj.conf.PropertyKey;
+import org.junit.Test;
+
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.regex.Pattern;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * Tests for {@link DebugBufferingPacketSender}.

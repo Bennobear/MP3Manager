@@ -29,11 +29,11 @@
 
 package com.mysql.cj.result;
 
-import java.util.Iterator;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.CJOperationNotSupportedException;
 import com.mysql.cj.exceptions.ExceptionFactory;
+
+import java.util.Iterator;
 
 /**
  * A list of {@link Row}s.

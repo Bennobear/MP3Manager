@@ -29,6 +29,13 @@
 
 package com.mysql.cj.protocol;
 
+import com.mysql.cj.exceptions.AssertionFailedException;
+import com.mysql.cj.exceptions.CJCommunicationsException;
+
+import javax.net.ssl.SSLEngine;
+import javax.net.ssl.SSLEngineResult;
+import javax.net.ssl.SSLEngineResult.Status;
+import javax.net.ssl.SSLException;
 import java.io.IOException;
 import java.net.SocketAddress;
 import java.net.SocketOption;
@@ -40,14 +47,6 @@ import java.util.Set;
 import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
-
-import javax.net.ssl.SSLEngine;
-import javax.net.ssl.SSLEngineResult;
-import javax.net.ssl.SSLEngineResult.Status;
-import javax.net.ssl.SSLException;
-
-import com.mysql.cj.exceptions.AssertionFailedException;
-import com.mysql.cj.exceptions.CJCommunicationsException;
 
 /**
  * FilterInputStream-esque byte channel that decrypts incoming packets. We proxy calls to the read method from the caller. We replace the provided completion

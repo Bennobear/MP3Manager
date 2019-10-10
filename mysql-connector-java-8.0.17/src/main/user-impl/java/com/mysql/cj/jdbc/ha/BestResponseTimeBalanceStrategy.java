@@ -29,13 +29,13 @@
 
 package com.mysql.cj.jdbc.ha;
 
+import com.mysql.cj.jdbc.ConnectionImpl;
+import com.mysql.cj.jdbc.JdbcConnection;
+
 import java.lang.reflect.InvocationHandler;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
-
-import com.mysql.cj.jdbc.ConnectionImpl;
-import com.mysql.cj.jdbc.JdbcConnection;
 
 public class BestResponseTimeBalanceStrategy implements BalanceStrategy {
 

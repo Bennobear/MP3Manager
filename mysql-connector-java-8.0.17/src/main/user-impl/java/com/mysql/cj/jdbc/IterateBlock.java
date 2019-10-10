@@ -29,10 +29,10 @@
 
 package com.mysql.cj.jdbc;
 
+import com.mysql.cj.jdbc.DatabaseMetaData.IteratorWithCleanup;
+
 import java.sql.SQLException;
 import java.util.Iterator;
-
-import com.mysql.cj.jdbc.DatabaseMetaData.IteratorWithCleanup;
 
 public abstract class IterateBlock<T> {
     IteratorWithCleanup<T> iteratorWithCleanup;

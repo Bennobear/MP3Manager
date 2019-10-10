@@ -29,23 +29,16 @@
 
 package testsuite.simple;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Time;
-import java.sql.Timestamp;
+import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.exceptions.MysqlErrorNumbers;
+import com.mysql.cj.util.TimeUtil;
+import testsuite.BaseTestCase;
+
+import java.sql.*;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Properties;
 import java.util.TimeZone;
-
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.exceptions.MysqlErrorNumbers;
-import com.mysql.cj.util.TimeUtil;
-
-import testsuite.BaseTestCase;
 
 public class DateTest extends BaseTestCase {
     /**

@@ -29,14 +29,14 @@
 
 package testsuite.regression;
 
+import testsuite.BaseTestCase;
+
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Map;
-
-import testsuite.BaseTestCase;
 
 /**
  * Microperformance benchmarks to track increase/decrease in performance of core methods in the driver over time.

@@ -29,6 +29,9 @@
 
 package com.mysql.cj.jdbc;
 
+import com.mysql.cj.MysqlConnection;
+import com.mysql.cj.protocol.NetworkResources;
+
 import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
@@ -38,9 +41,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
-import com.mysql.cj.MysqlConnection;
-import com.mysql.cj.protocol.NetworkResources;
 
 /**
  * This class implements a thread that is responsible for closing abandoned MySQL connections, i.e., connections that are not explicitly closed.

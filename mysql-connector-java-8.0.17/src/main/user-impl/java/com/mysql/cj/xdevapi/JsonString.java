@@ -29,9 +29,9 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.HashMap;
-
 import com.mysql.cj.xdevapi.JsonParser.EscapeChar;
+
+import java.util.HashMap;
 
 /**
  * Represents a JSON <b>string</b>.

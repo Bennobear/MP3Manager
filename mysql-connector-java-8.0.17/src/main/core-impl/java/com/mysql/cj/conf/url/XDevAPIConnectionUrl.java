@@ -29,13 +29,6 @@
 
 package com.mysql.cj.conf.url;
 
-import static com.mysql.cj.util.StringUtils.isNullOrEmpty;
-import static com.mysql.cj.util.StringUtils.safeTrim;
-
-import java.util.Comparator;
-import java.util.Map;
-import java.util.Properties;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.conf.ConnectionUrl;
 import com.mysql.cj.conf.ConnectionUrlParser;
@@ -44,6 +37,13 @@ import com.mysql.cj.conf.HostInfo;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.exceptions.ExceptionFactory;
 import com.mysql.cj.exceptions.WrongArgumentException;
+
+import java.util.Comparator;
+import java.util.Map;
+import java.util.Properties;
+
+import static com.mysql.cj.util.StringUtils.isNullOrEmpty;
+import static com.mysql.cj.util.StringUtils.safeTrim;
 
 public class XDevAPIConnectionUrl extends ConnectionUrl {
     private static final int DEFAULT_PORT = 33060;

@@ -29,48 +29,7 @@
 
 package testsuite.simple;
 
-import static org.junit.Assert.assertNotEquals;
-
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.InputStream;
-import java.io.PrintStream;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.net.Inet6Address;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
-import java.sql.ParameterMetaData;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.SQLSyntaxErrorException;
-import java.sql.Savepoint;
-import java.sql.Statement;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.Properties;
-import java.util.Random;
-import java.util.concurrent.Callable;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
-
-import com.mysql.cj.CharsetMapping;
-import com.mysql.cj.MysqlConnection;
-import com.mysql.cj.NativeSession;
-import com.mysql.cj.PreparedQuery;
-import com.mysql.cj.Query;
+import com.mysql.cj.*;
 import com.mysql.cj.conf.ConnectionUrl;
 import com.mysql.cj.conf.PropertyDefinitions;
 import com.mysql.cj.conf.PropertyDefinitions.DatabaseTerm;
@@ -85,25 +44,27 @@ import com.mysql.cj.jdbc.NonRegisteringDriver;
 import com.mysql.cj.protocol.MessageReader;
 import com.mysql.cj.protocol.MessageSender;
 import com.mysql.cj.protocol.Resultset;
-import com.mysql.cj.protocol.a.DebugBufferingPacketReader;
-import com.mysql.cj.protocol.a.DebugBufferingPacketSender;
-import com.mysql.cj.protocol.a.MultiPacketReader;
-import com.mysql.cj.protocol.a.NativePacketHeader;
-import com.mysql.cj.protocol.a.NativePacketPayload;
-import com.mysql.cj.protocol.a.NativeProtocol;
-import com.mysql.cj.protocol.a.SimplePacketReader;
-import com.mysql.cj.protocol.a.SimplePacketSender;
-import com.mysql.cj.protocol.a.TimeTrackingPacketReader;
-import com.mysql.cj.protocol.a.TimeTrackingPacketSender;
-import com.mysql.cj.protocol.a.TracingPacketReader;
-import com.mysql.cj.protocol.a.TracingPacketSender;
+import com.mysql.cj.protocol.a.*;
 import com.mysql.cj.util.TimeUtil;
 import com.mysql.jdbc.Driver;
-
 import testsuite.BaseQueryInterceptor;
 import testsuite.BaseTestCase;
 import testsuite.BufferingLogger;
 import testsuite.TestUtils;
+
+import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.net.Inet6Address;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.sql.*;
+import java.util.*;
+import java.util.concurrent.Callable;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+
+import static org.junit.Assert.assertNotEquals;
 
 /**
  * Tests java.sql.Connection functionality

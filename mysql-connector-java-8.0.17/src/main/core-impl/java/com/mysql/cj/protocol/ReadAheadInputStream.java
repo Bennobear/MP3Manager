@@ -29,11 +29,11 @@
 
 package com.mysql.cj.protocol;
 
+import com.mysql.cj.log.Log;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
-
-import com.mysql.cj.log.Log;
 
 /**
  * A non-blocking buffered input stream. Reads more if it can, won't block to fill the buffer, only blocks to satisfy a request of read(byte[])

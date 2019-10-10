@@ -29,10 +29,10 @@
 
 package com.mysql.cj.result;
 
+import com.mysql.cj.conf.PropertySet;
+
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-
-import com.mysql.cj.conf.PropertySet;
 
 /**
  * A value factory for a raw stream of bytes from the value.

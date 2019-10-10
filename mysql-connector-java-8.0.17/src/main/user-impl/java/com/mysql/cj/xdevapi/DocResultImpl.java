@@ -29,11 +29,11 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.function.Supplier;
-
 import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.protocol.x.StatementExecuteOk;
 import com.mysql.cj.result.RowList;
+
+import java.util.function.Supplier;
 
 /**
  * A sequence of documents retrieved from a find query.

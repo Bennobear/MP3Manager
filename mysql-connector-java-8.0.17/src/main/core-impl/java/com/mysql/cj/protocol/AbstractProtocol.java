@@ -29,8 +29,6 @@
 
 package com.mysql.cj.protocol;
 
-import java.util.LinkedList;
-
 import com.mysql.cj.MessageBuilder;
 import com.mysql.cj.Messages;
 import com.mysql.cj.Session;
@@ -40,6 +38,8 @@ import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.exceptions.ExceptionInterceptor;
 import com.mysql.cj.log.Log;
 import com.mysql.cj.util.TimeUtil;
+
+import java.util.LinkedList;
 
 public abstract class AbstractProtocol<M extends Message> implements Protocol<M> {
 

@@ -29,26 +29,15 @@
 
 package testsuite.simple;
 
-import java.sql.SQLException;
-import java.util.concurrent.Callable;
-
 import com.mysql.cj.jdbc.JdbcConnection;
 import com.mysql.cj.jdbc.NonRegisteringDriver;
-import com.mysql.cj.jdbc.exceptions.CommunicationsException;
-import com.mysql.cj.jdbc.exceptions.ConnectionFeatureNotAvailableException;
-import com.mysql.cj.jdbc.exceptions.MySQLQueryInterruptedException;
-import com.mysql.cj.jdbc.exceptions.MySQLStatementCancelledException;
-import com.mysql.cj.jdbc.exceptions.MySQLTimeoutException;
-import com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException;
-import com.mysql.cj.jdbc.exceptions.MysqlDataTruncation;
-import com.mysql.cj.jdbc.exceptions.NotUpdatable;
-import com.mysql.cj.jdbc.exceptions.OperationNotSupportedException;
-import com.mysql.cj.jdbc.exceptions.PacketTooBigException;
-import com.mysql.cj.jdbc.exceptions.SQLError;
+import com.mysql.cj.jdbc.exceptions.*;
 import com.mysql.cj.protocol.PacketReceivedTimeHolder;
 import com.mysql.cj.protocol.PacketSentTimeHolder;
-
 import testsuite.BaseTestCase;
+
+import java.sql.SQLException;
+import java.util.concurrent.Callable;
 
 public class ExceptionsTest extends BaseTestCase {
     static String TEST_MESSAGE = "Test message";

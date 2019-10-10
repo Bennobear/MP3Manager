@@ -29,6 +29,15 @@
 
 package testsuite.regression;
 
+import com.mysql.cj.CharsetMapping;
+import com.mysql.cj.MysqlConnection;
+import com.mysql.cj.Query;
+import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.exceptions.ExceptionFactory;
+import com.mysql.cj.protocol.Resultset;
+import testsuite.BaseQueryInterceptor;
+import testsuite.BaseTestCase;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -36,16 +45,6 @@ import java.sql.Statement;
 import java.util.Properties;
 import java.util.concurrent.Callable;
 import java.util.function.Supplier;
-
-import com.mysql.cj.CharsetMapping;
-import com.mysql.cj.MysqlConnection;
-import com.mysql.cj.Query;
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.exceptions.ExceptionFactory;
-import com.mysql.cj.protocol.Resultset;
-
-import testsuite.BaseQueryInterceptor;
-import testsuite.BaseTestCase;
 
 public class CharsetRegressionTest extends BaseTestCase {
 

@@ -29,14 +29,14 @@
 
 package com.mysql.cj;
 
-import java.util.Properties;
-import java.util.function.Supplier;
-
 import com.mysql.cj.interceptors.QueryInterceptor;
 import com.mysql.cj.log.Log;
 import com.mysql.cj.protocol.Message;
 import com.mysql.cj.protocol.Resultset;
 import com.mysql.cj.protocol.ServerSession;
+
+import java.util.Properties;
+import java.util.function.Supplier;
 
 /**
  * Wraps query interceptors during driver startup so that they don't produce different result sets than we expect.

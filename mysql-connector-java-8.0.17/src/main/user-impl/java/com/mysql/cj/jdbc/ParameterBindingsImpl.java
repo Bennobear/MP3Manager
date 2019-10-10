@@ -29,26 +29,7 @@
 
 package com.mysql.cj.jdbc;
 
-import java.io.InputStream;
-import java.io.Reader;
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.net.URL;
-import java.sql.Array;
-import java.sql.Date;
-import java.sql.Ref;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.mysql.cj.BindValue;
-import com.mysql.cj.CharsetMapping;
-import com.mysql.cj.PreparedQuery;
-import com.mysql.cj.QueryBindings;
-import com.mysql.cj.Session;
+import com.mysql.cj.*;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.exceptions.ExceptionInterceptor;
@@ -62,6 +43,15 @@ import com.mysql.cj.result.DefaultColumnDefinition;
 import com.mysql.cj.result.Field;
 import com.mysql.cj.result.Row;
 import com.mysql.cj.util.StringUtils;
+
+import java.io.InputStream;
+import java.io.Reader;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.net.URL;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ParameterBindingsImpl implements ParameterBindings {
 

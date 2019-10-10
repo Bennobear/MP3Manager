@@ -29,10 +29,10 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.util.NoSuchElementException;
-
 import com.mysql.cj.protocol.ColumnDefinition;
 import com.mysql.cj.result.RowList;
+
+import java.util.NoSuchElementException;
 
 public class XProtocolRowInputStream implements RowList {
     private ColumnDefinition metadata;

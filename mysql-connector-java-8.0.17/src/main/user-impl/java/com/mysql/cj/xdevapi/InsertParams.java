@@ -29,15 +29,11 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 import com.mysql.cj.x.protobuf.MysqlxCrud.Column;
 import com.mysql.cj.x.protobuf.MysqlxCrud.Insert.TypedRow;
+
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Helper class for collecting parameters for relational insert command.

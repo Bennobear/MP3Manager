@@ -29,14 +29,14 @@
 
 package com.mysql.cj.jdbc.ha;
 
-import java.sql.SQLException;
-import java.util.Properties;
-import java.util.concurrent.Executor;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
 import com.mysql.cj.jdbc.JdbcConnection;
 import com.mysql.cj.jdbc.exceptions.SQLError;
+
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.concurrent.Executor;
 
 public class ReplicationMySQLConnection extends MultiHostMySQLConnection implements ReplicationConnection {
     public ReplicationMySQLConnection(MultiHostConnectionProxy proxy) {

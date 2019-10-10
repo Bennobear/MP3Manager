@@ -29,15 +29,15 @@
 
 package com.mysql.cj.protocol.a;
 
+import com.mysql.cj.conf.RuntimeProperty;
+import com.mysql.cj.log.Log;
+import com.mysql.cj.util.StringUtils;
+
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
-
-import com.mysql.cj.conf.RuntimeProperty;
-import com.mysql.cj.log.Log;
-import com.mysql.cj.util.StringUtils;
 
 /**
  * Used to de-compress packets from the MySQL server when protocol-level compression is turned on.

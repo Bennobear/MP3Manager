@@ -29,7 +29,16 @@
 
 package com.mysql.cj.protocol.x;
 
-import static org.junit.Assert.assertEquals;
+import com.mysql.cj.conf.DefaultPropertySet;
+import com.mysql.cj.conf.PropertySet;
+import com.mysql.cj.exceptions.CJCommunicationsException;
+import com.mysql.cj.exceptions.ExceptionInterceptor;
+import com.mysql.cj.exceptions.FeatureNotAvailableException;
+import com.mysql.cj.exceptions.SSLParamsException;
+import com.mysql.cj.log.Log;
+import com.mysql.cj.protocol.*;
+import com.mysql.cj.x.protobuf.Mysqlx.ServerMessages;
+import org.junit.Test;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;
@@ -43,22 +52,7 @@ import java.util.Set;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Test;
-
-import com.mysql.cj.conf.DefaultPropertySet;
-import com.mysql.cj.conf.PropertySet;
-import com.mysql.cj.exceptions.CJCommunicationsException;
-import com.mysql.cj.exceptions.ExceptionInterceptor;
-import com.mysql.cj.exceptions.FeatureNotAvailableException;
-import com.mysql.cj.exceptions.SSLParamsException;
-import com.mysql.cj.log.Log;
-import com.mysql.cj.protocol.FullReadInputStream;
-import com.mysql.cj.protocol.MessageListener;
-import com.mysql.cj.protocol.NetworkResources;
-import com.mysql.cj.protocol.ServerSession;
-import com.mysql.cj.protocol.SocketConnection;
-import com.mysql.cj.protocol.SocketFactory;
-import com.mysql.cj.x.protobuf.Mysqlx.ServerMessages;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Tests for {@link AsyncMessageReader}.

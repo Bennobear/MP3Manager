@@ -29,11 +29,6 @@
 
 package com.mysql.cj.protocol.a;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
-import org.junit.Test;
-
 import com.mysql.cj.Constants;
 import com.mysql.cj.conf.DefaultPropertySet;
 import com.mysql.cj.exceptions.NumberOutOfRange;
@@ -43,6 +38,10 @@ import com.mysql.cj.result.DefaultValueFactory;
 import com.mysql.cj.result.Field;
 import com.mysql.cj.result.StringValueFactory;
 import com.mysql.cj.result.ValueFactory;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 /**
  * Tests for {@link MysqlTextValueDecoder}.

@@ -29,17 +29,6 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.assertEquals;
-
-import java.lang.reflect.Field;
-import java.util.Properties;
-import java.util.function.Function;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
-
 import com.mysql.cj.CoreSession;
 import com.mysql.cj.ServerVersion;
 import com.mysql.cj.conf.PropertyDefinitions;
@@ -53,6 +42,16 @@ import com.mysql.cj.xdevapi.Row;
 import com.mysql.cj.xdevapi.Session;
 import com.mysql.cj.xdevapi.SessionImpl;
 import com.mysql.cj.xdevapi.SqlResult;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+
+import java.lang.reflect.Field;
+import java.util.Properties;
+import java.util.function.Function;
+
+import static org.junit.Assert.assertEquals;
 
 public class SecureSessionTest extends DevApiBaseTestCase {
     final String trustStoreUrl = "file:src/test/config/ssl-test-certs/ca-truststore";

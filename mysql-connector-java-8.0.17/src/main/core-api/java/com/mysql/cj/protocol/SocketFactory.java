@@ -29,10 +29,10 @@
 
 package com.mysql.cj.protocol;
 
+import com.mysql.cj.conf.PropertySet;
+
 import java.io.Closeable;
 import java.io.IOException;
-
-import com.mysql.cj.conf.PropertySet;
 
 /**
  * Interface to allow pluggable socket creation in the driver

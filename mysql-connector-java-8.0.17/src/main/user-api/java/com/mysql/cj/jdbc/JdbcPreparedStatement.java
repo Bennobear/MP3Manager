@@ -29,12 +29,12 @@
 
 package com.mysql.cj.jdbc;
 
-import java.math.BigInteger;
-import java.sql.SQLException;
-
 import com.mysql.cj.MysqlType;
 import com.mysql.cj.ParseInfo;
 import com.mysql.cj.QueryBindings;
+
+import java.math.BigInteger;
+import java.sql.SQLException;
 
 public interface JdbcPreparedStatement extends java.sql.PreparedStatement, JdbcStatement {
 

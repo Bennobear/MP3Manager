@@ -29,18 +29,17 @@
 
 package com.mysql.cj.protocol.a;
 
-import static org.junit.Assert.assertEquals;
+import com.mysql.cj.Constants;
+import com.mysql.cj.conf.DefaultPropertySet;
+import com.mysql.cj.result.StringValueFactory;
+import com.mysql.cj.result.ValueFactory;
+import org.junit.Test;
 
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-import org.junit.Test;
-
-import com.mysql.cj.Constants;
-import com.mysql.cj.conf.DefaultPropertySet;
-import com.mysql.cj.result.StringValueFactory;
-import com.mysql.cj.result.ValueFactory;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Tests for {@link MysqlBinaryValueDecoder}.

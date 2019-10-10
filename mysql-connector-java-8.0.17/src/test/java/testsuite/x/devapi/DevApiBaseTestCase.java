@@ -29,23 +29,17 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.assertEquals;
-
-import java.lang.reflect.Field;
-import java.sql.SQLException;
-
 import com.mysql.cj.MysqlxSession;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
 import com.mysql.cj.protocol.x.XProtocolError;
-import com.mysql.cj.xdevapi.PreparableStatement;
-import com.mysql.cj.xdevapi.Schema;
-import com.mysql.cj.xdevapi.Session;
-import com.mysql.cj.xdevapi.SessionImpl;
-import com.mysql.cj.xdevapi.SqlResult;
-import com.mysql.cj.xdevapi.Statement;
-
+import com.mysql.cj.xdevapi.*;
 import testsuite.x.internal.InternalXBaseTestCase;
+
+import java.lang.reflect.Field;
+import java.sql.SQLException;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Utilities for Dev API tests.

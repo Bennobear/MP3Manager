@@ -29,13 +29,13 @@
 
 package com.mysql.cj.protocol.x;
 
+import com.mysql.cj.protocol.x.Notice.XSessionStateChanged;
+import com.mysql.cj.protocol.x.Notice.XWarning;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import com.mysql.cj.protocol.x.Notice.XSessionStateChanged;
-import com.mysql.cj.protocol.x.Notice.XWarning;
 
 /**
  * Handle state necessary to accumulate noticed and build a {@link StatementExecuteOk} response.

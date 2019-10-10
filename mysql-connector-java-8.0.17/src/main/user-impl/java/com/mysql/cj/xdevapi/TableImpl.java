@@ -29,11 +29,6 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.List;
-import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.MysqlxSession;
 import com.mysql.cj.protocol.x.XMessage;
@@ -42,6 +37,11 @@ import com.mysql.cj.protocol.x.XProtocolError;
 import com.mysql.cj.result.Row;
 import com.mysql.cj.result.StringValueFactory;
 import com.mysql.cj.result.ValueFactory;
+
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * {@link Table} implementation

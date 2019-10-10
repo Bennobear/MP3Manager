@@ -29,10 +29,10 @@
 
 package com.mysql.cj.exceptions;
 
+import com.mysql.cj.Messages;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import com.mysql.cj.Messages;
 
 /**
  * Constants representing MySQL error numbers returned by the server in error messages.

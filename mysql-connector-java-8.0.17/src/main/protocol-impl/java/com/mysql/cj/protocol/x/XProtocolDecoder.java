@@ -29,12 +29,6 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.io.IOException;
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
-
 import com.google.protobuf.CodedInputStream;
 import com.mysql.cj.exceptions.AssertionFailedException;
 import com.mysql.cj.exceptions.DataReadException;
@@ -44,6 +38,12 @@ import com.mysql.cj.protocol.InternalTimestamp;
 import com.mysql.cj.protocol.ValueDecoder;
 import com.mysql.cj.result.Field;
 import com.mysql.cj.result.ValueFactory;
+
+import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
 
 public class XProtocolDecoder implements ValueDecoder {
 

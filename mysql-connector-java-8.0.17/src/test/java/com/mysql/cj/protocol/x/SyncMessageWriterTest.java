@@ -29,23 +29,20 @@
 
 package com.mysql.cj.protocol.x;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-
-import org.junit.Before;
-import org.junit.Test;
-
 import com.google.protobuf.ByteString;
 import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.x.protobuf.Mysqlx.ClientMessages;
 import com.mysql.cj.x.protobuf.Mysqlx.Ok;
 import com.mysql.cj.x.protobuf.MysqlxSession.AuthenticateStart;
 import com.mysql.cj.x.protobuf.MysqlxSession.Reset;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+
+import static org.junit.Assert.*;
 
 public class SyncMessageWriterTest {
     private ByteArrayOutputStream outputStream;

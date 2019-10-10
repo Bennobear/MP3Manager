@@ -29,14 +29,6 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
-
 import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.protocol.ProtocolEntityFactory;
 import com.mysql.cj.protocol.ResultStreamer;
@@ -45,6 +37,10 @@ import com.mysql.cj.protocol.x.XMessage;
 import com.mysql.cj.result.BufferedRowList;
 import com.mysql.cj.result.Row;
 import com.mysql.cj.result.RowList;
+
+import java.util.*;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 /**
  * Base class for data set results.

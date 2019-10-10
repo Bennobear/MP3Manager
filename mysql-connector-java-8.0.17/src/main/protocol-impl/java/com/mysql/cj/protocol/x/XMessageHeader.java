@@ -29,10 +29,10 @@
 
 package com.mysql.cj.protocol.x;
 
+import com.mysql.cj.protocol.MessageHeader;
+
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-
-import com.mysql.cj.protocol.MessageHeader;
 
 public class XMessageHeader implements MessageHeader {
     private ByteBuffer headerBuf;

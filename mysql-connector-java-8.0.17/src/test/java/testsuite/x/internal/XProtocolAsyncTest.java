@@ -29,9 +29,17 @@
 
 package testsuite.x.internal;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import com.mysql.cj.protocol.ColumnDefinition;
+import com.mysql.cj.protocol.ResultListener;
+import com.mysql.cj.protocol.x.StatementExecuteOk;
+import com.mysql.cj.protocol.x.XMessageBuilder;
+import com.mysql.cj.protocol.x.XProtocol;
+import com.mysql.cj.result.Row;
+import com.mysql.cj.xdevapi.DocFilterParams;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -40,18 +48,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.experimental.categories.Category;
-
-import com.mysql.cj.protocol.ColumnDefinition;
-import com.mysql.cj.protocol.ResultListener;
-import com.mysql.cj.protocol.x.StatementExecuteOk;
-import com.mysql.cj.protocol.x.XMessageBuilder;
-import com.mysql.cj.protocol.x.XProtocol;
-import com.mysql.cj.result.Row;
-import com.mysql.cj.xdevapi.DocFilterParams;
+import static org.junit.Assert.*;
 
 /**
  * Tests for protocol-level <b>async</b> APIs against X Plugin via X Protocol.

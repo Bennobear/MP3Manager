@@ -29,11 +29,7 @@
 
 package com.mysql.cj.protocol.a.result;
 
-import com.mysql.cj.protocol.ColumnDefinition;
-import com.mysql.cj.protocol.ProtocolEntityFactory;
-import com.mysql.cj.protocol.ResultsetRow;
-import com.mysql.cj.protocol.ResultsetRows;
-import com.mysql.cj.protocol.ResultsetRowsOwner;
+import com.mysql.cj.protocol.*;
 import com.mysql.cj.protocol.a.NativePacketPayload;
 
 public abstract class AbstractResultsetRows implements ResultsetRows {

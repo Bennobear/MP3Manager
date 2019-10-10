@@ -29,11 +29,11 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.io.IOException;
-import java.util.Optional;
-
 import com.mysql.cj.protocol.MessageReader;
 import com.mysql.cj.protocol.PacketReceivedTimeHolder;
+
+import java.io.IOException;
+import java.util.Optional;
 
 /**
  * A {@link MessageReader} which tracks the last time a packet was received.

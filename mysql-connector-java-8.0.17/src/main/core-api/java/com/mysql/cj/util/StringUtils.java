@@ -29,6 +29,11 @@
 
 package com.mysql.cj.util;
 
+import com.mysql.cj.Messages;
+import com.mysql.cj.ServerVersion;
+import com.mysql.cj.exceptions.ExceptionFactory;
+import com.mysql.cj.exceptions.WrongArgumentException;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.StringReader;
@@ -37,20 +42,9 @@ import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 import java.nio.charset.UnsupportedCharsetException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.EnumSet;
-import java.util.List;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import com.mysql.cj.Messages;
-import com.mysql.cj.ServerVersion;
-import com.mysql.cj.exceptions.ExceptionFactory;
-import com.mysql.cj.exceptions.WrongArgumentException;
 
 /**
  * Various utility methods for converting to/from byte arrays in the platform encoding

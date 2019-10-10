@@ -29,21 +29,18 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.util.concurrent.Callable;
-
-import org.junit.Test;
-
 import com.mysql.cj.protocol.x.XProtocolError;
 import com.mysql.cj.xdevapi.DatabaseObject.DbObjectStatus;
 import com.mysql.cj.xdevapi.Row;
 import com.mysql.cj.xdevapi.RowResult;
 import com.mysql.cj.xdevapi.Table;
+import org.junit.Test;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.concurrent.Callable;
+
+import static org.junit.Assert.*;
 
 /**
  * @todo

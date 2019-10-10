@@ -29,9 +29,9 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.List;
-
 import com.mysql.cj.protocol.x.StatementExecuteOk;
+
+import java.util.List;
 
 /**
  * A result from the collection.add() statement.

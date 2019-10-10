@@ -29,40 +29,7 @@
 
 package com.mysql.cj.jdbc;
 
-import java.io.InputStream;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.net.URL;
-import java.sql.Array;
-import java.sql.Clob;
-import java.sql.Date;
-import java.sql.JDBCType;
-import java.sql.NClob;
-import java.sql.ParameterMetaData;
-import java.sql.Ref;
-import java.sql.RowId;
-import java.sql.SQLException;
-import java.sql.SQLType;
-import java.sql.SQLXML;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.sql.Wrapper;
-import java.util.ArrayList;
-import java.util.Calendar;
-
-import com.mysql.cj.BindValue;
-import com.mysql.cj.CancelQueryTask;
-import com.mysql.cj.ClientPreparedQuery;
-import com.mysql.cj.ClientPreparedQueryBindings;
-import com.mysql.cj.Messages;
-import com.mysql.cj.MysqlType;
-import com.mysql.cj.NativeSession;
-import com.mysql.cj.ParseInfo;
-import com.mysql.cj.PreparedQuery;
-import com.mysql.cj.Query;
-import com.mysql.cj.QueryBindings;
+import com.mysql.cj.*;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.exceptions.CJException;
 import com.mysql.cj.exceptions.FeatureNotAvailableException;
@@ -82,6 +49,16 @@ import com.mysql.cj.protocol.a.NativePacketPayload;
 import com.mysql.cj.result.Field;
 import com.mysql.cj.util.StringUtils;
 import com.mysql.cj.util.Util;
+
+import java.io.InputStream;
+import java.io.Reader;
+import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.net.URL;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  * A SQL Statement is pre-compiled and stored in a PreparedStatement object. This object can then be used to efficiently execute this statement multiple times.

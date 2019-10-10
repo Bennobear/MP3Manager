@@ -29,10 +29,10 @@
 
 package com.mysql.cj.protocol;
 
-import java.io.IOException;
-
 import com.mysql.cj.exceptions.CJOperationNotSupportedException;
 import com.mysql.cj.exceptions.ExceptionFactory;
+
+import java.io.IOException;
 
 public interface ProtocolEntityReader<T extends ProtocolEntity, M extends Message> {
 

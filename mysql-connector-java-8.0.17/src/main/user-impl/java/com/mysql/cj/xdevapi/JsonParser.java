@@ -29,16 +29,16 @@
 
 package com.mysql.cj.xdevapi;
 
+import com.mysql.cj.Messages;
+import com.mysql.cj.exceptions.AssertionFailedException;
+import com.mysql.cj.exceptions.ExceptionFactory;
+import com.mysql.cj.exceptions.WrongArgumentException;
+
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
-
-import com.mysql.cj.Messages;
-import com.mysql.cj.exceptions.AssertionFailedException;
-import com.mysql.cj.exceptions.ExceptionFactory;
-import com.mysql.cj.exceptions.WrongArgumentException;
 
 public class JsonParser {
 

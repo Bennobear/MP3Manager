@@ -29,9 +29,9 @@
 
 package testsuite.regression;
 
-import java.sql.ResultSetMetaData;
-
 import testsuite.BaseTestCase;
+
+import java.sql.ResultSetMetaData;
 
 /**
  * Tests various number-handling issues that have arisen in the JDBC driver at one time or another.

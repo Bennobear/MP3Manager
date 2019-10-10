@@ -29,13 +29,13 @@
 
 package com.mysql.cj.xdevapi;
 
+import com.mysql.cj.Messages;
+import com.mysql.cj.exceptions.AssertionFailedException;
+
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.mysql.cj.Messages;
-import com.mysql.cj.exceptions.AssertionFailedException;
 
 /**
  * Internally-used object passing index creation parameters to XMessageBuilder.

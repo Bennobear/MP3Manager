@@ -31,7 +31,6 @@ package testsuite.simple;
 
 import com.mysql.cj.conf.PropertyDefinitions;
 import com.mysql.cj.jdbc.admin.MiniAdmin;
-
 import testsuite.BaseTestCase;
 
 /**

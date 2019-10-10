@@ -29,29 +29,16 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.util.concurrent.Callable;
-
-import org.junit.Test;
-
 import com.mysql.cj.ServerVersion;
 import com.mysql.cj.exceptions.WrongArgumentException;
 import com.mysql.cj.protocol.x.XProtocolError;
-import com.mysql.cj.xdevapi.Collection;
+import com.mysql.cj.xdevapi.*;
 import com.mysql.cj.xdevapi.DatabaseObject.DbObjectStatus;
-import com.mysql.cj.xdevapi.DbDoc;
-import com.mysql.cj.xdevapi.DbDocImpl;
-import com.mysql.cj.xdevapi.JsonArray;
-import com.mysql.cj.xdevapi.JsonLiteral;
-import com.mysql.cj.xdevapi.JsonNumber;
-import com.mysql.cj.xdevapi.JsonString;
-import com.mysql.cj.xdevapi.Row;
-import com.mysql.cj.xdevapi.RowResult;
-import com.mysql.cj.xdevapi.SqlResult;
-import com.mysql.cj.xdevapi.XDevAPIError;
+import org.junit.Test;
+
+import java.util.concurrent.Callable;
+
+import static org.junit.Assert.*;
 
 public class CollectionTest extends BaseCollectionTestCase {
 

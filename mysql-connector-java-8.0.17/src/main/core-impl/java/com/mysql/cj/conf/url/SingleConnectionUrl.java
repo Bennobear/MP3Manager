@@ -29,10 +29,10 @@
 
 package com.mysql.cj.conf.url;
 
-import java.util.Properties;
-
 import com.mysql.cj.conf.ConnectionUrl;
 import com.mysql.cj.conf.ConnectionUrlParser;
+
+import java.util.Properties;
 
 public class SingleConnectionUrl extends ConnectionUrl {
     /**

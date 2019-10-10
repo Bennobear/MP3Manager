@@ -29,10 +29,10 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.io.IOException;
-
 import com.mysql.cj.protocol.MessageSender;
 import com.mysql.cj.protocol.PacketSentTimeHolder;
+
+import java.io.IOException;
 
 /**
  * A {@link MessageSender} which tracks the last time a packet was sent.

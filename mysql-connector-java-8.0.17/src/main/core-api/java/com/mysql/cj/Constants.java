@@ -29,10 +29,10 @@
 
 package com.mysql.cj;
 
+import com.mysql.cj.conf.PropertyDefinitions;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
-
-import com.mysql.cj.conf.PropertyDefinitions;
 
 /**
  * Represents various constants used in the driver.

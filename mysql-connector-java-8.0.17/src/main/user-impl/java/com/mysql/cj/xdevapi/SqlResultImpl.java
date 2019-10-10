@@ -29,12 +29,12 @@
 
 package com.mysql.cj.xdevapi;
 
+import com.mysql.cj.exceptions.WrongArgumentException;
+import com.mysql.cj.protocol.ResultStreamer;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Supplier;
-
-import com.mysql.cj.exceptions.WrongArgumentException;
-import com.mysql.cj.protocol.ResultStreamer;
 
 /**
  * Result of {@link SqlStatement#execute()}.

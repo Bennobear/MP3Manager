@@ -29,14 +29,14 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.util.Map;
-import java.util.TimeZone;
-
 import com.mysql.cj.ServerVersion;
 import com.mysql.cj.exceptions.CJOperationNotSupportedException;
 import com.mysql.cj.exceptions.ExceptionFactory;
 import com.mysql.cj.protocol.ServerCapabilities;
 import com.mysql.cj.protocol.ServerSession;
+
+import java.util.Map;
+import java.util.TimeZone;
 
 public class XServerSession implements ServerSession {
 

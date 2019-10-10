@@ -29,13 +29,13 @@
 
 package com.mysql.cj;
 
-import java.io.IOException;
-
 import com.mysql.cj.protocol.ColumnDefinition;
 import com.mysql.cj.protocol.ProtocolEntityFactory;
 import com.mysql.cj.protocol.Resultset;
 import com.mysql.cj.protocol.a.NativePacketPayload;
 import com.mysql.cj.util.TestUtils;
+
+import java.io.IOException;
 
 //TODO should not be protocol-specific
 

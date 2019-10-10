@@ -29,13 +29,13 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.lang.ref.PhantomReference;
-import java.lang.ref.ReferenceQueue;
-
 import com.mysql.cj.MysqlxSession;
 import com.mysql.cj.protocol.x.XMessage;
 import com.mysql.cj.protocol.x.XMessageBuilder;
 import com.mysql.cj.protocol.x.XProtocolError;
+
+import java.lang.ref.PhantomReference;
+import java.lang.ref.ReferenceQueue;
 
 /**
  * Abstract class, common to all X DevAPI statement classes that can be prepared.

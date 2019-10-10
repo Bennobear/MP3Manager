@@ -29,12 +29,11 @@
 
 package testsuite.simple;
 
+import com.mysql.cj.util.StringUtils;
+import testsuite.BaseTestCase;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.mysql.cj.util.StringUtils;
-
-import testsuite.BaseTestCase;
 
 /**
  * Tests new StringUtils functions in the driver: public static String sanitizeProcOrFuncName(String src) and public static List splitDBdotName(String src,

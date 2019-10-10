@@ -29,18 +29,18 @@
 
 package com.mysql.cj.protocol.x;
 
+import com.mysql.cj.protocol.ColumnDefinition;
+import com.mysql.cj.protocol.ResultListener;
+import com.mysql.cj.result.BufferedRowList;
+import com.mysql.cj.result.Row;
+import com.mysql.cj.result.RowList;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
-
-import com.mysql.cj.protocol.ColumnDefinition;
-import com.mysql.cj.protocol.ResultListener;
-import com.mysql.cj.result.BufferedRowList;
-import com.mysql.cj.result.Row;
-import com.mysql.cj.result.RowList;
 
 /**
  * Create an entire (buffered) result from the data fed to this result listener.

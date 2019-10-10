@@ -29,33 +29,9 @@
 
 package com.mysql.cj.jdbc;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
-import java.net.URL;
-import java.sql.Date;
-import java.sql.ParameterMetaData;
-import java.sql.SQLException;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.sql.Wrapper;
-import java.util.ArrayList;
-
-import com.mysql.cj.CancelQueryTask;
-import com.mysql.cj.Messages;
-import com.mysql.cj.MysqlType;
-import com.mysql.cj.ParseInfo;
-import com.mysql.cj.PreparedQuery;
-import com.mysql.cj.ServerPreparedQuery;
-import com.mysql.cj.ServerPreparedQueryBindValue;
-import com.mysql.cj.ServerPreparedQueryBindings;
+import com.mysql.cj.*;
 import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.exceptions.CJException;
-import com.mysql.cj.exceptions.ExceptionFactory;
-import com.mysql.cj.exceptions.ExceptionInterceptor;
-import com.mysql.cj.exceptions.MysqlErrorNumbers;
-import com.mysql.cj.exceptions.WrongArgumentException;
+import com.mysql.cj.exceptions.*;
 import com.mysql.cj.jdbc.exceptions.MySQLStatementCancelledException;
 import com.mysql.cj.jdbc.exceptions.MySQLTimeoutException;
 import com.mysql.cj.jdbc.exceptions.SQLError;
@@ -64,6 +40,14 @@ import com.mysql.cj.jdbc.result.ResultSetInternalMethods;
 import com.mysql.cj.jdbc.result.ResultSetMetaData;
 import com.mysql.cj.protocol.ColumnDefinition;
 import com.mysql.cj.protocol.Message;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Reader;
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * JDBC Interface for MySQL-4.1 and newer server-side PreparedStatements.

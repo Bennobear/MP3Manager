@@ -1,8 +1,5 @@
 package Model;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,11 +7,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/* Handles Database requests */
 public class ConnectionDAO {
     Connection connection = null;
     PreparedStatement ptmt = null;
     ResultSet resultSet = null;
     private List<Song> songList = new ArrayList<Song>();
+
     public ConnectionDAO() {
     }
 
@@ -24,8 +23,8 @@ public class ConnectionDAO {
         return conn;
     }
 
-
-    public void add(String year, String artist , String album, String title, String path) {
+    /* Called Upon searching for MP3s if they have Metadata they'll be added to the Mysql Database */
+    public void add(String year, String artist, String album, String title, String path) {
         try {
             String i = null;
             String queryString = "INSERT INTO songs(id, year, artist, album, title, path) VALUES(?,?,?,?,?,?)";
@@ -33,7 +32,7 @@ public class ConnectionDAO {
             ptmt = connection.prepareStatement(queryString);
             ptmt.setString(1, i);
             ptmt.setString(2, year);
-            ptmt.setString(3,artist);
+            ptmt.setString(3, artist);
             ptmt.setString(4, album);
             ptmt.setString(5, title);
             ptmt.setString(6, path);
@@ -55,6 +54,7 @@ public class ConnectionDAO {
         }
     }
 
+    /* Used to populate the ListView */
     public List<Song> findAll() {
         try {
             String queryString = "SELECT * FROM songs";

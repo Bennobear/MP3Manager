@@ -29,12 +29,6 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 import com.google.protobuf.ByteString;
 import com.google.protobuf.CodedOutputStream;
 import com.google.protobuf.Descriptors.Descriptor;
@@ -43,6 +37,12 @@ import com.google.protobuf.Descriptors.OneofDescriptor;
 import com.google.protobuf.Parser;
 import com.google.protobuf.UnknownFieldSet;
 import com.mysql.cj.protocol.Message;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class XMessage implements Message, com.google.protobuf.Message {
 

@@ -29,18 +29,14 @@
 
 package com.mysql.cj;
 
+import com.mysql.cj.protocol.ColumnDefinition;
+
 import java.io.InputStream;
 import java.io.Reader;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.sql.Clob;
-import java.sql.Date;
-import java.sql.NClob;
-import java.sql.Time;
-import java.sql.Timestamp;
+import java.sql.*;
 import java.util.Calendar;
-
-import com.mysql.cj.protocol.ColumnDefinition;
 
 public interface QueryBindings<T extends BindValue> {
 

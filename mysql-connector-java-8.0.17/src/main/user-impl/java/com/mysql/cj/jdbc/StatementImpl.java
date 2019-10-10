@@ -29,43 +29,12 @@
 
 package com.mysql.cj.jdbc;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.math.BigInteger;
-import java.sql.BatchUpdateException;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.SQLWarning;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.atomic.AtomicBoolean;
-
-import com.mysql.cj.CancelQueryTask;
-import com.mysql.cj.CharsetMapping;
-import com.mysql.cj.Messages;
-import com.mysql.cj.MysqlType;
-import com.mysql.cj.NativeSession;
-import com.mysql.cj.ParseInfo;
-import com.mysql.cj.PingTarget;
-import com.mysql.cj.Query;
-import com.mysql.cj.Session;
-import com.mysql.cj.SimpleQuery;
-import com.mysql.cj.TransactionEventHandler;
+import com.mysql.cj.*;
 import com.mysql.cj.conf.HostInfo;
 import com.mysql.cj.conf.PropertyDefinitions;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.conf.RuntimeProperty;
-import com.mysql.cj.exceptions.AssertionFailedException;
-import com.mysql.cj.exceptions.CJException;
-import com.mysql.cj.exceptions.CJOperationNotSupportedException;
-import com.mysql.cj.exceptions.CJTimeoutException;
-import com.mysql.cj.exceptions.ExceptionFactory;
-import com.mysql.cj.exceptions.ExceptionInterceptor;
-import com.mysql.cj.exceptions.MysqlErrorNumbers;
-import com.mysql.cj.exceptions.OperationCancelledException;
-import com.mysql.cj.exceptions.StatementIsClosedException;
+import com.mysql.cj.exceptions.*;
 import com.mysql.cj.jdbc.exceptions.MySQLStatementCancelledException;
 import com.mysql.cj.jdbc.exceptions.MySQLTimeoutException;
 import com.mysql.cj.jdbc.exceptions.SQLError;
@@ -88,6 +57,19 @@ import com.mysql.cj.result.Field;
 import com.mysql.cj.result.Row;
 import com.mysql.cj.util.StringUtils;
 import com.mysql.cj.util.Util;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.math.BigInteger;
+import java.sql.BatchUpdateException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.SQLWarning;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * A Statement object is used for executing a static SQL statement and obtaining

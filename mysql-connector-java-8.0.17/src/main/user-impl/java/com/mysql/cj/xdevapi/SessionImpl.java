@@ -29,19 +29,9 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.List;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.MysqlxSession;
-import com.mysql.cj.conf.ConnectionUrl;
-import com.mysql.cj.conf.DefaultPropertySet;
-import com.mysql.cj.conf.HostInfo;
-import com.mysql.cj.conf.PropertyDefinitions;
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.conf.PropertySet;
-import com.mysql.cj.conf.RuntimeProperty;
+import com.mysql.cj.conf.*;
 import com.mysql.cj.exceptions.MysqlErrorNumbers;
 import com.mysql.cj.protocol.x.XMessage;
 import com.mysql.cj.protocol.x.XMessageBuilder;
@@ -50,6 +40,10 @@ import com.mysql.cj.protocol.x.XProtocolError;
 import com.mysql.cj.result.Row;
 import com.mysql.cj.result.StringValueFactory;
 import com.mysql.cj.util.StringUtils;
+
+import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * {@link Session} implementation.

@@ -29,17 +29,17 @@
 
 package com.mysql.cj.xdevapi;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.TimeZone;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
-
 import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.protocol.ColumnDefinition;
 import com.mysql.cj.protocol.x.StatementExecuteOk;
 import com.mysql.cj.result.Field;
 import com.mysql.cj.result.RowList;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.TimeZone;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 /**
  * {@link RowResult} implementation.

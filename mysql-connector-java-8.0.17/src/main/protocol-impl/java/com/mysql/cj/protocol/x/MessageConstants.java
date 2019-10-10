@@ -29,10 +29,6 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
 import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.MessageLite;
 import com.google.protobuf.Parser;
@@ -45,13 +41,7 @@ import com.mysql.cj.x.protobuf.Mysqlx.ServerMessages;
 import com.mysql.cj.x.protobuf.MysqlxConnection.Capabilities;
 import com.mysql.cj.x.protobuf.MysqlxConnection.CapabilitiesGet;
 import com.mysql.cj.x.protobuf.MysqlxConnection.CapabilitiesSet;
-import com.mysql.cj.x.protobuf.MysqlxCrud.CreateView;
-import com.mysql.cj.x.protobuf.MysqlxCrud.Delete;
-import com.mysql.cj.x.protobuf.MysqlxCrud.DropView;
-import com.mysql.cj.x.protobuf.MysqlxCrud.Find;
-import com.mysql.cj.x.protobuf.MysqlxCrud.Insert;
-import com.mysql.cj.x.protobuf.MysqlxCrud.ModifyView;
-import com.mysql.cj.x.protobuf.MysqlxCrud.Update;
+import com.mysql.cj.x.protobuf.MysqlxCrud.*;
 import com.mysql.cj.x.protobuf.MysqlxExpect.Open;
 import com.mysql.cj.x.protobuf.MysqlxNotice.Frame;
 import com.mysql.cj.x.protobuf.MysqlxNotice.SessionStateChanged;
@@ -64,13 +54,13 @@ import com.mysql.cj.x.protobuf.MysqlxResultset.ColumnMetaData;
 import com.mysql.cj.x.protobuf.MysqlxResultset.FetchDone;
 import com.mysql.cj.x.protobuf.MysqlxResultset.FetchDoneMoreResultsets;
 import com.mysql.cj.x.protobuf.MysqlxResultset.Row;
-import com.mysql.cj.x.protobuf.MysqlxSession.AuthenticateContinue;
-import com.mysql.cj.x.protobuf.MysqlxSession.AuthenticateOk;
-import com.mysql.cj.x.protobuf.MysqlxSession.AuthenticateStart;
-import com.mysql.cj.x.protobuf.MysqlxSession.Close;
-import com.mysql.cj.x.protobuf.MysqlxSession.Reset;
+import com.mysql.cj.x.protobuf.MysqlxSession.*;
 import com.mysql.cj.x.protobuf.MysqlxSql.StmtExecute;
 import com.mysql.cj.x.protobuf.MysqlxSql.StmtExecuteOk;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Constants related to X Protocol messages.

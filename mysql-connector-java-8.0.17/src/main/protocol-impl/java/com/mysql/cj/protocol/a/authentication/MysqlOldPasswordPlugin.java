@@ -29,15 +29,15 @@
 
 package com.mysql.cj.protocol.a.authentication;
 
-import java.io.UnsupportedEncodingException;
-import java.util.List;
-
 import com.mysql.cj.protocol.AuthenticationPlugin;
 import com.mysql.cj.protocol.Protocol;
 import com.mysql.cj.protocol.a.NativeConstants.IntegerDataType;
 import com.mysql.cj.protocol.a.NativeConstants.StringSelfDataType;
 import com.mysql.cj.protocol.a.NativePacketPayload;
 import com.mysql.cj.util.StringUtils;
+
+import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 /**
  * MySQL Native Old-Password Authentication Plugin

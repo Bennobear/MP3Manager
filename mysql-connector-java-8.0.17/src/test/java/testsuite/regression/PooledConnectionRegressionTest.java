@@ -29,51 +29,27 @@
 
 package testsuite.regression;
 
-import static org.junit.Assert.assertNotEquals;
-
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.SQLFeatureNotSupportedException;
-import java.sql.SQLNonTransientConnectionException;
-import java.sql.Statement;
-import java.util.Properties;
-import java.util.concurrent.Callable;
+import com.mysql.cj.NativeSession;
+import com.mysql.cj.ServerVersion;
+import com.mysql.cj.conf.PropertyKey;
+import com.mysql.cj.jdbc.*;
+import com.mysql.cj.jdbc.exceptions.CommunicationsException;
+import com.mysql.cj.jdbc.exceptions.PacketTooBigException;
+import junit.framework.Test;
+import junit.framework.TestSuite;
+import testsuite.BaseTestCase;
 
 import javax.sql.ConnectionEvent;
 import javax.sql.ConnectionEventListener;
 import javax.sql.ConnectionPoolDataSource;
 import javax.sql.PooledConnection;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.sql.*;
+import java.util.Properties;
+import java.util.concurrent.Callable;
 
-import com.mysql.cj.NativeSession;
-import com.mysql.cj.ServerVersion;
-import com.mysql.cj.conf.PropertyKey;
-import com.mysql.cj.jdbc.Blob;
-import com.mysql.cj.jdbc.CallableStatementWrapper;
-import com.mysql.cj.jdbc.Clob;
-import com.mysql.cj.jdbc.CommentClientInfoProvider;
-import com.mysql.cj.jdbc.ConnectionImpl;
-import com.mysql.cj.jdbc.ConnectionWrapper;
-import com.mysql.cj.jdbc.DatabaseMetaData;
-import com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema;
-import com.mysql.cj.jdbc.JdbcConnection;
-import com.mysql.cj.jdbc.JdbcPropertySetImpl;
-import com.mysql.cj.jdbc.MysqlConnectionPoolDataSource;
-import com.mysql.cj.jdbc.MysqlSQLXML;
-import com.mysql.cj.jdbc.MysqlXADataSource;
-import com.mysql.cj.jdbc.NClob;
-import com.mysql.cj.jdbc.PreparedStatementWrapper;
-import com.mysql.cj.jdbc.StatementWrapper;
-import com.mysql.cj.jdbc.exceptions.CommunicationsException;
-import com.mysql.cj.jdbc.exceptions.PacketTooBigException;
-
-import testsuite.BaseTestCase;
-
-import junit.framework.Test;
-import junit.framework.TestSuite;
+import static org.junit.Assert.assertNotEquals;
 
 /**
  * Tests a PooledConnection implementation provided by a JDBC driver. Test case provided by Johnny Macchione from bug database record BUG#884. According to

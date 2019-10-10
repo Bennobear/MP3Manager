@@ -29,31 +29,19 @@
 
 package com.mysql.cj.jdbc;
 
+import com.mysql.cj.Messages;
+import com.mysql.cj.exceptions.MysqlErrorNumbers;
+import com.mysql.cj.jdbc.exceptions.SQLError;
+
 import java.io.InputStream;
 import java.io.Reader;
 import java.lang.reflect.Proxy;
 import java.math.BigDecimal;
 import java.net.URL;
-import java.sql.Array;
-import java.sql.Blob;
-import java.sql.CallableStatement;
-import java.sql.Clob;
-import java.sql.Date;
-import java.sql.NClob;
-import java.sql.Ref;
-import java.sql.RowId;
-import java.sql.SQLException;
-import java.sql.SQLType;
-import java.sql.SQLXML;
-import java.sql.Time;
-import java.sql.Timestamp;
+import java.sql.*;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
-
-import com.mysql.cj.Messages;
-import com.mysql.cj.exceptions.MysqlErrorNumbers;
-import com.mysql.cj.jdbc.exceptions.SQLError;
 
 /**
  * Wraps callable statements created by pooled connections.

@@ -29,22 +29,6 @@
 
 package com.mysql.cj.protocol.x;
 
-import java.security.DigestException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.function.Consumer;
-import java.util.stream.Collectors;
-
-import javax.security.auth.callback.Callback;
-import javax.security.auth.callback.CallbackHandler;
-import javax.security.auth.callback.NameCallback;
-import javax.security.auth.callback.PasswordCallback;
-import javax.security.auth.callback.UnsupportedCallbackException;
-import javax.security.sasl.Sasl;
-import javax.security.sasl.SaslClient;
-import javax.security.sasl.SaslException;
-
 import com.google.protobuf.ByteString;
 import com.mysql.cj.MessageBuilder;
 import com.mysql.cj.Messages;
@@ -56,19 +40,10 @@ import com.mysql.cj.x.protobuf.MysqlxConnection.CapabilitiesSet;
 import com.mysql.cj.x.protobuf.MysqlxConnection.Capability;
 import com.mysql.cj.x.protobuf.MysqlxCrud.Collection;
 import com.mysql.cj.x.protobuf.MysqlxCrud.Column;
-import com.mysql.cj.x.protobuf.MysqlxCrud.DataModel;
-import com.mysql.cj.x.protobuf.MysqlxCrud.Delete;
-import com.mysql.cj.x.protobuf.MysqlxCrud.Find;
+import com.mysql.cj.x.protobuf.MysqlxCrud.*;
 import com.mysql.cj.x.protobuf.MysqlxCrud.Find.RowLock;
 import com.mysql.cj.x.protobuf.MysqlxCrud.Find.RowLockOptions;
-import com.mysql.cj.x.protobuf.MysqlxCrud.Insert;
 import com.mysql.cj.x.protobuf.MysqlxCrud.Insert.TypedRow;
-import com.mysql.cj.x.protobuf.MysqlxCrud.Limit;
-import com.mysql.cj.x.protobuf.MysqlxCrud.LimitExpr;
-import com.mysql.cj.x.protobuf.MysqlxCrud.Order;
-import com.mysql.cj.x.protobuf.MysqlxCrud.Projection;
-import com.mysql.cj.x.protobuf.MysqlxCrud.Update;
-import com.mysql.cj.x.protobuf.MysqlxCrud.UpdateOperation;
 import com.mysql.cj.x.protobuf.MysqlxCrud.UpdateOperation.UpdateType;
 import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import com.mysql.cj.x.protobuf.MysqlxDatatypes.Any;
@@ -87,13 +62,19 @@ import com.mysql.cj.x.protobuf.MysqlxSession.AuthenticateStart;
 import com.mysql.cj.x.protobuf.MysqlxSession.Close;
 import com.mysql.cj.x.protobuf.MysqlxSession.Reset;
 import com.mysql.cj.x.protobuf.MysqlxSql.StmtExecute;
-import com.mysql.cj.xdevapi.CreateIndexParams;
+import com.mysql.cj.xdevapi.*;
 import com.mysql.cj.xdevapi.CreateIndexParams.IndexField;
-import com.mysql.cj.xdevapi.ExprUtil;
-import com.mysql.cj.xdevapi.FilterParams;
-import com.mysql.cj.xdevapi.InsertParams;
-import com.mysql.cj.xdevapi.UpdateParams;
-import com.mysql.cj.xdevapi.UpdateSpec;
+
+import javax.security.auth.callback.*;
+import javax.security.sasl.Sasl;
+import javax.security.sasl.SaslClient;
+import javax.security.sasl.SaslException;
+import java.security.DigestException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class XMessageBuilder implements MessageBuilder<XMessage> {
     private static final String XPLUGIN_NAMESPACE = "mysqlx";

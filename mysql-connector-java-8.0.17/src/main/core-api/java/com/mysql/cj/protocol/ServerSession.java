@@ -29,10 +29,10 @@
 
 package com.mysql.cj.protocol;
 
+import com.mysql.cj.ServerVersion;
+
 import java.util.Map;
 import java.util.TimeZone;
-
-import com.mysql.cj.ServerVersion;
 
 /**
  * Keeps the effective states of server/session variables,

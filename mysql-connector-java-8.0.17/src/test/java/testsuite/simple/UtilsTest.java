@@ -29,23 +29,18 @@
 
 package testsuite.simple;
 
+import com.mysql.cj.jdbc.*;
+import com.mysql.cj.jdbc.ha.MultiHostConnectionProxy;
+import com.mysql.cj.jdbc.result.ResultSetImpl;
+import com.mysql.cj.util.Util;
+import testsuite.BaseTestCase;
+
 import java.io.Serializable;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
 import java.util.List;
-
-import com.mysql.cj.jdbc.ClientPreparedStatement;
-import com.mysql.cj.jdbc.ConnectionImpl;
-import com.mysql.cj.jdbc.JdbcConnection;
-import com.mysql.cj.jdbc.JdbcStatement;
-import com.mysql.cj.jdbc.StatementImpl;
-import com.mysql.cj.jdbc.ha.MultiHostConnectionProxy;
-import com.mysql.cj.jdbc.result.ResultSetImpl;
-import com.mysql.cj.util.Util;
-
-import testsuite.BaseTestCase;
 
 public class UtilsTest extends BaseTestCase {
     /**

@@ -29,13 +29,13 @@
 
 package com.mysql.cj.result;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-
 import com.mysql.cj.conf.PropertySet;
 import com.mysql.cj.protocol.InternalDate;
 import com.mysql.cj.protocol.InternalTime;
 import com.mysql.cj.protocol.InternalTimestamp;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * A class implements the <code>ValueFactory&lt;T&gt;</code> interface to create value instances from intermediate forms.

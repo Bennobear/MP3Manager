@@ -29,9 +29,6 @@
 
 package com.mysql.cj.protocol.a.result;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.exceptions.ExceptionFactory;
 import com.mysql.cj.protocol.ColumnDefinition;
@@ -42,6 +39,9 @@ import com.mysql.cj.protocol.a.BinaryRowFactory;
 import com.mysql.cj.protocol.a.NativeMessageBuilder;
 import com.mysql.cj.protocol.a.NativeProtocol;
 import com.mysql.cj.result.Row;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Model for result set data backed by a cursor (see http://dev.mysql.com/doc/refman/5.7/en/cursors.html and

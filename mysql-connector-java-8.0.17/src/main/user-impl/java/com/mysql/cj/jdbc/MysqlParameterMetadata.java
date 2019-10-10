@@ -29,9 +29,6 @@
 
 package com.mysql.cj.jdbc;
 
-import java.sql.ParameterMetaData;
-import java.sql.SQLException;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.MysqlType;
 import com.mysql.cj.Session;
@@ -40,6 +37,9 @@ import com.mysql.cj.exceptions.MysqlErrorNumbers;
 import com.mysql.cj.jdbc.exceptions.SQLError;
 import com.mysql.cj.jdbc.result.ResultSetMetaData;
 import com.mysql.cj.result.Field;
+
+import java.sql.ParameterMetaData;
+import java.sql.SQLException;
 
 public class MysqlParameterMetadata implements ParameterMetaData {
     boolean returnSimpleMetadata = false;

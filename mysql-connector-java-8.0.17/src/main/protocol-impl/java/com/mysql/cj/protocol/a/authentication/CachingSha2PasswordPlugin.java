@@ -29,9 +29,6 @@
 
 package com.mysql.cj.protocol.a.authentication;
 
-import java.security.DigestException;
-import java.util.List;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.conf.PropertyKey;
 import com.mysql.cj.exceptions.CJException;
@@ -45,6 +42,9 @@ import com.mysql.cj.protocol.a.NativeConstants.StringLengthDataType;
 import com.mysql.cj.protocol.a.NativeConstants.StringSelfDataType;
 import com.mysql.cj.protocol.a.NativePacketPayload;
 import com.mysql.cj.util.StringUtils;
+
+import java.security.DigestException;
+import java.util.List;
 
 public class CachingSha2PasswordPlugin extends Sha256PasswordPlugin {
     public static String PLUGIN_NAME = "caching_sha2_password";

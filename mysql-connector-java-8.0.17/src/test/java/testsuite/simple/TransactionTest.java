@@ -29,9 +29,9 @@
 
 package testsuite.simple;
 
-import java.sql.SQLException;
-
 import testsuite.BaseTestCase;
+
+import java.sql.SQLException;
 
 public class TransactionTest extends BaseTestCase {
     private static final double DOUBLE_CONST = 25.4312;

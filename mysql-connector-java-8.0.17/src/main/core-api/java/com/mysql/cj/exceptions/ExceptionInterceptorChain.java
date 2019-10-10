@@ -29,13 +29,13 @@
 
 package com.mysql.cj.exceptions;
 
+import com.mysql.cj.log.Log;
+import com.mysql.cj.util.Util;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
-
-import com.mysql.cj.log.Log;
-import com.mysql.cj.util.Util;
 
 public class ExceptionInterceptorChain implements ExceptionInterceptor {
     List<ExceptionInterceptor> interceptors;

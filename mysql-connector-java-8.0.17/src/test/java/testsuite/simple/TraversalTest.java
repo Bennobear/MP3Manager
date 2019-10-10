@@ -29,11 +29,11 @@
 
 package testsuite.simple;
 
+import testsuite.BaseTestCase;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import testsuite.BaseTestCase;
 
 /**
  * Tests result set traversal methods.

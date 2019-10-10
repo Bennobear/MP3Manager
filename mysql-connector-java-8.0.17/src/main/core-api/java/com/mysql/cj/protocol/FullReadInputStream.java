@@ -29,12 +29,12 @@
 
 package com.mysql.cj.protocol;
 
+import com.mysql.cj.Messages;
+
 import java.io.EOFException;
 import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
-import com.mysql.cj.Messages;
 
 /**
  * InputStream wrapper that provides methods to aggregate reads of a given size. c.f. readFully(byte[],int,int).

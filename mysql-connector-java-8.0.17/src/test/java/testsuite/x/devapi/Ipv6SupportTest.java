@@ -29,23 +29,17 @@
 
 package testsuite.x.devapi;
 
-import static org.junit.Assert.fail;
+import com.mysql.cj.ServerVersion;
+import com.mysql.cj.conf.PropertyDefinitions;
+import com.mysql.cj.xdevapi.Session;
+import org.junit.*;
+import testsuite.TestUtils;
 
 import java.net.Inet6Address;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Assume;
-import org.junit.Before;
-import org.junit.Test;
-
-import com.mysql.cj.ServerVersion;
-import com.mysql.cj.conf.PropertyDefinitions;
-import com.mysql.cj.xdevapi.Session;
-
-import testsuite.TestUtils;
+import static org.junit.Assert.fail;
 
 public class Ipv6SupportTest extends DevApiBaseTestCase {
     List<String> ipv6Addrs;

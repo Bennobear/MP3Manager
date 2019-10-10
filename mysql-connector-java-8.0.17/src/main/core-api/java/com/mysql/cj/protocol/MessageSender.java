@@ -29,11 +29,11 @@
 
 package com.mysql.cj.protocol;
 
-import java.io.IOException;
-import java.nio.channels.CompletionHandler;
-
 import com.mysql.cj.exceptions.CJOperationNotSupportedException;
 import com.mysql.cj.exceptions.ExceptionFactory;
+
+import java.io.IOException;
+import java.nio.channels.CompletionHandler;
 
 /**
  * This interface provides a facility for sending messages to server. The destination, transmission method, etc are determined by the implementation.

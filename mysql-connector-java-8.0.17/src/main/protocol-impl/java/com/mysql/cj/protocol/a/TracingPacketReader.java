@@ -29,13 +29,13 @@
 
 package com.mysql.cj.protocol.a;
 
-import java.io.IOException;
-import java.util.Optional;
-
 import com.mysql.cj.Messages;
 import com.mysql.cj.log.Log;
 import com.mysql.cj.protocol.MessageReader;
 import com.mysql.cj.util.StringUtils;
+
+import java.io.IOException;
+import java.util.Optional;
 
 /**
  * A decorating {@link MessageReader} which traces all received packets to the provided logger.
