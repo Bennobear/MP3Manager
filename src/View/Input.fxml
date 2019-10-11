@@ -14,8 +14,8 @@
     </stylesheets>
     <children>
         <TextField fx:id="txtInput" layoutX="151.0" layoutY="188.0"/>
-        <Button fx:id="btnSearch" layoutX="300.0" layoutY="188.0" mnemonicParsing="false" onAction="#searchD"
-                text="Search"/>
+        <Button fx:id="btnSearch" layoutX="320.0" layoutY="179.0" mnemonicParsing="false" onAction="#searchD"
+                text="Upload"/>
         <Button fx:id="btnBack" layoutX="274.0" layoutY="361.0" mnemonicParsing="false" onAction="#getBack"
                 text="Back"/>
     </children>
