@@ -37,7 +37,7 @@ public class ConnectionDAO {
             ptmt.setString(5, title);
             ptmt.setString(6, path);
             ptmt.executeUpdate();
-            System.out.println("Data Added Successfully");
+            System.out.println("MP3 Added Successfully");
         } catch (SQLException e) {
             System.out.println(e);
         } finally {

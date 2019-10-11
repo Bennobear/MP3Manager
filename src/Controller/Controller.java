@@ -95,7 +95,7 @@ public class Controller implements Initializable {
         mediaPlayer.setOnPaused(() -> System.out.println("Paused at: " + mediaPlayer.getCurrentTime()));
     }
 
-    /* Change Scene to Input */
+    /* Change Stage to Input */
     @FXML
     private void openInput() {
         try {
@@ -113,7 +113,7 @@ public class Controller implements Initializable {
         }
     }
 
-    /* Change Scene to Output */
+    /* Change Stage to Output */
     @FXML
     private void openOutput() {
         try {
@@ -134,10 +134,8 @@ public class Controller implements Initializable {
     /* Searches the path the user wrote in the textField for any MP3s if they have MetaData they'll be added to the Database */
     @FXML
     private void searchD() throws InvalidDataException, IOException, UnsupportedTagException {
-
         File folder = new File(txtInput.getText());
         File[] listOfFiles = folder.listFiles();
-
         for (int i = 0; i < listOfFiles.length; i++) {
             File file = listOfFiles[i];
             if (file.isFile() && file.getName().endsWith(".mp3")) {
