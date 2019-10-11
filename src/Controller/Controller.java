@@ -63,7 +63,7 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         listSongs.getItems().addAll(dao.findAll());
         btnPlay.disableProperty().bind(Bindings.isEmpty(listSongs.getSelectionModel().getSelectedItems()));
-        btnPause.disableProperty().bind(Bindings.isEmpty(listSongs.getSelectionModel().getSelectedItems()));
+        btnPause.setDisable(true);
     }
 
 
@@ -72,6 +72,7 @@ public class Controller implements Initializable {
     private void playMusic() {
         String path = listSongs.getSelectionModel().getSelectedItem().getPath();
         Media hit = new Media(new File(path).toURI().toString());
+        btnPause.setDisable(false);
         if (mediaPlayer != null) {
             mediaPlayer.stop();
             mediaPlayer = new MediaPlayer(hit);
@@ -86,13 +87,14 @@ public class Controller implements Initializable {
     @FXML
     private void pauseMusic() {
         MediaPlayer.Status currentStatus = mediaPlayer.getStatus();
-        if (currentStatus == MediaPlayer.Status.PLAYING)
+        if (currentStatus == MediaPlayer.Status.PLAYING){
             mediaPlayer.pause();
+            mediaPlayer.setOnPaused(() -> System.out.println("Paused at: " + mediaPlayer.getCurrentTime()));
+        }
         else if (currentStatus == MediaPlayer.Status.PAUSED || currentStatus == MediaPlayer.Status.STOPPED) {
             System.out.println("Player will start at: " + mediaPlayer.getCurrentTime());
             mediaPlayer.play();
         }
-        mediaPlayer.setOnPaused(() -> System.out.println("Paused at: " + mediaPlayer.getCurrentTime()));
     }
 
     /* Change Stage to Input */
