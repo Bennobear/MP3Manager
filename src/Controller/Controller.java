@@ -133,7 +133,8 @@ public class Controller implements Initializable {
         }
     }
 
-    /* Searches the path the user wrote in the textField for any MP3s if they have MetaData they'll be added to the Database */
+    /* Searches the path the user wrote in the textField for any MP3s if they have MetaData they'll be added to the Database
+    *  uses MP3Magic */
     @FXML
     private void searchD() throws InvalidDataException, IOException, UnsupportedTagException {
         File folder = new File(txtInput.getText());
