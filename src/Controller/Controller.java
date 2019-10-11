@@ -6,6 +6,7 @@ import com.mpatric.mp3agic.ID3v1;
 import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.Mp3File;
 import com.mpatric.mp3agic.UnsupportedTagException;
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -48,10 +49,10 @@ public class Controller implements Initializable {
     ListView<Song> listSongs = new ListView<>();
 
     @FXML
-    Button btnPlay;
+    Button btnPlay = new Button();
 
     @FXML
-    Button btnPause;
+    Button btnPause = new Button();
 
     /* Input & Output */
     @FXML
@@ -61,7 +62,10 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         listSongs.getItems().addAll(dao.findAll());
+        btnPlay.disableProperty().bind(Bindings.isEmpty(listSongs.getSelectionModel().getSelectedItems()));
+        btnPause.disableProperty().bind(Bindings.isEmpty(listSongs.getSelectionModel().getSelectedItems()));
     }
+
 
     /* Play the selected Song with the push of a Button */
     @FXML
